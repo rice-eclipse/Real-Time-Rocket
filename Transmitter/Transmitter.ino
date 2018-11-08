@@ -8,6 +8,7 @@
 
 #include <SPI.h>
 #include <RH_RF95.h>
+#include <Adafruit_MPL3115A2.h>
 
 #define RFM95_CS 4
 #define RFM95_RST 5
@@ -18,10 +19,13 @@
 
 // Singleton instance of the radio driver
 RH_RF95 rf95(RFM95_CS, RFM95_INT);
+Adafruit_MPL3115A2 baro = Adafruit_MPL3115A2();
 
 void setup() 
 {
 pinMode(RFM95_RST, OUTPUT);
+pinMode(8, OUTPUT);
+digitalWrite(8, LOW);
 digitalWrite(RFM95_RST, HIGH);
 
 while (!Serial);
@@ -55,6 +59,12 @@ Serial.print("Set Freq to: "); Serial.println(RF95_FREQ);
 // If you are using RFM95/96/97/98 modules which uses the PA_BOOST transmitter pin, then 
 // you can set transmitter powers from 5 to 23 dBm:
 rf95.setTxPower(23, false);
+Serial.println("Set power to 23");
+
+if (!baro.begin()) {
+    Serial.println("Couldn't find sensor.");
+    return;
+  }
 }
 
 int16_t packetnum = 0;  // packet counter, we increment per xmission
@@ -64,19 +74,42 @@ void loop()
 //Serial.println("Sending to rf95_server");
 // Send a message to rf95_server
 
-// Send a timestamp (ms) followed by the number
+// Gets pressure in inch Mercury
+char presData[10] = "Pre      ";
+float pres = baro.getPressure() / 3377.0;
+itoa(pres, presData + 4, 10);
+
+// Get altitude in meters
+char altData[10] = "Alt      ";
+float alt = baro.AltitudeFt();
+itoa(alt, altData + 4, 10);
+
+// Gets temp in C
+char tempData[10] = "Temp     ";
+float temp = baro.getTemperature();
+itoa(temp, tempData + 5, 10);
+
 char timestamp[13] = "Time        ";
-itoa(millis(), timestamp+5, 10);
+itoa(millis()/1000, timestamp+5, 10);
 timestamp[12] = 0;
 char number[10] = "#        ";
 itoa(packetnum++, number+1, 10);
 number[9] = 0;
+
+
 Serial.print("Sending timestamp: "); Serial.println(timestamp);
 Serial.print("Sending number: "); Serial.println(number);
+
+Serial.print("Sending pressure: "); Serial.println(presData);
+Serial.print("Sending altitude: "); Serial.println(altData);
+Serial.print("Sending temp (C): "); Serial.println(tempData);
 
 //Serial.println("Sending..."); delay(10);
 rf95.send((uint8_t *)timestamp, 13);
 rf95.send((uint8_t *)number, 10);
+rf95.send((uint8_t *)presData, 10);
+rf95.send((uint8_t *)altData, 10);
+rf95.send((uint8_t *)tempData, 10);
 
 //Serial.println("Waiting for packet to complete..."); delay(10);
 //rf95.waitPacketSent();
