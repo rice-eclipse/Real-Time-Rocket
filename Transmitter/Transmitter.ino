@@ -81,7 +81,7 @@ itoa(pres, presData + 4, 10);
 
 // Get altitude in meters
 char altData[10] = "Alt      ";
-float alt = baro.AltitudeFt();
+float alt = baro.getAltitude();
 itoa(alt, altData + 4, 10);
 
 // Gets temp in C
