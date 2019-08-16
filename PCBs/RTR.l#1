@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="inch" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -1432,7 +1432,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="1042" prefix="BT">
+<deviceset name="1042" prefix="BAT">
 <description>Lithium-Ion Battery Holder, 1 Cell, Plastic UL 94V-O, SMT</description>
 <gates>
 <gate name="G$1" symbol="1042" x="0" y="0"/>
