@@ -2471,6 +2471,9 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <rectangle x1="-0.4" y1="0.175" x2="0" y2="0.4" layer="51"/>
 <rectangle x1="-0.25" y1="0.175" x2="0" y2="0.4" layer="21"/>
 </package>
+<package name="TEST_PAD">
+<smd name="P$1" x="0" y="0" dx="1.5875" dy="1.5875" layer="1" roundness="100"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="2X6" urn="urn:adsk.eagle:package:38277/1" type="box" library_version="1">
@@ -3293,6 +3296,12 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="TEST_PAD">
+<pin name="P$1" x="0" y="-2.54" visible="pad" length="middle" direction="pas" rot="R90"/>
+<circle x="0" y="2.54" radius="0.254" width="2.54" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="-2.54" width="0.508" layer="94"/>
+<text x="-5.08" y="5.08" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -4377,6 +4386,22 @@ Source: www.kingbright.com</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="TEST_PAD" prefix="T">
+<description>Test pad</description>
+<gates>
+<gate name="G$1" symbol="TEST_PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TEST_PAD">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -4460,6 +4485,15 @@ Source: www.kingbright.com</description>
 <part name="ALT_SWITCH1" library="RTR" deviceset="JP-2C" device="" package3d_urn="urn:adsk.eagle:package:15452/1" value="JP-2C"/>
 <part name="PWR_STAT" library="RTR" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2"/>
 <part name="CHG_R5" library="RTR" deviceset="R-SMD" device="" value="470"/>
+<part name="GND17" library="RTR" deviceset="GND" device=""/>
+<part name="P+11" library="RTR" deviceset="VCC" device=""/>
+<part name="T1" library="RTR" deviceset="TEST_PAD" device=""/>
+<part name="T2" library="RTR" deviceset="TEST_PAD" device=""/>
+<part name="T3" library="RTR" deviceset="TEST_PAD" device=""/>
+<part name="T4" library="RTR" deviceset="TEST_PAD" device=""/>
+<part name="T5" library="RTR" deviceset="TEST_PAD" device=""/>
+<part name="T6" library="RTR" deviceset="TEST_PAD" device=""/>
+<part name="T7" library="RTR" deviceset="TEST_PAD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4675,6 +4709,29 @@ Not following this could severely damage the board!</text>
 <instance part="CHG_R5" gate="G$1" x="22.86" y="5.08" smashed="yes" rot="R90">
 <attribute name="VALUE" x="21.082" y="3.81" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="GND17" gate="1" x="228.6" y="-22.86" smashed="yes"/>
+<instance part="P+11" gate="VCC" x="213.36" y="-7.62" smashed="yes"/>
+<instance part="T1" gate="G$1" x="220.98" y="-12.7" smashed="yes">
+<attribute name="NAME" x="215.9" y="-7.62" size="1.778" layer="95"/>
+</instance>
+<instance part="T2" gate="G$1" x="228.6" y="-12.7" smashed="yes">
+<attribute name="NAME" x="223.52" y="-7.62" size="1.778" layer="95"/>
+</instance>
+<instance part="T3" gate="G$1" x="-127" y="-106.68" smashed="yes">
+<attribute name="NAME" x="-132.08" y="-101.6" size="1.778" layer="95"/>
+</instance>
+<instance part="T4" gate="G$1" x="0" y="-101.6" smashed="yes">
+<attribute name="NAME" x="-5.08" y="-96.52" size="1.778" layer="95"/>
+</instance>
+<instance part="T5" gate="G$1" x="20.32" y="-137.16" smashed="yes">
+<attribute name="NAME" x="15.24" y="-132.08" size="1.778" layer="95"/>
+</instance>
+<instance part="T6" gate="G$1" x="180.34" y="-101.6" smashed="yes">
+<attribute name="NAME" x="175.26" y="-96.52" size="1.778" layer="95"/>
+</instance>
+<instance part="T7" gate="G$1" x="33.02" y="45.72" smashed="yes">
+<attribute name="NAME" x="27.94" y="48.26" size="1.778" layer="95"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4784,6 +4841,7 @@ Not following this could severely damage the board!</text>
 <wire x1="-106.68" y1="-109.22" x2="-127" y2="-109.22" width="0.1524" layer="91"/>
 <junction x="-106.68" y="-109.22"/>
 <label x="-121.92" y="-109.22" size="1.778" layer="95"/>
+<pinref part="T3" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -4847,6 +4905,12 @@ Not following this could severely damage the board!</text>
 <wire x1="-71.12" y1="-48.26" x2="-76.2" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="-76.2" y1="-48.26" x2="-76.2" y2="-45.72" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="P+11" gate="VCC" pin="VCC"/>
+<wire x1="213.36" y1="-10.16" x2="213.36" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="-15.24" x2="220.98" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="T1" gate="G$1" pin="P$1"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -4862,6 +4926,10 @@ Not following this could severely damage the board!</text>
 <pinref part="U1" gate="G$1" pin="GND@1"/>
 <wire x1="-48.26" y1="93.98" x2="-45.72" y2="93.98" width="0.1524" layer="91"/>
 <junction x="-45.72" y="93.98"/>
+<pinref part="UFL_CON" gate="G$1" pin="GND"/>
+<wire x1="-15.24" y1="104.14" x2="-15.24" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="96.52" x2="-45.72" y2="96.52" width="0.1524" layer="91"/>
+<junction x="-45.72" y="96.52"/>
 </segment>
 <segment>
 <pinref part="BRD1" gate="G$1" pin="GND@P1.22"/>
@@ -5003,6 +5071,11 @@ Not following this could severely damage the board!</text>
 <wire x1="78.74" y1="-124.46" x2="78.74" y2="-137.16" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="-137.16" x2="101.6" y2="-137.16" width="0.1524" layer="91"/>
 <junction x="101.6" y="-137.16"/>
+</segment>
+<segment>
+<pinref part="GND17" gate="1" pin="GND"/>
+<wire x1="228.6" y1="-15.24" x2="228.6" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="T2" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="RF_RST" class="0">
@@ -5582,15 +5655,9 @@ Not following this could severely damage the board!</text>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="UFL_CON" gate="G$1" pin="SIG"/>
-<pinref part="UFL_CON" gate="G$1" pin="GND"/>
-<wire x1="-15.24" y1="104.14" x2="-15.24" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="ANT_CON" gate="1" pin="1"/>
-<wire x1="-15.24" y1="106.68" x2="-15.24" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="109.22" x2="-17.78" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="109.22" x2="-17.78" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="106.68" x2="-15.24" y2="106.68" width="0.1524" layer="91"/>
-<junction x="-15.24" y="106.68"/>
+<wire x1="-30.48" y1="109.22" x2="-15.24" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="UFL_CON" gate="G$1" pin="SIG"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -5696,8 +5763,9 @@ Not following this could severely damage the board!</text>
 <wire x1="-25.4" y1="-109.22" x2="-22.86" y2="-109.22" width="0.1524" layer="91"/>
 <junction x="-25.4" y="-109.22"/>
 <wire x1="-25.4" y1="-109.22" x2="-25.4" y2="-104.14" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="-104.14" x2="78.74" y2="-104.14" width="0.1524" layer="91"/>
 <pinref part="5V_BOOST_CONVERTER" gate="G$1" pin="SYNC"/>
+<wire x1="-25.4" y1="-104.14" x2="0" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="0" y1="-104.14" x2="78.74" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="-119.38" x2="99.06" y2="-119.38" width="0.1524" layer="91"/>
 <pinref part="5V_BOOST_CONVERTER" gate="G$1" pin="VBAT"/>
 <wire x1="99.06" y1="-119.38" x2="99.06" y2="-114.3" width="0.1524" layer="91"/>
@@ -5715,6 +5783,8 @@ Not following this could severely damage the board!</text>
 <wire x1="99.06" y1="-109.22" x2="78.74" y2="-109.22" width="0.1524" layer="91"/>
 <junction x="99.06" y="-109.22"/>
 <junction x="78.74" y="-109.22"/>
+<pinref part="T4" gate="G$1" pin="P$1"/>
+<junction x="0" y="-104.14"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -5731,15 +5801,21 @@ Not following this could severely damage the board!</text>
 <net name="N$14" class="0">
 <segment>
 <pinref part="LIPO" gate="G$1" pin="-"/>
-<pinref part="BATTERY_PROTECTION" gate="G$1" pin="VSS"/>
-<wire x1="-25.4" y1="-119.38" x2="-10.16" y2="-119.38" width="0.1524" layer="91"/>
-<pinref part="CHG_C3" gate="G$1" pin="2"/>
-<wire x1="-10.16" y1="-119.38" x2="0" y2="-119.38" width="0.1524" layer="91"/>
-<junction x="-10.16" y="-119.38"/>
-<junction x="-25.4" y="-119.38"/>
 <pinref part="U5" gate="G$1" pin="S2"/>
-<wire x1="48.26" y1="-139.7" x2="-25.4" y2="-139.7" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="-139.7" x2="-25.4" y2="-119.38" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="-139.7" x2="20.32" y2="-139.7" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="-139.7" x2="0" y2="-139.7" width="0.1524" layer="91"/>
+<wire x1="0" y1="-139.7" x2="-25.4" y2="-139.7" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="-139.7" x2="-25.4" y2="-124.46" width="0.1524" layer="91"/>
+<pinref part="BATTERY_PROTECTION" gate="G$1" pin="VSS"/>
+<wire x1="-25.4" y1="-124.46" x2="-25.4" y2="-119.38" width="0.1524" layer="91"/>
+<wire x1="0" y1="-119.38" x2="0" y2="-139.7" width="0.1524" layer="91"/>
+<junction x="0" y="-139.7"/>
+<pinref part="CHG_C3" gate="G$1" pin="2"/>
+<wire x1="-10.16" y1="-119.38" x2="-10.16" y2="-124.46" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="-124.46" x2="-25.4" y2="-124.46" width="0.1524" layer="91"/>
+<junction x="-25.4" y="-124.46"/>
+<pinref part="T5" gate="G$1" pin="P$1"/>
+<junction x="20.32" y="-139.7"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -5787,9 +5863,12 @@ Not following this could severely damage the board!</text>
 <pinref part="CHG_C5" gate="G$1" pin="1"/>
 <wire x1="157.48" y1="-109.22" x2="157.48" y2="-104.14" width="0.1524" layer="91"/>
 <junction x="157.48" y="-104.14"/>
-<wire x1="172.72" y1="-104.14" x2="198.12" y2="-104.14" width="0.1524" layer="91"/>
 <junction x="172.72" y="-104.14"/>
 <label x="182.88" y="-104.14" size="1.778" layer="95"/>
+<wire x1="172.72" y1="-104.14" x2="180.34" y2="-104.14" width="0.1524" layer="91"/>
+<pinref part="T6" gate="G$1" pin="P$1"/>
+<wire x1="180.34" y1="-104.14" x2="198.12" y2="-104.14" width="0.1524" layer="91"/>
+<junction x="180.34" y="-104.14"/>
 </segment>
 <segment>
 <pinref part="9V_CON" gate="1" pin="1"/>
@@ -5828,9 +5907,12 @@ Not following this could severely damage the board!</text>
 <wire x1="20.32" y1="58.42" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="43.18" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="PWR_STAT" gate="G$1" pin="A"/>
-<wire x1="22.86" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="43.18" x2="33.02" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="20.32" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
 <junction x="22.86" y="43.18"/>
+<pinref part="T7" gate="G$1" pin="P$1"/>
+<junction x="33.02" y="43.18"/>
 </segment>
 </net>
 <net name="N$22" class="0">
