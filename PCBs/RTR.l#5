@@ -6063,7 +6063,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <smd name="8" x="2.475" y="1.905" dx="1.97" dy="0.59" layer="1" roundness="25"/>
 </package>
 <package name="SOP65P640X110-17N">
-<rectangle x1="-0.997059375" y1="-1.21411875" x2="0.735" y2="0.895" layer="31"/>
+<rectangle x1="-0.99705625" y1="-1.21411875" x2="0.735" y2="0.895" layer="31"/>
 <text x="-5.14503125" y="-3.761559375" size="1.75171875" layer="27" align="top-left">&gt;VALUE</text>
 <text x="-5.11963125" y="3.742940625" size="1.743190625" layer="25">&gt;NAME</text>
 <circle x="-4.345" y="2.685" radius="0.2" width="0" layer="21"/>

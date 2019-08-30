@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -1674,6 +1674,7 @@ Holes are 0.05".
 <wire x1="-10" y1="-7" x2="10" y2="-7" width="0.1524" layer="39"/>
 <wire x1="10" y1="-7" x2="10" y2="3" width="0.1524" layer="39"/>
 <wire x1="10" y1="3" x2="10" y2="7" width="0.1524" layer="39"/>
+<rectangle x1="-10.033" y1="-7.112" x2="10.033" y2="7.112" layer="40"/>
 </package>
 <package name="JP1" urn="urn:adsk.eagle:footprint:15398/1" library_version="1">
 <description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
@@ -6062,7 +6063,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <smd name="8" x="2.475" y="1.905" dx="1.97" dy="0.59" layer="1" roundness="25"/>
 </package>
 <package name="SOP65P640X110-17N">
-<rectangle x1="-0.997059375" y1="-1.21411875" x2="0.735" y2="0.895" layer="31"/>
+<rectangle x1="-0.99705625" y1="-1.21411875" x2="0.735" y2="0.895" layer="31"/>
 <text x="-5.14503125" y="-3.761559375" size="1.75171875" layer="27" align="top-left">&gt;VALUE</text>
 <text x="-5.11963125" y="3.742940625" size="1.743190625" layer="25">&gt;NAME</text>
 <circle x="-4.345" y="2.685" radius="0.2" width="0" layer="21"/>
