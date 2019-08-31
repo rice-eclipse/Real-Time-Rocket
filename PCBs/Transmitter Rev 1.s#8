@@ -6057,7 +6057,7 @@ Not following this could severely damage the board!</text>
 <wire x1="104.14" y1="88.9" x2="104.14" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="9V_VIN" class="0">
 <segment>
 <pinref part="9V_C2" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="124.46" x2="45.72" y2="121.92" width="0.1524" layer="91"/>
@@ -6068,7 +6068,7 @@ Not following this could severely damage the board!</text>
 <junction x="45.72" y="124.46"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="9V_+" class="0">
 <segment>
 <pinref part="9V_C1" gate="G$1" pin="1"/>
 <wire x1="27.94" y1="124.46" x2="27.94" y2="121.92" width="0.1524" layer="91"/>
@@ -6078,7 +6078,7 @@ Not following this could severely damage the board!</text>
 <junction x="27.94" y="124.46"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="9V_VOUT" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="VOUT"/>
 <wire x1="91.44" y1="124.46" x2="99.06" y2="124.46" width="0.1524" layer="91"/>

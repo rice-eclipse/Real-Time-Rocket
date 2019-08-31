@@ -5186,21 +5186,6 @@ Not following this could severely damage the board!</text>
 <wire x1="-58.42" y1="-25.4" x2="-40.64" y2="-25.4" width="0.1524" layer="91"/>
 <label x="-50.8" y="-25.4" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="CHARGE_CONTROLLER" gate="G$1" pin="VDD"/>
-<pinref part="CHG_STAT" gate="G$1" pin="A"/>
-<wire x1="-78.74" y1="-109.22" x2="-91.44" y2="-109.22" width="0.1524" layer="91"/>
-<pinref part="CHG_C1" gate="G$1" pin="1"/>
-<wire x1="-106.68" y1="-111.76" x2="-106.68" y2="-109.22" width="0.1524" layer="91"/>
-<wire x1="-106.68" y1="-109.22" x2="-91.44" y2="-109.22" width="0.1524" layer="91"/>
-<junction x="-91.44" y="-109.22"/>
-<wire x1="-106.68" y1="-109.22" x2="-119.38" y2="-109.22" width="0.1524" layer="91"/>
-<junction x="-106.68" y="-109.22"/>
-<pinref part="T3" gate="G$1" pin="P$1"/>
-<pinref part="J1" gate="G$1" pin="VUSB"/>
-<wire x1="-119.38" y1="-109.22" x2="-134.62" y2="-109.22" width="0.1524" layer="91"/>
-<junction x="-119.38" y="-109.22"/>
-</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -6566,6 +6551,23 @@ Not following this could severely damage the board!</text>
 <wire x1="-81.28" y1="-40.64" x2="-81.28" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="ANALOG_BRK" gate="G$1" pin="1"/>
 <wire x1="-81.28" y1="-50.8" x2="-73.66" y2="-50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="V_USB" class="0">
+<segment>
+<pinref part="CHARGE_CONTROLLER" gate="G$1" pin="VDD"/>
+<pinref part="CHG_STAT" gate="G$1" pin="A"/>
+<wire x1="-78.74" y1="-109.22" x2="-91.44" y2="-109.22" width="0.1524" layer="91"/>
+<pinref part="CHG_C1" gate="G$1" pin="1"/>
+<wire x1="-106.68" y1="-111.76" x2="-106.68" y2="-109.22" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="-109.22" x2="-91.44" y2="-109.22" width="0.1524" layer="91"/>
+<junction x="-91.44" y="-109.22"/>
+<wire x1="-106.68" y1="-109.22" x2="-119.38" y2="-109.22" width="0.1524" layer="91"/>
+<junction x="-106.68" y="-109.22"/>
+<pinref part="T3" gate="G$1" pin="P$1"/>
+<pinref part="J1" gate="G$1" pin="VUSB"/>
+<wire x1="-119.38" y1="-109.22" x2="-134.62" y2="-109.22" width="0.1524" layer="91"/>
+<junction x="-119.38" y="-109.22"/>
 </segment>
 </net>
 </nets>

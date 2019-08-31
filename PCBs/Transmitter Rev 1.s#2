@@ -6190,7 +6190,7 @@ Not following this could severely damage the board!</text>
 <junction x="22.86" y="-139.7"/>
 </segment>
 </net>
-<net name="SOURCE" class="0">
+<net name="DRAIN" class="0">
 <segment>
 <pinref part="DUAL_N_MOSFETS" gate="G$1" pin="D1"/>
 <wire x1="58.42" y1="-129.54" x2="60.96" y2="-129.54" width="0.1524" layer="91"/>

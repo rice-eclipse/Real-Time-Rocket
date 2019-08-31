@@ -5036,8 +5036,8 @@ Not following this could severely damage the board!</text>
 <instance part="T6" gate="G$1" x="180.34" y="-99.06" smashed="yes">
 <attribute name="NAME" x="175.26" y="-93.98" size="1.778" layer="95"/>
 </instance>
-<instance part="T7" gate="G$1" x="33.02" y="45.72" smashed="yes">
-<attribute name="NAME" x="27.94" y="48.26" size="1.778" layer="95"/>
+<instance part="T7" gate="G$1" x="33.02" y="48.26" smashed="yes">
+<attribute name="NAME" x="27.94" y="50.8" size="1.778" layer="95"/>
 </instance>
 <instance part="RF_C1" gate="G$1" x="180.34" y="142.24" smashed="yes" rot="R90">
 <attribute name="VALUE" x="181.356" y="145.669" size="1.778" layer="96"/>
@@ -6288,23 +6288,30 @@ Not following this could severely damage the board!</text>
 <wire x1="35.56" y1="71.12" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="ALT_SWITCH" gate="1" pin="3"/>
 <wire x1="35.56" y1="58.42" x2="30.48" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="BRD1" gate="G$1" pin="USB1_VI"/>
 <wire x1="30.48" y1="58.42" x2="20.32" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="58.42" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="43.18" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="PWR_STAT" gate="G$1" pin="A"/>
-<wire x1="22.86" y1="43.18" x2="33.02" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="43.18" x2="48.26" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="20.32" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
-<junction x="22.86" y="43.18"/>
-<pinref part="T7" gate="G$1" pin="P$1"/>
-<junction x="33.02" y="43.18"/>
-<pinref part="PWR_C1" gate="G$1" pin="1"/>
-<junction x="48.26" y="43.18"/>
 <pinref part="BAT_PWR" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="63.5" x2="30.48" y2="58.42" width="0.1524" layer="91"/>
 <junction x="30.48" y="58.42"/>
+<pinref part="BRD1" gate="G$1" pin="USB1_VI"/>
+<wire x1="48.26" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="PWR_C1" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="43.18" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
+<junction x="22.86" y="43.18"/>
+<junction x="48.26" y="43.18"/>
+<wire x1="30.48" y1="43.18" x2="35.56" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="43.18" x2="48.26" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="43.18" x2="30.48" y2="45.72" width="0.1524" layer="91"/>
+<junction x="30.48" y="43.18"/>
+<pinref part="T7" gate="G$1" pin="P$1"/>
+<wire x1="30.48" y1="45.72" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="45.72" x2="35.56" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="45.72" x2="35.56" y2="43.18" width="0.1524" layer="91"/>
+<junction x="33.02" y="45.72"/>
+<junction x="35.56" y="43.18"/>
 </segment>
 </net>
 <net name="BAT_VIN" class="0">
