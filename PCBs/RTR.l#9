@@ -10210,7 +10210,7 @@ Used as a generalized connector for attaching new sensors</description>
 <gate name="G$1" symbol="R-US" x="-7.62" y="2.54"/>
 </gates>
 <devices>
-<device name="" package="RES_SMW52R0JT">
+<device name="1206" package="R1206">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>

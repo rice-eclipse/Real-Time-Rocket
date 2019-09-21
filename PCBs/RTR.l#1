@@ -6102,12 +6102,12 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <pad name="P$1" x="-1" y="1.2" drill="0.45" diameter="0.5588" thermals="no"/>
 <pad name="P$2" x="0" y="1.2" drill="0.45" diameter="0.5588" thermals="no"/>
 <pad name="P$3" x="1" y="1.2" drill="0.45" diameter="0.5588" thermals="no"/>
-<pad name="P$4" x="-1" y="0" drill="0.45" diameter="0.5588"/>
-<pad name="P$5" x="0" y="0" drill="0.45" diameter="0.5588"/>
-<pad name="P$6" x="1" y="0" drill="0.45" diameter="0.5588"/>
-<pad name="P$7" x="-1" y="-1.2" drill="0.45" diameter="0.5588"/>
-<pad name="P$8" x="0" y="-1.2" drill="0.45" diameter="0.5588"/>
-<pad name="P$9" x="1" y="-1.2" drill="0.45" diameter="0.5588"/>
+<pad name="P$4" x="-1" y="0" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$5" x="0" y="0" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$6" x="1" y="0" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$7" x="-1" y="-1.2" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$8" x="0" y="-1.2" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$9" x="1" y="-1.2" drill="0.45" diameter="0.5588" thermals="no"/>
 </package>
 <package name="1P2T" urn="urn:adsk.eagle:footprint:27654/1" locally_modified="yes" library_version="2">
 <wire x1="-6.35" y1="3.325" x2="6.35" y2="3.325" width="0.2032" layer="21"/>
