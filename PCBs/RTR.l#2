@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -6102,12 +6102,12 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <pad name="P$1" x="-1" y="1.2" drill="0.45" diameter="0.5588" thermals="no"/>
 <pad name="P$2" x="0" y="1.2" drill="0.45" diameter="0.5588" thermals="no"/>
 <pad name="P$3" x="1" y="1.2" drill="0.45" diameter="0.5588" thermals="no"/>
-<pad name="P$4" x="-1" y="0" drill="0.45" diameter="0.5588"/>
-<pad name="P$5" x="0" y="0" drill="0.45" diameter="0.5588"/>
-<pad name="P$6" x="1" y="0" drill="0.45" diameter="0.5588"/>
-<pad name="P$7" x="-1" y="-1.2" drill="0.45" diameter="0.5588"/>
-<pad name="P$8" x="0" y="-1.2" drill="0.45" diameter="0.5588"/>
-<pad name="P$9" x="1" y="-1.2" drill="0.45" diameter="0.5588"/>
+<pad name="P$4" x="-1" y="0" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$5" x="0" y="0" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$6" x="1" y="0" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$7" x="-1" y="-1.2" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$8" x="0" y="-1.2" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$9" x="1" y="-1.2" drill="0.45" diameter="0.5588" thermals="no"/>
 </package>
 <package name="1P2T" urn="urn:adsk.eagle:footprint:27654/1" locally_modified="yes" library_version="2">
 <wire x1="-6.35" y1="3.325" x2="6.35" y2="3.325" width="0.2032" layer="21"/>
@@ -8316,6 +8316,40 @@ part number 2062-2P from STA</description>
 <wire x1="-1.27" y1="2.54" x2="-2.54" y2="2.54" width="0.6096" layer="94"/>
 <pin name="1" x="-7.62" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1"/>
 <pin name="3" x="-7.62" y="0" visible="pad" length="middle" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="GPS_M20050-1">
+<wire x1="0" y1="0" x2="40" y2="0" width="0.254" layer="94"/>
+<wire x1="40" y1="0" x2="40" y2="35" width="0.254" layer="94"/>
+<wire x1="40" y1="35" x2="0" y2="35" width="0.254" layer="94"/>
+<wire x1="0" y1="35" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="AT1" x="-5" y="33" length="middle"/>
+<pin name="GND1" x="-5" y="30" length="middle"/>
+<pin name="GND2" x="-5" y="27" length="middle"/>
+<pin name="ANT_OUT" x="-5" y="24" length="middle"/>
+<pin name="GND3" x="-5" y="21" length="middle"/>
+<pin name="ANT_IN" x="-5" y="18" length="middle"/>
+<pin name="GND4" x="-5" y="15" length="middle"/>
+<pin name="VCC" x="-5" y="12" length="middle"/>
+<pin name="GND5" x="-5" y="9" length="middle"/>
+<pin name="HW_R" x="-5" y="6" length="middle"/>
+<pin name="TM" x="-5" y="3" length="middle"/>
+<pin name="BV" x="12" y="-5" length="middle" rot="R90"/>
+<pin name="E3" x="18" y="-5" length="middle" rot="R90"/>
+<pin name="E2" x="15" y="-5" length="middle" rot="R90"/>
+<pin name="GND6" x="21" y="-5" length="middle" rot="R90"/>
+<pin name="GND7" x="24" y="-5" length="middle" rot="R90"/>
+<pin name="GND8" x="27" y="-5" length="middle" rot="R90"/>
+<pin name="FIX" x="45" y="3" length="middle" rot="R180"/>
+<pin name="GND14" x="45" y="6" length="middle" rot="R180"/>
+<pin name="TX" x="45" y="9" length="middle" rot="R180"/>
+<pin name="RX" x="45" y="12" length="middle" rot="R180"/>
+<pin name="GND13" x="45" y="15" length="middle" rot="R180"/>
+<pin name="GND12" x="45" y="18" length="middle" rot="R180"/>
+<pin name="GND11" x="45" y="21" length="middle" rot="R180"/>
+<pin name="GND10" x="45" y="24" length="middle" rot="R180"/>
+<pin name="HW_S" x="45" y="27" length="middle" rot="R180"/>
+<pin name="GND9" x="45" y="30" length="middle" rot="R180"/>
+<pin name="AT2" x="45" y="33" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>

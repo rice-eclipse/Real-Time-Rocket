@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -6099,15 +6099,15 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <smd name="15" x="2.865" y="1.625" dx="1.48" dy="0.41" layer="1" roundness="25"/>
 <smd name="16" x="2.865" y="2.275" dx="1.48" dy="0.41" layer="1" roundness="25"/>
 <smd name="17" x="0" y="0" dx="2.94" dy="3.58" layer="1" cream="no"/>
-<pad name="P$1" x="-1" y="1.2" drill="0.45" diameter="0.5588"/>
-<pad name="P$2" x="0" y="1.2" drill="0.45" diameter="0.5588"/>
-<pad name="P$3" x="1" y="1.2" drill="0.45" diameter="0.5588"/>
-<pad name="P$4" x="-1" y="0" drill="0.45" diameter="0.5588"/>
-<pad name="P$5" x="0" y="0" drill="0.45" diameter="0.5588"/>
-<pad name="P$6" x="1" y="0" drill="0.45" diameter="0.5588"/>
-<pad name="P$7" x="-1" y="-1.2" drill="0.45" diameter="0.5588"/>
-<pad name="P$8" x="0" y="-1.2" drill="0.45" diameter="0.5588"/>
-<pad name="P$9" x="1" y="-1.2" drill="0.45" diameter="0.5588"/>
+<pad name="P$1" x="-1" y="1.2" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$2" x="0" y="1.2" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$3" x="1" y="1.2" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$4" x="-1" y="0" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$5" x="0" y="0" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$6" x="1" y="0" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$7" x="-1" y="-1.2" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$8" x="0" y="-1.2" drill="0.45" diameter="0.5588" thermals="no"/>
+<pad name="P$9" x="1" y="-1.2" drill="0.45" diameter="0.5588" thermals="no"/>
 </package>
 <package name="1P2T" urn="urn:adsk.eagle:footprint:27654/1" locally_modified="yes" library_version="2">
 <wire x1="-6.35" y1="3.325" x2="6.35" y2="3.325" width="0.2032" layer="21"/>

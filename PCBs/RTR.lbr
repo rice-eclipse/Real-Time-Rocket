@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -6892,6 +6892,40 @@ part number 2062-2P from STA</description>
 <rectangle x1="1.016" y1="-1.524" x2="1.524" y2="-1.016" layer="51" rot="R90"/>
 <text x="-2.54" y="2.667" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
 </package>
+<package name="M20050-1_GPS">
+<wire x1="-4.75" y1="6.9" x2="4.75" y2="6.9" width="0.05" layer="20"/>
+<wire x1="4.75" y1="6.9" x2="4.75" y2="-6.9" width="0.05" layer="20"/>
+<wire x1="4.75" y1="-6.9" x2="-4.75" y2="-6.9" width="0.05" layer="20"/>
+<wire x1="-4.75" y1="-6.9" x2="-4.75" y2="6.9" width="0.05" layer="20"/>
+<smd name="P1" x="-4.32" y="6.3" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P2" x="-4.32" y="5.2" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P3" x="-4.32" y="4.1" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P4" x="-4.32" y="3" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P5" x="-4.32" y="1.9" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P6" x="-4.32" y="0.8" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P7" x="-4.32" y="-0.3" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P8" x="-4.32" y="-1.4" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P9" x="-4.32" y="-2.5" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P10" x="-4.32" y="-3.6" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P11" x="-4.32" y="-4.7" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P18" x="4.32" y="-4.7" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P19" x="4.32" y="-3.6" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P20" x="4.32" y="-2.5" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P21" x="4.32" y="-1.4" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P22" x="4.32" y="-0.3" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P23" x="4.32" y="0.8" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P24" x="4.32" y="1.9" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P25" x="4.32" y="3" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P26" x="4.32" y="4.1" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P27" x="4.32" y="5.2" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P28" x="4.32" y="6.3" dx="1.94" dy="0.7" layer="1"/>
+<smd name="P12" x="-2.7" y="-6.47" dx="0.7" dy="1.94" layer="1"/>
+<smd name="P13" x="-1.6" y="-6.47" dx="0.7" dy="1.94" layer="1"/>
+<smd name="P14" x="-0.5" y="-6.47" dx="0.7" dy="1.94" layer="1"/>
+<smd name="P15" x="0.6" y="-6.47" dx="0.7" dy="1.94" layer="1"/>
+<smd name="P16" x="1.7" y="-6.47" dx="0.7" dy="1.94" layer="1"/>
+<smd name="P17" x="2.8" y="-6.47" dx="0.7" dy="1.94" layer="1"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="2X5" urn="urn:adsk.eagle:package:38012/1" type="box" library_version="1">
@@ -10994,6 +11028,48 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GPS_M20050-1" prefix="A" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="GPS_M20050-1" x="-63.5" y="-15.24"/>
+</gates>
+<devices>
+<device name="" package="M20050-1_GPS">
+<connects>
+<connect gate="G$1" pin="ANT_IN" pad="P6"/>
+<connect gate="G$1" pin="ANT_OUT" pad="P4"/>
+<connect gate="G$1" pin="AT1" pad="P1"/>
+<connect gate="G$1" pin="AT2" pad="P28"/>
+<connect gate="G$1" pin="BV" pad="P12"/>
+<connect gate="G$1" pin="E2" pad="P13"/>
+<connect gate="G$1" pin="E3" pad="P14"/>
+<connect gate="G$1" pin="FIX" pad="P18"/>
+<connect gate="G$1" pin="GND1" pad="P2"/>
+<connect gate="G$1" pin="GND10" pad="P25"/>
+<connect gate="G$1" pin="GND11" pad="P24"/>
+<connect gate="G$1" pin="GND12" pad="P23"/>
+<connect gate="G$1" pin="GND13" pad="P22"/>
+<connect gate="G$1" pin="GND14" pad="P19"/>
+<connect gate="G$1" pin="GND2" pad="P3"/>
+<connect gate="G$1" pin="GND3" pad="P5"/>
+<connect gate="G$1" pin="GND4" pad="P7"/>
+<connect gate="G$1" pin="GND5" pad="P9"/>
+<connect gate="G$1" pin="GND6" pad="P15"/>
+<connect gate="G$1" pin="GND7" pad="P16"/>
+<connect gate="G$1" pin="GND8" pad="P17"/>
+<connect gate="G$1" pin="GND9" pad="P27"/>
+<connect gate="G$1" pin="HW_R" pad="P10"/>
+<connect gate="G$1" pin="HW_S" pad="P26"/>
+<connect gate="G$1" pin="RX" pad="P21"/>
+<connect gate="G$1" pin="TM" pad="P11"/>
+<connect gate="G$1" pin="TX" pad="P20"/>
+<connect gate="G$1" pin="VCC" pad="P8"/>
 </connects>
 <technologies>
 <technology name=""/>
