@@ -9,11 +9,19 @@ MPL3115A2 Altitude Sensor One Shot Mode Example
  - Serial terminal at 115200bps
  - Prints altitude in meters or temperature in degrees C, depending on whether ALTMODE is defined
  */
- 
+//accel stuff
+#include <SparkFun_ADXL345.h>         
+            
+int cx;
+int cy;
+int cz;
+ADXL345 adxl = ADXL345();// I2C selected
+
+
 #include <Wire.h> // for I2C communication
 #include <RH_RF95.h>
  
-#define ALTMODE; //comment out for barometer mode; default is altitude mode
+#define ALTMODE //comment out for barometer mode, default is altitude mode
 #define ALTBASIS 18 //start altitude to calculate mean sea level pressure in meters
 //this altitude must be known (or provided by GPS etc.)
 
@@ -42,12 +50,23 @@ void setup(){
   // Radio initialization
   pinMode(RFM95_RST, OUTPUT);
   digitalWrite(RFM95_RST, HIGH);
-
+Serial.println("here0");
   // manual reset
   digitalWrite(RFM95_RST, LOW);
   delay(10);
   digitalWrite(RFM95_RST, HIGH);
   delay(10);
+  Serial.println("here1");
+  //accel setup               
+  adxl.powerOn();                     // Power on
+  adxl.setRangeSetting(8);          //2,4,8 or 16
+                                      // Higher Values = Wider Measurement Range
+                                       // Lower Values = Greater Sensitivity
+  adxl.setSpiBit(0);                  //set to 0 for some reason
+  //accel calibration, DO NOT MOVE module during startup, or calibration values will be inaccurate
+  adxl.readAccel(&cx, &cy, &cz);
+  Serial.println("here2");
+  
 
   while (!rf95.init()) {
   Serial.println("LoRa radio init failed");
@@ -128,6 +147,9 @@ void loop(){
 char altbaro_send[13] = "baro:       ";
 char alt1_send[13] = "alt1:       ";
 char alt2_send[13] = "alt2:       ";
+char x_accel_read[13] = "            ";
+char y_accel_read[13] = "            ";
+char z_accel_read[13] = "            ";
 //char temp_send[13] = "temp:       ";
  
 void sensor_read_data(){
@@ -166,12 +188,53 @@ void sensor_read_data(){
   Serial.print(",");
   Serial.print(altsmooth); // exponentially smoothed
   Serial.print(",");
+  
+//accel stuff
+  int x,y,z;   
+  adxl.readAccel(&x, &y, &z);
+  //print calibrated values
+  //Serial.print(x-cx);
+  //Serial.print(", ");
+  //Serial.print(y-cy);
+  //Serial.print(", ");
+  //Serial.println(z-cz);
+  
+  //convert integer readings to string
+  itoa(x-cx, x_accel_read, 10);
+  itoa(y-cy, y_accel_read, 10);
+  itoa(z-cz, z_accel_read, 10);
 
+  //text
+  char x_accel_send[20] = "X_accel:";
+  char y_accel_send[20] = "Y_accel:";
+  char z_accel_send[20] = "Z_accel:";
+  
+  //combine text with sensor values
+  strcat(x_accel_send, x_accel_read);
+  strcat(y_accel_send, y_accel_read);
+  strcat(z_accel_send, z_accel_read);
+
+  //final string to be sent. Receiver should display same values
+  Serial.println();
+  Serial.print("accelerometer reading:");
+  Serial.print(x_accel_send);
+  Serial.println();
+  Serial.print(y_accel_send);
+  Serial.println();
+  Serial.print(z_accel_send);
+  Serial.println();
+  rf95.send((uint8_t *)x_accel_send,sizeof(x_accel_send));
+  rf95.send((uint8_t *)y_accel_send,sizeof(y_accel_send));
+  rf95.send((uint8_t *)z_accel_send,sizeof(z_accel_send));
+//end accel stuff
+  
   dtostrf(altbaro, 6, 2, altbaro_send + 5);
   rf95.send((uint8_t *)altbaro_send, 13);
 
   dtostrf(altsmooth, 6, 2, alt1_send + 5);
   rf95.send((uint8_t *)alt1_send, 10);
+
+
 
   altsmooth=(altsmooth*3+altbaro)/4; //exponential smoothing to get a smooth time series
   
