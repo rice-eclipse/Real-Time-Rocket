@@ -1,5 +1,6 @@
 #include <Wire.h> // for I2C communication
 #include <RH_RF95.h>
+#include <gp20u7.h>
 
 #define RFM95_CS 4
 #define RFM95_RST 5
@@ -17,10 +18,22 @@ const int SENSORADDRESS = 0x60; // address specific to the MPL3115A1, value foun
 byte IICdata[5] = {0,0,0,0,0}; //buffer for sensor data
 int16_t packetnum = 0;
 float altsmooth = 0; //for exponential smoothing
+Geolocation currentLocation;
+GP20U7 gps = GP20U7(Serial); // initialize the library with the serial port to which the device is connected
+int ADXL345 = 0x53; // The ADXL345 sensor I2C address
+float X_out, Y_out, Z_out;  // Accel Outputs
 
 void setup(){
   Wire.begin(); // join i2c bus
   Serial.begin(9600); // start serial for output
+  
+  //GPS
+  Serial.println("GPS Setup");
+  
+  //currentLocation.lattitude = 0;  //Set null state for location
+  //currentLocation.longitude = 0;  //Set null state for location
+  gps.begin();
+  
   Serial.println("Setup");
   if(IIC_Read(0x0C) == 196); //checks whether sensor is readable (who_am_i bit)
   else Serial.println("i2c bad");
@@ -34,16 +47,14 @@ void setup(){
   delay(10);
   digitalWrite(RFM95_RST, HIGH);
   delay(10);
-  Serial.println("here1");
-  
-  //accel setup               
-  //adxl.powerOn();                     // Power on
-  //adxl.setRangeSetting(8);            //2,4,8 or 16 - Higher Values = Wider Measurement Range - Lower Values = Greater Sensitivity
-  //adxl.setSpiBit(0);                  //set to 0 for some reason
-  
-  //accel calibration, DO NOT MOVE module during startup, or calibration values will be inaccurate
-  //adxl.readAccel(&cx, &cy, &cz);
-  Serial.println("here2");
+
+  //Accel
+  Wire.beginTransmission(ADXL345); // Start communicating with the device 
+  Wire.write(0x2D); // Access/ talk to POWER_CTL Register - 0x2D
+  // Enable measurement
+  Wire.write(8); // (8dec -> 0000 1000 binary) Bit D3 High for measuring enable 
+  Wire.endTransmission();
+  delay(10);
   
   while (!rf95.init()) {
   Serial.println("LoRa radio init failed");
@@ -77,6 +88,7 @@ void setup(){
     buff[i] = Baro_Read(); //read pressure
     Serial.println(buff[i]);
   }
+  
   float currpress=(buff[0]+buff[1]+buff[2]+buff[3])/4; //average over two seconds
  
   Serial.print("Current pressure: "); Serial.print(currpress); Serial.println(" Pa");
@@ -103,45 +115,82 @@ void setup(){
   altsmooth=Alt_Read();
   Serial.print("Altitude now: "); Serial.println(altsmooth);
   Serial.println("Done.");
-}
+} 
+
+String packet = "";
+char packet_chars[50];
 
 void loop() {
   char timestamp[13] = "Time        ";
   itoa(millis()/1000, timestamp+5, 10);
   char number[10] = "#        ";
   itoa(packetnum++, number+1, 10);
+  
+  Serial.print(number);
+  Serial.print(" - ");
+  Serial.println(timestamp);
+  packet += number;
+  packet += timestamp;
+  //packet = strcat(packet, number);
+  //packet = strcat(packet, millis()/1000); 
+  packet.toCharArray(packet_chars, sizeof(packet_chars));
 
-  Serial.println("altimeter reading:");
+  
+  //rf95.send((uint8_t *)timestamp, 13);
+  //rf95.send((uint8_t *)number, 10);
+  
+  Serial.print("Alt: ");
   float pressure = read_pressure();
-  Serial.print(pressure);
-  Serial.println(" pascals");
+  Serial.print(pressure); //Pascals
+  Serial.print(",");
+  
+  rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
   
   float height = read_height();
-  Serial.print(height);
-  Serial.println(" meters");
+  Serial.print(height); //Meters
+  Serial.print(",");
   
   float temp = read_tempature();
-  Serial.print(temp);
-  Serial.println("*C");
-  
-  Serial.println(timestamp);
-  Serial.println(number);
-  rf95.send((uint8_t *)timestamp, 13);
-  rf95.send((uint8_t *)number, 10);
+  Serial.println(temp); //Degrees C
+
+  read_gps();
+  Serial.print("GPS: ");
+  Serial.print(currentLocation.latitude,5);
+  Serial.print(",");
+  Serial.println(currentLocation.longitude,5);
+
+  read_Accel();
+  Serial.print("Accel: ");
+  Serial.print(X_out);
+  Serial.print(",");
+  Serial.print(Y_out);
+  Serial.print(",");
+  Serial.println(Z_out);
 }
-
-char altbaro_send[13] = "baro:       ";
-char alt1_send[13] = "alt1:       ";
-char alt2_send[13] = "alt2:       ";
-char x_accel_read[13] = "            ";
-char y_accel_read[13] = "            ";
-char z_accel_read[13] = "            ";
-//char temp_send[13] = "temp:       ";
-
 
 /*
  * INTERNAL FUNCTIONS
  */
+
+void read_Accel(){
+  Wire.beginTransmission(ADXL345);
+  Wire.write(0x32); // Start with register 0x32 (ACCEL_XOUT_H)
+  Wire.endTransmission(false);
+  Wire.requestFrom(ADXL345, 6, true); // Read 6 registers total, each axis value is stored in 2 registers
+  X_out = ( Wire.read()| Wire.read() << 8); // X-axis value
+  X_out = X_out/32; //For a range of +-2g, we need to divide the raw values by 256, according to the datasheet
+  Y_out = ( Wire.read()| Wire.read() << 8); // Y-axis value
+  Y_out = Y_out/32;
+  Z_out = ( Wire.read()| Wire.read() << 8); // Z-axis value
+  Z_out = Z_out/32;
+}
+ 
+void read_gps() {
+  if(gps.read()){
+    currentLocation = gps.getGeolocation();
+  }
+}
+
 
 float read_pressure() {
   //
