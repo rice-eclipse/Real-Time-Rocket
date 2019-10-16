@@ -1,2 +1,2 @@
 # Real-Time-Rocket
-Real-time Data Transmission for Certification Rockets
+Real-time Flight Computer for Rice Eclipse Rockets
