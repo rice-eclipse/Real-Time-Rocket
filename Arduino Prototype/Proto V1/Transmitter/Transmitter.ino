@@ -23,6 +23,11 @@ GP20U7 gps = GP20U7(Serial); // initialize the library with the serial port to w
 int ADXL345 = 0x53; // The ADXL345 sensor I2C address
 float X_out, Y_out, Z_out;  // Accel Outputs
 
+float height_cal = 0;
+float a_x_cal= 0;
+float a_y_cal= 0;
+float a_z_cal= 0;
+
 void setup(){
   Wire.begin(); // join i2c bus
   Serial.begin(9600); // start serial for output
@@ -94,7 +99,7 @@ void setup(){
   Serial.print("Current pressure: "); Serial.print(currpress); Serial.println(" Pa");
   //calculate pressure at mean sea level based on a given altitude
   float seapress = currpress/pow(1-ALTBASIS*0.0000225577,5.255877);
-  Serial.print("Sea level pressure: "); Serial.print(seapress); Serial.println(" Pa");
+  Serial.print("Sea level pressure: "); Serial.print(seapress); Serial.println(" Pa");  
   Serial.print("Temperature: ");
   Serial.print(IICdata[3]+(float)(IICdata[4]>>4)/16); Serial.println(" C");
  
@@ -111,61 +116,106 @@ void setup(){
   IIC_Write(0x26, 0b10111011); //bit 2 is one shot mode //0xB9 = 0b10111001
   IIC_Write(0x26, 0b10111001); //must clear oversampling (OST) bit, otherwise update will be once per second
   delay(550); //wait for measurement
-  IIC_ReadData(); //
+  IIC_ReadData();
   altsmooth=Alt_Read();
   Serial.print("Altitude now: "); Serial.println(altsmooth);
   Serial.println("Done.");
+
+  //Calibration
+  String message = "Calibrating Sensors...";
+  char message_chars[50];
+  message.toCharArray(message_chars, sizeof(message_chars));
+  rf95.send((uint8_t *)message_chars, sizeof(message_chars));
+  
+  for(int i=0; i<5; i++){
+    height_cal += read_height();
+    read_Accel();
+    a_x_cal += X_out;
+    a_y_cal += Y_out;
+    a_z_cal += Z_out;
+  }
+
+  height_cal /= 5;
+  a_x_cal /= 5;
+  a_y_cal /= 5;
+  a_z_cal /= 5;
+
 } 
 
 String packet = "";
 char packet_chars[50];
 
 void loop() {
-  char timestamp[13] = "Time        ";
-  itoa(millis()/1000, timestamp+5, 10);
-  char number[10] = "#        ";
-  itoa(packetnum++, number+1, 10);
+  packet = "";
+  //char timestamp[13] = "Time        ";
+  //itoa(millis()/1000, timestamp+5, 10);
+  //char number[10] = "#        ";
+  //itoa(packetnum++, number+1, 10);
   
-  Serial.print(number);
-  Serial.print(" - ");
-  Serial.println(timestamp);
-  packet += number;
-  packet += timestamp;
-  //packet = strcat(packet, number);
-  //packet = strcat(packet, millis()/1000); 
-  packet.toCharArray(packet_chars, sizeof(packet_chars));
+  //Serial.print(number);
+  //Serial.print(" - ");
+  //Serial.println(timestamp);
+  packet += "(";
+  packet += packetnum;
+  packet += ".alt";
+  packet += ",";
+  packet += millis()/1000;
+  packet += "):";
 
-  
-  //rf95.send((uint8_t *)timestamp, 13);
-  //rf95.send((uint8_t *)number, 10);
-  
-  Serial.print("Alt: ");
-  float pressure = read_pressure();
-  Serial.print(pressure); //Pascals
-  Serial.print(",");
-  
-  rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
-  
-  float height = read_height();
-  Serial.print(height); //Meters
-  Serial.print(",");
-  
+  //Altimeter Data
+  //float pressure = read_pressure();
+  //packet += pressure;
+  //packet += ",";
+  float height = read_height() ;
+  packet += (height - height_cal);
+  packet += ",";
   float temp = read_tempature();
-  Serial.println(temp); //Degrees C
+  packet += temp;
 
+  Serial.println(packet);
+
+  packet.toCharArray(packet_chars, sizeof(packet_chars));
+  rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
+
+  packet = "";
+  packet += "(";
+  packet += packetnum;
+  packet += ".gps";
+  packet += ",";
+  packet += millis()/1000;
+  packet += "):";
+  
   read_gps();
-  Serial.print("GPS: ");
-  Serial.print(currentLocation.latitude,5);
-  Serial.print(",");
-  Serial.println(currentLocation.longitude,5);
+  packet += currentLocation.latitude;
+  packet += ",";
+  packet += currentLocation.longitude;
 
+  Serial.println(packet);
+  
+  packet.toCharArray(packet_chars, sizeof(packet_chars));
+  rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
+
+  packet = "";
+  packet += "(";
+  packet += packetnum;
+  packet += ".acl";
+  packet += ",";
+  packet += millis()/1000;
+  packet += "):";
+  
   read_Accel();
-  Serial.print("Accel: ");
-  Serial.print(X_out);
-  Serial.print(",");
-  Serial.print(Y_out);
-  Serial.print(",");
-  Serial.println(Z_out);
+  packet += X_out - a_x_cal;
+  packet += ",";
+  packet += Y_out - a_y_cal;
+  packet += ",";
+  packet += Z_out - a_z_cal;  
+
+  Serial.println(packet);
+  
+  packet.toCharArray(packet_chars, sizeof(packet_chars));
+  rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
+
+  packetnum++;
 }
 
 /*
