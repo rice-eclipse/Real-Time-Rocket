@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -8357,32 +8357,19 @@ part number 2062-2P from STA</description>
 <wire x1="40" y1="35" x2="0" y2="35" width="0.254" layer="94"/>
 <wire x1="0" y1="35" x2="0" y2="0" width="0.254" layer="94"/>
 <pin name="AT1" x="-5" y="33" length="middle"/>
-<pin name="GND1" x="-5" y="30" length="middle"/>
-<pin name="GND2" x="-5" y="27" length="middle"/>
+<pin name="GND" x="-5" y="30" length="middle"/>
 <pin name="ANT_OUT" x="-5" y="24" length="middle"/>
-<pin name="GND3" x="-5" y="21" length="middle"/>
 <pin name="ANT_IN" x="-5" y="18" length="middle"/>
-<pin name="GND4" x="-5" y="15" length="middle"/>
 <pin name="VCC" x="-5" y="12" length="middle"/>
-<pin name="GND5" x="-5" y="9" length="middle"/>
 <pin name="HW_R" x="-5" y="6" length="middle"/>
 <pin name="TM" x="-5" y="3" length="middle"/>
 <pin name="BV" x="12" y="-5" length="middle" rot="R90"/>
 <pin name="E3" x="18" y="-5" length="middle" rot="R90"/>
 <pin name="E2" x="15" y="-5" length="middle" rot="R90"/>
-<pin name="GND6" x="21" y="-5" length="middle" rot="R90"/>
-<pin name="GND7" x="24" y="-5" length="middle" rot="R90"/>
-<pin name="GND8" x="27" y="-5" length="middle" rot="R90"/>
 <pin name="FIX" x="45" y="3" length="middle" rot="R180"/>
-<pin name="GND14" x="45" y="6" length="middle" rot="R180"/>
 <pin name="TX" x="45" y="9" length="middle" rot="R180"/>
 <pin name="RX" x="45" y="12" length="middle" rot="R180"/>
-<pin name="GND13" x="45" y="15" length="middle" rot="R180"/>
-<pin name="GND12" x="45" y="18" length="middle" rot="R180"/>
-<pin name="GND11" x="45" y="21" length="middle" rot="R180"/>
-<pin name="GND10" x="45" y="24" length="middle" rot="R180"/>
 <pin name="HW_S" x="45" y="27" length="middle" rot="R180"/>
-<pin name="GND9" x="45" y="30" length="middle" rot="R180"/>
 <pin name="AT2" x="45" y="33" length="middle" rot="R180"/>
 </symbol>
 </symbols>
@@ -11028,6 +11015,35 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GPS_M20050-1" prefix="A" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="GPS_M20050-1" x="-63.5" y="-15.24"/>
+</gates>
+<devices>
+<device name="" package="M20050-1_GPS">
+<connects>
+<connect gate="G$1" pin="ANT_IN" pad="P6"/>
+<connect gate="G$1" pin="ANT_OUT" pad="P4"/>
+<connect gate="G$1" pin="AT1" pad="P1"/>
+<connect gate="G$1" pin="AT2" pad="P28"/>
+<connect gate="G$1" pin="BV" pad="P12"/>
+<connect gate="G$1" pin="E2" pad="P13"/>
+<connect gate="G$1" pin="E3" pad="P14"/>
+<connect gate="G$1" pin="FIX" pad="P18"/>
+<connect gate="G$1" pin="GND" pad="P2 P3 P5 P7 P9 P15 P16 P17 P19 P22 P23 P24 P25 P27"/>
+<connect gate="G$1" pin="HW_R" pad="P10"/>
+<connect gate="G$1" pin="HW_S" pad="P26"/>
+<connect gate="G$1" pin="RX" pad="P21"/>
+<connect gate="G$1" pin="TM" pad="P11"/>
+<connect gate="G$1" pin="TX" pad="P20"/>
+<connect gate="G$1" pin="VCC" pad="P8"/>
 </connects>
 <technologies>
 <technology name=""/>
