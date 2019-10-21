@@ -167,10 +167,10 @@
 <library name="RTR">
 <packages>
 <package name="M20050-1_GPS">
-<wire x1="-4.75" y1="6.9" x2="4.75" y2="6.9" width="0.05" layer="20"/>
-<wire x1="4.75" y1="6.9" x2="4.75" y2="-6.9" width="0.05" layer="20"/>
-<wire x1="4.75" y1="-6.9" x2="-4.75" y2="-6.9" width="0.05" layer="20"/>
-<wire x1="-4.75" y1="-6.9" x2="-4.75" y2="6.9" width="0.05" layer="20"/>
+<wire x1="-4.75" y1="6.9" x2="4.75" y2="6.9" width="0.05" layer="21"/>
+<wire x1="4.75" y1="6.9" x2="4.75" y2="-6.9" width="0.05" layer="21"/>
+<wire x1="4.75" y1="-6.9" x2="-4.75" y2="-6.9" width="0.05" layer="21"/>
+<wire x1="-4.75" y1="-6.9" x2="-4.75" y2="6.9" width="0.05" layer="21"/>
 <smd name="P1" x="-4.32" y="6.3" dx="1.94" dy="0.7" layer="1"/>
 <smd name="P2" x="-4.32" y="5.2" dx="1.94" dy="0.7" layer="1"/>
 <smd name="P3" x="-4.32" y="4.1" dx="1.94" dy="0.7" layer="1"/>
@@ -533,14 +533,14 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="A1" library="RTR" package="M20050-1_GPS" value="" x="12.7" y="7.62" smashed="yes" rot="R180"/>
-<element name="C1" library="RTR" package="C1206" value="22 pF" x="3.175" y="19.685" smashed="yes">
-<attribute name="NAME" x="1.905" y="20.955" size="1.27" layer="25"/>
-<attribute name="VALUE" x="1.905" y="17.145" size="1.27" layer="27"/>
+<element name="A1" library="RTR" package="M20050-1_GPS" value="" x="12.7" y="8.255" smashed="yes" rot="R180"/>
+<element name="C1" library="RTR" package="C1206" value="22 pF" x="3.81" y="22.225" smashed="yes">
+<attribute name="NAME" x="2.54" y="23.495" size="1.27" layer="25"/>
+<attribute name="VALUE" x="2.54" y="19.685" size="1.27" layer="27"/>
 </element>
-<element name="C2" library="RTR" package="C1206" value="22 pF" x="3.175" y="15.875" smashed="yes">
-<attribute name="NAME" x="1.905" y="17.145" size="1.27" layer="25"/>
-<attribute name="VALUE" x="1.905" y="13.335" size="1.27" layer="27"/>
+<element name="C2" library="RTR" package="C1206" value="22 pF" x="3.81" y="19.05" smashed="yes">
+<attribute name="NAME" x="2.54" y="20.32" size="1.27" layer="25"/>
+<attribute name="VALUE" x="2.54" y="16.51" size="1.27" layer="27"/>
 </element>
 <element name="C3" library="RTR" package="C1206" value="22 pF" x="22.86" y="3.81" smashed="yes" rot="R90">
 <attribute name="NAME" x="21.59" y="2.54" size="1.27" layer="25" rot="R90"/>
@@ -573,14 +573,34 @@ design rules under a new name.</description>
 <contactref element="A1" pad="P25"/>
 <contactref element="A1" pad="P27"/>
 <contactref element="A1" pad="P28"/>
+<wire x1="12.1" y1="14.725" x2="16.51" y2="27.305" width="0" layer="19" extent="1-1"/>
+<wire x1="11" y1="14.725" x2="12.1" y2="14.725" width="0" layer="19" extent="1-1"/>
+<wire x1="9.9" y1="14.725" x2="11" y2="14.725" width="0" layer="19" extent="1-1"/>
+<wire x1="8.38" y1="11.855" x2="9.9" y2="14.725" width="0" layer="19" extent="1-1"/>
+<wire x1="8.38" y1="8.555" x2="8.38" y2="11.855" width="0" layer="19" extent="1-1"/>
+<wire x1="8.38" y1="7.455" x2="8.38" y2="8.555" width="0" layer="19" extent="1-1"/>
+<wire x1="8.38" y1="6.355" x2="8.38" y2="7.455" width="0" layer="19" extent="1-1"/>
+<wire x1="8.38" y1="5.255" x2="8.38" y2="6.355" width="0" layer="19" extent="1-1"/>
+<wire x1="8.38" y1="3.055" x2="8.38" y2="5.255" width="0" layer="19" extent="1-1"/>
+<wire x1="8.38" y1="1.955" x2="8.38" y2="3.055" width="0" layer="19" extent="1-1"/>
+<wire x1="5.21" y1="19.05" x2="9.9" y2="14.725" width="0" layer="19" extent="1-1"/>
+<wire x1="5.21" y1="22.225" x2="5.21" y2="19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="17.02" y1="10.755" x2="12.1" y2="14.725" width="0" layer="19" extent="1-1"/>
+<wire x1="17.02" y1="8.555" x2="17.02" y2="10.755" width="0" layer="19" extent="1-1"/>
+<wire x1="17.02" y1="6.355" x2="17.02" y2="8.555" width="0" layer="19" extent="1-1"/>
+<wire x1="17.02" y1="4.155" x2="17.02" y2="6.355" width="0" layer="19" extent="1-1"/>
+<wire x1="17.02" y1="3.055" x2="17.02" y2="4.155" width="0" layer="19" extent="1-1"/>
+<wire x1="17.02" y1="1.955" x2="17.02" y2="3.055" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="J1" pad="3"/>
 <contactref element="A1" pad="P20"/>
+<wire x1="8.38" y1="10.755" x2="6.35" y2="27.305" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="J1" pad="5"/>
 <contactref element="A1" pad="P21"/>
+<wire x1="8.38" y1="9.655" x2="8.89" y2="27.305" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="J1" pad="1"/>
@@ -588,30 +608,40 @@ design rules under a new name.</description>
 <contactref element="C2" pad="1"/>
 <contactref element="A1" pad="P8"/>
 <contactref element="A1" pad="P12"/>
+<wire x1="2.41" y1="22.225" x2="3.81" y2="27.305" width="0" layer="19" extent="1-1"/>
+<wire x1="2.41" y1="19.05" x2="2.41" y2="22.225" width="0" layer="19" extent="1-1"/>
+<wire x1="15.4" y1="14.725" x2="2.41" y2="19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="17.02" y1="9.655" x2="15.4" y2="14.725" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
 <contactref element="C3" pad="1"/>
 <contactref element="A1" pad="P4"/>
+<wire x1="17.02" y1="5.255" x2="22.86" y2="2.41" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="C3" pad="2"/>
 <contactref element="A1" pad="P6"/>
+<wire x1="17.02" y1="7.455" x2="22.86" y2="5.21" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="J1" pad="12"/>
 <contactref element="A1" pad="P26"/>
+<wire x1="8.38" y1="4.155" x2="16.51" y2="29.845" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <contactref element="J1" pad="10"/>
 <contactref element="A1" pad="P18"/>
+<wire x1="8.38" y1="12.955" x2="13.97" y2="29.845" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
 <contactref element="J1" pad="8"/>
 <contactref element="A1" pad="P11"/>
+<wire x1="17.02" y1="12.955" x2="11.43" y2="29.845" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
 <contactref element="J1" pad="6"/>
 <contactref element="A1" pad="P10"/>
+<wire x1="17.02" y1="11.855" x2="8.89" y2="29.845" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
