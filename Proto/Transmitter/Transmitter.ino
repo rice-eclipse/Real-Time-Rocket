@@ -1,16 +1,17 @@
 #include <Wire.h> // for I2C communication
-#include <RH_RF95.h>
-#include <gp20u7.h>
+#include <RH_RF95.h> // For Transciever
+#include <gp20u7.h> // For GPS
+#include <MPU9250_asukiaaa.h> //For IMU
 
 #define RFM95_CS 4
 #define RFM95_RST 5
 #define RFM95_INT 3
 
-// Change to 434.0 or other frequency, must match RX's freq!
-#define RF95_FREQ 915.0
+#define RF95_FREQ 915.0 // Change to 434.0 or other frequency, must match RX's freq!
 
-// Singleton instance of the radio driver
-RH_RF95 rf95(RFM95_CS, RFM95_INT);
+RH_RF95 rf95(RFM95_CS, RFM95_INT); // Singleton instance of the radio driver
+MPU9250_asukiaaa IMU; // Instance of IMU
+Geolocation currentLocation; // Instance of GPS Location
 
 #define ALTBASIS 18 //start altitude to calculate mean sea level pressure in meters
 
@@ -18,15 +19,20 @@ const int SENSORADDRESS = 0x60; // address specific to the MPL3115A1, value foun
 byte IICdata[5] = {0,0,0,0,0}; //buffer for sensor data
 int16_t packetnum = 0;
 float altsmooth = 0; //for exponential smoothing
-Geolocation currentLocation;
-GP20U7 gps = GP20U7(Serial); // initialize the library with the serial port to which the device is connected
-int ADXL345 = 0x53; // The ADXL345 sensor I2C address
-float X_out, Y_out, Z_out;  // Accel Outputs
 
-float height_cal = 0;
-float a_x_cal= 0;
-float a_y_cal= 0;
-float a_z_cal= 0;
+float aX, aY, aZ, aSqrt, gX, gY, gZ, mDirection, mX, mY, mZ; // IMU Variables
+
+GP20U7 gps = GP20U7(Serial); // initialize the library with the serial port to which the device is connected
+
+//OLD ACCEL
+//int ADXL345 = 0x53; // The ADXL345 sensor I2C address
+//float X_out, Y_out, Z_out;  // Accel Outputs
+
+//OLD calibration
+//float height_cal = 0;
+//float a_x_cal= 0;
+//float a_y_cal= 0;
+//float a_z_cal= 0;
 
 void setup(){
   Wire.begin(); // join i2c bus
@@ -80,6 +86,10 @@ void setup(){
   // If you are using RFM95/96/97/98 modules which uses the PA_BOOST transmitter pin, then 
   // you can set transmitter powers from 5 to 23 dBm:
   rf95.setTxPower(23, false);
+
+  IMU.beginAccel();
+  IMU.beginGyro();
+  IMU.beginMag();
  
   IIC_Write(0x2D,0); //write altitude offset=0 (because calculation below is based on offset=0)
   //calculate sea level pressure by averaging a few readings
@@ -166,11 +176,11 @@ void loop() {
   //float pressure = read_pressure();
   //packet += pressure;
   //packet += ",";
-  float height = read_height() ;
+  float height = read_height();
   packet += (height - height_cal);
   packet += ",";
-  float temp = read_tempature();
-  packet += temp;
+  //float temp = read_temperature();
+  //packet += temp;
 
   Serial.println(packet);
 
@@ -198,12 +208,14 @@ void loop() {
   packet = "";
   packet += "(";
   packet += packetnum;
-  packet += ".acl";
+  packet += ".imu";
   packet += ",";
   packet += millis()/1000;
   packet += "):";
   
-  read_Accel();
+  read_accel();
+  read_gyro();
+  read_magno();
   packet += X_out - a_x_cal;
   packet += ",";
   packet += Y_out - a_y_cal;
@@ -222,7 +234,36 @@ void loop() {
  * INTERNAL FUNCTIONS
  */
 
-void read_Accel(){
+//IMU - Accelerometer
+void read_accel(){
+  if (IMU.accelUpdate() == 0) {
+    aX = IMU.accelX();
+    aY = IMU.accelY();
+    aZ = IMU.accelZ();
+    aSqrt = IMU.accelSqrt();
+  } 
+}
+
+//IMU - Gyroscope
+void read_gyro(){
+  if (IMU.gyroUpdate() == 0) {
+    gX = IMU.gyroX();
+    gY = IMU.gyroY();
+    gZ = IMU.gyroZ();
+  } 
+}
+
+//IMU - Magnetometerds
+void read_magno(){
+  if (IMU.magUpdate() == 0) {
+    mX = IMU.magX();
+    mY = IMU.magY();
+    mZ = IMU.magZ();
+    mDirection = IMU.magHorizDirection();
+  } 
+}
+
+/* void read_Accel(){
   Wire.beginTransmission(ADXL345);
   Wire.write(0x32); // Start with register 0x32 (ACCEL_XOUT_H)
   Wire.endTransmission(false);
@@ -233,15 +274,16 @@ void read_Accel(){
   Y_out = Y_out/32;
   Z_out = ( Wire.read()| Wire.read() << 8); // Z-axis value
   Z_out = Z_out/32;
-}
- 
+} */
+
+//GPS 
 void read_gps() {
   if(gps.read()){
     currentLocation = gps.getGeolocation();
   }
 }
 
-
+//Altimeter - Pressure
 float read_pressure() {
   //
   float pres;
@@ -253,6 +295,7 @@ float read_pressure() {
   return pres;
 }
 
+//Altimeter - Height
 float read_height() {
   //
   float alt;
@@ -264,7 +307,8 @@ float read_height() {
   return alt;
 }
 
-float read_tempature() {
+//Altimeter - Temperature
+float read_temperature() {
   //
   int m_temp;
   float l_temp;
@@ -274,7 +318,8 @@ float read_tempature() {
   temp = (float)(m_temp + l_temp);
   return temp;
 }
- 
+
+//Altimeter - Internal Barometer read 
 float Baro_Read(){
   //this function takes values from the read buffer and converts them to pressure units
   unsigned long m_altitude = IICdata[0];
@@ -282,7 +327,8 @@ float Baro_Read(){
   float l_altitude = (float)(IICdata[2]>>4)/4; //dividing by 4, since two lowest bits are fractional value
   return((float)(m_altitude<<10 | c_altitude<<2)+l_altitude); //shifting 2 to the left to make room for LSB
 }
- 
+
+//Altimeter - Internal Altimeter read 
 float Alt_Read(){
   //Reads altitude data (if CTRL_REG1 is set to altitude mode)
   int m_altitude = IICdata[0];
@@ -290,7 +336,10 @@ float Alt_Read(){
   float l_altitude = (float)(IICdata[2]>>4)/16;
   return((float)((m_altitude << 8)|c_altitude) + l_altitude);
 }
- 
+
+/*
+* I2C Internal Functions
+*/ 
 byte IIC_Read(byte regAddr){
   // This function reads one byte over I2C
   Wire.beginTransmission(SENSORADDRESS);
