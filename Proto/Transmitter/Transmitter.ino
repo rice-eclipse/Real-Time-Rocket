@@ -19,20 +19,17 @@ const int SENSORADDRESS = 0x60; // address specific to the MPL3115A1, value foun
 byte IICdata[5] = {0,0,0,0,0}; //buffer for sensor data
 int16_t packetnum = 0;
 float altsmooth = 0; //for exponential smoothing
+float height;
 
 float aX, aY, aZ, aSqrt, gX, gY, gZ, mDirection, mX, mY, mZ; // IMU Variables
 
 GP20U7 gps = GP20U7(Serial); // initialize the library with the serial port to which the device is connected
 
-//OLD ACCEL
-//int ADXL345 = 0x53; // The ADXL345 sensor I2C address
-//float X_out, Y_out, Z_out;  // Accel Outputs
-
 //OLD calibration
-//float height_cal = 0;
-//float a_x_cal= 0;
-//float a_y_cal= 0;
-//float a_z_cal= 0;
+float height_cal = 0;
+float a_x_cal= 0;
+float a_y_cal= 0;
+float a_z_cal= 0;
 
 void setup(){
   Wire.begin(); // join i2c bus
@@ -57,14 +54,6 @@ void setup(){
   digitalWrite(RFM95_RST, LOW);
   delay(10);
   digitalWrite(RFM95_RST, HIGH);
-  delay(10);
-
-  //Accel
-  Wire.beginTransmission(ADXL345); // Start communicating with the device 
-  Wire.write(0x2D); // Access/ talk to POWER_CTL Register - 0x2D
-  // Enable measurement
-  Wire.write(8); // (8dec -> 0000 1000 binary) Bit D3 High for measuring enable 
-  Wire.endTransmission();
   delay(10);
   
   while (!rf95.init()) {
@@ -138,11 +127,11 @@ void setup(){
   rf95.send((uint8_t *)message_chars, sizeof(message_chars));
   
   for(int i=0; i<5; i++){
+    read_accel();
     height_cal += read_height();
-    read_Accel();
-    a_x_cal += X_out;
-    a_y_cal += Y_out;
-    a_z_cal += Z_out;
+    a_x_cal += aX;
+    a_y_cal += aY;
+    a_z_cal += aZ;
   }
 
   height_cal /= 5;
@@ -150,83 +139,137 @@ void setup(){
   a_y_cal /= 5;
   a_z_cal /= 5;
 
+  prep_height();
+
 } 
 
 String packet = "";
-char packet_chars[50];
+char packet_chars[30];
 
 void loop() {
-  packet = "";
-  //char timestamp[13] = "Time        ";
-  //itoa(millis()/1000, timestamp+5, 10);
-  //char number[10] = "#        ";
-  //itoa(packetnum++, number+1, 10);
+
+  /*
+   * Collect and send Altimeter Data
+   */
   
-  //Serial.print(number);
-  //Serial.print(" - ");
-  //Serial.println(timestamp);
+  packet = "";
   packet += "(";
+  packet += "alt.";
   packet += packetnum;
-  packet += ".alt";
   packet += ",";
   packet += millis()/1000;
-  packet += "):";
+  packet += "){";
 
-  //Altimeter Data
-  //float pressure = read_pressure();
-  //packet += pressure;
-  //packet += ",";
-  float height = read_height();
+  if(packetnum % 5 == 0 && packetnum != 0){
+    height = read_height();
+    prep_height();
+  }
   packet += (height - height_cal);
-  packet += ",";
-  //float temp = read_temperature();
-  //packet += temp;
+  packet += "}";
 
   Serial.println(packet);
 
   packet.toCharArray(packet_chars, sizeof(packet_chars));
   rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
 
+  
+  /*
+   * Collect and send GPS Data
+  
   packet = "";
   packet += "(";
+  packet += "gps.";
   packet += packetnum;
-  packet += ".gps";
   packet += ",";
   packet += millis()/1000;
-  packet += "):";
+  packet += "){";
   
   read_gps();
   packet += currentLocation.latitude;
   packet += ",";
   packet += currentLocation.longitude;
+  packet += "}";
 
   Serial.println(packet);
   
   packet.toCharArray(packet_chars, sizeof(packet_chars));
   rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
+  */
 
+  /*
+   * Collect and send Accelerometer data
+   */
   packet = "";
   packet += "(";
+  packet += "acl.";
   packet += packetnum;
-  packet += ".imu";
   packet += ",";
   packet += millis()/1000;
-  packet += "):";
+  packet += "){";
   
   read_accel();
-  read_gyro();
-  read_magno();
-  packet += X_out - a_x_cal;
+  packet += aX - a_x_cal;
   packet += ",";
-  packet += Y_out - a_y_cal;
+  packet += aY - a_y_cal;
   packet += ",";
-  packet += Z_out - a_z_cal;  
+  packet += aZ - a_z_cal;
+  packet += "}";
 
   Serial.println(packet);
   
   packet.toCharArray(packet_chars, sizeof(packet_chars));
   rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
 
+  /*
+   * Collect and send Gyro data
+   */
+  packet = "";
+  packet += "(";
+  packet += "gyr.";
+  packet += packetnum;
+  packet += ",";
+  packet += millis()/1000;
+  packet += "){";
+  
+  read_gyro();
+  packet += gX;
+  packet += ",";
+  packet += gY;
+  packet += ",";
+  packet += gZ;
+  packet += "}";
+
+  Serial.println(packet);
+  
+  packet.toCharArray(packet_chars, sizeof(packet_chars));
+  rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
+
+  /*
+   * Collect and send Magnetometer data
+   */
+  packet = "";
+  packet += "(";
+  packet += "mag.";
+  packet += packetnum;
+  packet += ",";
+  packet += millis()/1000;
+  packet += "){";
+  
+  read_magno();
+  packet += mX;
+  packet += ",";
+  packet += mY;
+  packet += ",";
+  packet += mZ;
+  packet += ",";
+  packet += mDirection;
+  packet += "}";
+
+  Serial.println(packet);
+  
+  packet.toCharArray(packet_chars, sizeof(packet_chars));
+  rf95.send((uint8_t *)packet_chars, sizeof(packet_chars));
+  
   packetnum++;
 }
 
@@ -295,13 +338,18 @@ float read_pressure() {
   return pres;
 }
 
+//Altimeter - Prepare to read Height
+void prep_height() {
+  //
+  IIC_Write(0x26, 0b10111011); //bit 2 is one shot mode //0xB9 = 0b10111001
+  IIC_Write(0x26, 0b10111001); //must clear oversampling (OST) bit, otherwise update will be once per second
+}
+
 //Altimeter - Height
 float read_height() {
   //
   float alt;
-  IIC_Write(0x26, 0b10111011); //bit 2 is one shot mode //0xB9 = 0b10111001
-  IIC_Write(0x26, 0b10111001); //must clear oversampling (OST) bit, otherwise update will be once per second
-  delay(550); //wait for sensor to read pressure (512ms in datasheet)
+  //delay(550); //wait for sensor to read pressure (512ms in datasheet)
   IIC_ReadData(); //read sensor data
   alt = Alt_Read();
   return alt;
