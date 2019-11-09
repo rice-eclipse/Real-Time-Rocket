@@ -73,7 +73,6 @@ void loop()
     {
       digitalWrite(LED, HIGH);
       //RH_RF95::printBuffer("Received: ", buf, len);
-      Serial.print("Got: ");
       Serial.print((char*)buf);
       Serial.print("-- RSSI: ");
       Serial.print(rf95.lastRssi(), DEC);
