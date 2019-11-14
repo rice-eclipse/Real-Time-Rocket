@@ -144,7 +144,7 @@ void setup(){
 } 
 
 String packet = "";
-char packet_chars[30];
+char packet_chars[40];
 
 void loop() {
 
