@@ -144,7 +144,7 @@ void setup(){
 } 
 
 String packet = "";
-char packet_chars[40];
+char packet_chars[50];
 
 void loop() {
 
@@ -415,4 +415,3 @@ void IIC_Write(byte regAddr, byte value){
   Wire.write(value);
   Wire.endTransmission(true);
 }
-
