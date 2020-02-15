@@ -1,8 +1,33 @@
 #include <Wire.h>
 
 #define ALT_ADDR 0x77
+
+#define RESET_ALT 0x1E
+
 #define CONVERT_D1_256 0x40
 #define CONVERT_D2_256 0x50 
+#define CONVERT_D1_4096 0x48
+#define CONVERT_D2_4096 0x58
+
+
+#define PROM_C0 0xA0
+#define PROM_C1 0xA2
+#define PROM_C2 0xA4
+#define PROM_C3 0xA6
+#define PROM_C4 0xA8
+#define PROM_C5 0xAA
+#define PROM_C6 0xAC
+
+#define T_REF 20
+
+
+
+int C1;
+int C2; 
+int C3; 
+int C4;
+int C5;
+int C6;
 
 
 void setup() {
@@ -12,25 +37,75 @@ void setup() {
 
   // reset the altimeter
   Wire.beginTransmission(ALT_ADDR);
-  Wire.write(0x1e);
+  Wire.write(ALT_ADDR);
   Wire.endTransmission();
 
   delay(500);
   Serial.println("Device reset");
+  Serial.println("Reading PROM");
+  update_prom();
 }
 
 void loop() {
-  //tell the altimeter to convert d1 (not quite sure what it does)
-  /*Serial.println("Converting to D1");
-  Wire.beginTransmission(ALT_ADDR);
-  Wire.write(CONVERT_D1_256);
-  Wire.endTransmission();*/
+  int d1 = read_data(CONVERT_D1_4096);//uncorrected pressure data
+  int d2 = read_data(CONVERT_D2_4096);//uncorrected temp data
 
-  Serial.println("Converting to D2");
+  Serial.println(d1);
+
+  float dT = d2 - (C5 * 256);
+  Serial.println(dT);
+  float temp = 2000 + ((dT * 28312) / 8388608.0);
+  Serial.print("Temperature is: ");
+  Serial.println(temp);
+
+  delay(500);
+}
+
+
+/*
+ * Read the PROM memory from the altimeter.
+ */
+void update_prom(){
+  C1 = read_prom(PROM_C1);
+  C2 = read_prom(PROM_C2);
+  C3 = read_prom(PROM_C3);
+  C4 = read_prom(PROM_C4);
+  C5 = read_prom(PROM_C5);
+  C6 = read_prom(PROM_C6);
+  Serial.print("C6 is: ");
+  Serial.println(C6);
+}
+
+int read_prom(int command){
+  
   Wire.beginTransmission(ALT_ADDR);
-  Wire.write(CONVERT_D2_256);
+  Wire.write(command);
   Wire.endTransmission();
 
+  
+  delay(100);
+  
+
+
+  Wire.requestFrom(ALT_ADDR, 2);
+
+  delay(100);
+  // wait for the bytes to become available
+  while (Wire.available() < 1);
+
+  unsigned int reading;
+  reading |= Wire.read();
+  reading << 8;
+  reading |= Wire.read();
+  return reading;
+}
+
+uint32_t read_data(int command) {
+  Wire.beginTransmission(ALT_ADDR);
+  Wire.write(command);
+  Wire.endTransmission();
+
+  
   delay(100);
   
   // tell the altimeter to perform an ADC read
@@ -38,25 +113,16 @@ void loop() {
   Wire.write(0x00);
   Wire.endTransmission();
 
-  // wait a bit for the read to go through
-  delay(100);
-
-  // returned read is 24 bits (3 bytes)
   Wire.requestFrom(ALT_ADDR, 3);
-
-  Serial.println("Waiting for 3 bytes...");
-
+  
   // wait for the bytes to become available
   while (Wire.available() < 3);
 
-  int reading;
-  reading |= Wire.read();
+  uint32_t reading;
+  reading |= (uint32_t) Wire.read();
   reading << 8;
-  reading |= Wire.read();
+  reading |= (uint32_t) Wire.read();
   reading << 8;
-  reading |= Wire.read();
-  Serial.print("Read: ");
-  Serial.println(reading);
-
-  delay(500);
+  reading |= (uint32_t) Wire.read();
+  return reading;
 }
