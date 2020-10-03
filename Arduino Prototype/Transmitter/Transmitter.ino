@@ -68,8 +68,7 @@ void setup()
 void loop()
 {
   String joy_message;
-  String test_message = "Bee Movie is a 2007 American computer-animated comedy film produced by DreamWorks Animation and distributed by Paramount Pictures.[a] Directed by Simon J. Smith and Steve Hickner, the film stars Jerry Seinfeld and Renée Zellweger, with Matthew Broderick, Patrick Warburton, John Goodman and Chris Rock in supporting roles. Its story follows Barry B. Benson (Seinfeld), a honey bee who sues the human race for exploiting bees, after learning from his florist friend Vanessa (Zellweger) that humans sell and consume honey.";
-  
+  String test_message = "Bee Movie is a 2007 American computer-animated comedy film produced by DreamWorks Animation and distributed by Paramount Pictures. Bee Movie is a 2007 American computer-animated comedy film produced by DreamWorks Animation and distributed by Paramount Pictures.";
   /*if (digitalRead(JOYSWPIN) == LOW) {
     joy_message = "LOW";
     Serial.println(joy_message);
@@ -80,13 +79,18 @@ void loop()
     Serial.println(joy_val);
   }*/
   char joy_message_chars[50];
-  char test_message_chars[200];
+  char test_message_chars[252];
+
 
   
   //joy_message.toCharArray(joy_message_chars, sizeof(joy_message_chars));
   test_message.toCharArray(test_message_chars, sizeof(test_message_chars));
   //rf95.send((uint8_t *)joy_message_chars, sizeof(joy_message_chars));
   rf95.send((uint8_t *) test_message_chars, sizeof(test_message_chars));
+
+
+  Serial.print("Just sent a message ");
+  Serial.println(test_message_chars);
 
   delay(100);
 }
