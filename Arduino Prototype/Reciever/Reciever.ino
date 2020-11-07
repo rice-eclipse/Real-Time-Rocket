@@ -8,7 +8,7 @@
  
 #include <SPI.h>
 #include <RH_RF95.h>
-#include <Servo.h>
+//#include <Servo.h>
  
 #define RFM95_CS 4
 #define RFM95_RST 5
@@ -23,7 +23,7 @@ RH_RF95 rf95(RFM95_CS, RFM95_INT);
 // Blinky on receipt
 #define LED 13
 
-Servo servo; //servo object to control servo
+//Servo servo; //servo object to control servo
 int pos = 90; //initial servo position
  
 void setup() 
@@ -63,7 +63,7 @@ void setup()
   // If you are using RFM95/96/97/98 modules which uses the PA_BOOST transmitter pin, then 
   // you can set transmitter powers from 5 to 23 dBm:
   rf95.setTxPower(23, false);
-  servo.attach(9); //attach servo to pin 9
+  //servo.attach(9); //attach servo to pin 9
   //servo.write(pos); //set servo to default center position
 }
  
@@ -95,7 +95,7 @@ void loop()
         //Set servo to center position
         //Wait for servo to move
         pos = 90;
-        servo.write(pos);
+        //servo.write(pos);
         delay(150);
       }
       else if (dataString.toFloat() > 600) {
@@ -103,7 +103,7 @@ void loop()
         //Wait for servo to move
         //Serial.println(dataString.toFloat());
         pos++;
-        servo.write(pos);
+        //servo.write(pos);
         delay(15);
       }
       else if (dataString.toFloat() < 400) {
@@ -111,7 +111,7 @@ void loop()
         //Wait for servo to move
         //Serial.println(dataString.toFloat());
         pos--;
-        servo.write(pos);
+        //servo.write(pos);
         delay(15);
       }
     }
