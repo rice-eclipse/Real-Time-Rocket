@@ -14,7 +14,7 @@
 #define RFM95_INT 3
 
 // Change to 434.0 or other frequency, must match RX's freq!
-#define RF95_FREQ 434.0
+#define RF95_FREQ 915.0
 #define JOYPIN 1
 #define JOYSWPIN 0
 
@@ -68,7 +68,7 @@ void setup()
 void loop()
 {
   String joy_message;
-  String test_message = "Bee Movie is a 2007 American computer-animated comedy film produced by DreamWorks Animation and distributed by Paramount Pictures. Bee Movie is a 2007 American computer-animated comedy film produced by DreamWorks Animation and distributed by Paramount Pictures.";
+  String test_message = "bee movie";
   /*if (digitalRead(JOYSWPIN) == LOW) {
     joy_message = "LOW";
     Serial.println(joy_message);
@@ -92,5 +92,5 @@ void loop()
   Serial.print("Just sent a message ");
   Serial.println(test_message_chars);
 
-  delay(100);
+  delay(500);
 }
