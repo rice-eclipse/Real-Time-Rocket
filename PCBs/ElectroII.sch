@@ -1040,17 +1040,6 @@ Used as a generalized connector for attaching new sensors</description>
 <wire x1="88.9" y1="30.48" x2="81.28" y2="30.48" width="0.1524" layer="91"/>
 <label x="81.28" y="30.48" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="SPI1" gate="G$1" pin="9"/>
-<wire x1="124.46" y1="30.48" x2="116.84" y2="30.48" width="0.1524" layer="91"/>
-<label x="116.84" y="30.48" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="!CE!/GPIO7"/>
-<wire x1="25.4" y1="0" x2="27.94" y2="0" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="N$9" class="0">
 <segment>
@@ -1616,6 +1605,18 @@ Used as a generalized connector for attaching new sensors</description>
 <pinref part="P+6" gate="VCC" pin="VCC"/>
 <wire x1="-27.94" y1="30.48" x2="-27.94" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="3V3@1"/>
+</segment>
+</net>
+<net name="CE1" class="0">
+<segment>
+<pinref part="SPI1" gate="G$1" pin="9"/>
+<wire x1="124.46" y1="30.48" x2="116.84" y2="30.48" width="0.1524" layer="91"/>
+<label x="116.84" y="30.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="!CE!/GPIO7"/>
+<wire x1="25.4" y1="0" x2="27.94" y2="0" width="0.1524" layer="91"/>
+<label x="27.94" y="0" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
