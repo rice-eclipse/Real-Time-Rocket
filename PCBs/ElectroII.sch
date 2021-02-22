@@ -7791,6 +7791,70 @@ General purpose 1N400x type rectifier
 </deviceset>
 </devicesets>
 </library>
+<library name="NANOSMDC110F-2">
+<packages>
+<package name="RESC3115X65N">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="-2.26" y1="1.14" x2="2.26" y2="1.14" width="0.05" layer="39"/>
+<wire x1="2.26" y1="1.14" x2="2.26" y2="-1.14" width="0.05" layer="39"/>
+<wire x1="2.26" y1="-1.14" x2="-2.26" y2="-1.14" width="0.05" layer="39"/>
+<wire x1="-2.26" y1="-1.14" x2="-2.26" y2="1.14" width="0.05" layer="39"/>
+<wire x1="-1.65" y1="0.88" x2="1.65" y2="0.88" width="0.127" layer="51"/>
+<wire x1="-1.65" y1="-0.88" x2="1.65" y2="-0.88" width="0.127" layer="51"/>
+<text x="-2.3404" y="1.33805" size="0.610921875" layer="25">&gt;NAME</text>
+<text x="-2.44711875" y="-2.23558125" size="0.611796875" layer="27">&gt;VALUE</text>
+<wire x1="1.65" y1="0.88" x2="1.65" y2="-0.88" width="0.127" layer="51"/>
+<wire x1="-1.65" y1="0.88" x2="-1.65" y2="-0.88" width="0.127" layer="51"/>
+<wire x1="-1.55" y1="1.065" x2="1.55" y2="1.065" width="0.127" layer="21"/>
+<wire x1="-1.55" y1="-1.065" x2="1.55" y2="-1.065" width="0.127" layer="21"/>
+<smd name="1" x="-1.465" y="0" dx="1.09" dy="1.77" layer="1" roundness="14"/>
+<smd name="2" x="1.54" y="0" dx="0.94" dy="1.77" layer="1" roundness="14"/>
+</package>
+</packages>
+<symbols>
+<symbol name="NANOSMDC110F-2">
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
+<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="7.62" y="0" visible="pad" length="middle" direction="pas" rot="R180"/>
+<pin name="1" x="-7.62" y="0" visible="pad" length="middle" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="NANOSMDC110F-2" prefix="R">
+<description>Fuse, SMD [Littelfuse] NANOSMDC110F-2 Fuse, SMD </description>
+<gates>
+<gate name="G$1" symbol="NANOSMDC110F-2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RESC3115X65N">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value=" Polymeric PTC Resettable Fuse 6V 1.1A Ih Surface Mount 1206 (3216 Metric), Concave "/>
+<attribute name="DIGI-KEY_PART_NUMBER" value="NANOSMDC110F-2CT-ND"/>
+<attribute name="MF" value="Littelfuse Inc."/>
+<attribute name="MP" value="NANOSMDC110F-2"/>
+<attribute name="PACKAGE" value="1206 TE Connectivity / AMP"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/NANOSMDC110F-2/?ref=eda"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7848,7 +7912,6 @@ General purpose 1N400x type rectifier
 <part name="GND16" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="U2" library="TPS61090RSAR" deviceset="TPS61090RSAR" device=""/>
 <part name="GND17" library="RTR Main Library" deviceset="GND" device=""/>
-<part name="P+9" library="RTR Main Library" deviceset="VCC" device=""/>
 <part name="GND18" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="C2" library="RTR Main Library" deviceset="C-ALL_PACKAGES" device="C1206" value="100u"/>
 <part name="GND19" library="RTR Main Library" deviceset="GND" device=""/>
@@ -7870,6 +7933,7 @@ General purpose 1N400x type rectifier
 <part name="GND24" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="CN1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="JST_2PIN" device="-SMT-RA" package3d_urn="urn:adsk.eagle:package:6240692/1"/>
 <part name="GND25" library="RTR Main Library" deviceset="GND" device=""/>
+<part name="F1" library="NANOSMDC110F-2" deviceset="NANOSMDC110F-2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7897,10 +7961,10 @@ General purpose 1N400x type rectifier
 <wire x1="60.96" y1="-129.54" x2="60.96" y2="-73.66" width="0.1524" layer="97"/>
 <wire x1="60.96" y1="-73.66" x2="-43.18" y2="-73.66" width="0.1524" layer="97"/>
 <text x="-25.4" y="-83.82" size="2.54" layer="97">TRANCEIVER</text>
-<wire x1="-261.62" y1="-7.62" x2="-73.66" y2="-7.62" width="0.1524" layer="97"/>
+<wire x1="-322.58" y1="-7.62" x2="-73.66" y2="-7.62" width="0.1524" layer="97"/>
 <wire x1="-73.66" y1="-7.62" x2="-73.66" y2="-68.58" width="0.1524" layer="97"/>
-<wire x1="-73.66" y1="-68.58" x2="-261.62" y2="-68.58" width="0.1524" layer="97"/>
-<wire x1="-261.62" y1="-68.58" x2="-261.62" y2="-7.62" width="0.1524" layer="97"/>
+<wire x1="-73.66" y1="-68.58" x2="-322.58" y2="-68.58" width="0.1524" layer="97"/>
+<wire x1="-322.58" y1="-68.58" x2="-322.58" y2="-7.62" width="0.1524" layer="97"/>
 <text x="-175.26" y="-12.7" size="1.778" layer="97">BOOST CONVERTER</text>
 </plain>
 <instances>
@@ -8037,9 +8101,6 @@ General purpose 1N400x type rectifier
 <instance part="GND17" gate="1" x="-139.7" y="-45.72" smashed="yes">
 <attribute name="VALUE" x="-142.24" y="-48.26" size="1.778" layer="96"/>
 </instance>
-<instance part="P+9" gate="VCC" x="-86.36" y="-20.32" smashed="yes">
-<attribute name="VALUE" x="-88.9" y="-22.86" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="GND18" gate="1" x="-111.76" y="-45.72" smashed="yes">
 <attribute name="VALUE" x="-114.3" y="-48.26" size="1.778" layer="96"/>
 </instance>
@@ -8102,19 +8163,23 @@ General purpose 1N400x type rectifier
 <attribute name="NAME" x="-128.4986" y="-31.75" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-123.698" y="-31.75" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="D1" gate="1" x="-231.14" y="-25.4" smashed="yes" rot="R90">
-<attribute name="NAME" x="-231.6226" y="-22.86" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-228.8286" y="-22.86" size="1.778" layer="96" rot="R90"/>
+<instance part="D1" gate="1" x="-233.68" y="-25.4" smashed="yes" rot="R90">
+<attribute name="NAME" x="-234.1626" y="-22.86" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-231.3686" y="-22.86" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND24" gate="1" x="-231.14" y="-30.48" smashed="yes">
-<attribute name="VALUE" x="-233.68" y="-33.02" size="1.778" layer="96"/>
+<instance part="GND24" gate="1" x="-233.68" y="-30.48" smashed="yes">
+<attribute name="VALUE" x="-236.22" y="-33.02" size="1.778" layer="96"/>
 </instance>
-<instance part="CN1" gate="G$1" x="-256.54" y="-22.86" smashed="yes" rot="R180">
-<attribute name="NAME" x="-250.19" y="-28.575" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-250.19" y="-17.78" size="1.778" layer="96" rot="R180"/>
+<instance part="CN1" gate="G$1" x="-271.78" y="-22.86" smashed="yes" rot="R180">
+<attribute name="NAME" x="-265.43" y="-28.575" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-265.43" y="-17.78" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND25" gate="1" x="-246.38" y="-35.56" smashed="yes">
-<attribute name="VALUE" x="-248.92" y="-38.1" size="1.778" layer="96"/>
+<instance part="GND25" gate="1" x="-259.08" y="-33.02" smashed="yes">
+<attribute name="VALUE" x="-261.62" y="-35.56" size="1.778" layer="96"/>
+</instance>
+<instance part="F1" gate="G$1" x="-254" y="-22.86" smashed="yes">
+<attribute name="NAME" x="-257.81" y="-21.3614" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-257.81" y="-26.162" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -8155,6 +8220,24 @@ General purpose 1N400x type rectifier
 <pinref part="UART0" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="-53.34" x2="106.68" y2="-53.34" width="0.1524" layer="91"/>
 <label x="106.68" y="-53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="VOUT"/>
+<wire x1="-144.78" y1="-22.86" x2="-127" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-127" y1="-22.86" x2="-111.76" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-111.76" y1="-22.86" x2="-104.14" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="-111.76" y="-22.86"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="-104.14" y1="-22.86" x2="-91.44" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="-104.14" y="-22.86"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<junction x="-91.44" y="-22.86"/>
+<wire x1="-91.44" y1="-22.86" x2="-86.36" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="PWR" gate="G$1" pin="A"/>
+<wire x1="-91.44" y1="-22.86" x2="-91.44" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<junction x="-127" y="-22.86"/>
+<label x="-86.36" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -8516,9 +8599,9 @@ General purpose 1N400x type rectifier
 </segment>
 <segment>
 <pinref part="CN1" gate="G$1" pin="1"/>
-<wire x1="-254" y1="-25.4" x2="-246.38" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="-246.38" y1="-25.4" x2="-246.38" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-269.24" y1="-25.4" x2="-259.08" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="GND25" gate="1" pin="GND"/>
+<wire x1="-259.08" y1="-25.4" x2="-259.08" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -8862,24 +8945,6 @@ General purpose 1N400x type rectifier
 <wire x1="35.56" y1="-86.36" x2="30.48" y2="-86.36" width="0.1524" layer="91"/>
 <junction x="30.48" y="-86.36"/>
 </segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="VOUT"/>
-<wire x1="-144.78" y1="-22.86" x2="-127" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="P+9" gate="VCC" pin="VCC"/>
-<wire x1="-127" y1="-22.86" x2="-111.76" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-111.76" y1="-22.86" x2="-104.14" y2="-22.86" width="0.1524" layer="91"/>
-<junction x="-111.76" y="-22.86"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="-104.14" y1="-22.86" x2="-91.44" y2="-22.86" width="0.1524" layer="91"/>
-<junction x="-104.14" y="-22.86"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<junction x="-91.44" y="-22.86"/>
-<wire x1="-91.44" y1="-22.86" x2="-86.36" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="PWR" gate="G$1" pin="A"/>
-<wire x1="-91.44" y1="-22.86" x2="-91.44" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="2"/>
-<junction x="-127" y="-22.86"/>
-</segment>
 </net>
 <net name="CE1" class="0">
 <segment>
@@ -8968,10 +9033,12 @@ General purpose 1N400x type rectifier
 <junction x="-180.34" y="-22.86"/>
 <pinref part="U2" gate="G$1" pin="EN"/>
 <wire x1="-180.34" y1="-22.86" x2="-180.34" y2="-27.94" width="0.1524" layer="91"/>
-<pinref part="D1" gate="1" pin="C"/>
-<wire x1="-223.52" y1="-22.86" x2="-231.14" y2="-22.86" width="0.1524" layer="91"/>
 <junction x="-223.52" y="-22.86"/>
-<junction x="-231.14" y="-22.86"/>
+<junction x="-233.68" y="-22.86"/>
+<pinref part="D1" gate="1" pin="C"/>
+<wire x1="-233.68" y1="-22.86" x2="-223.52" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-233.68" y1="-22.86" x2="-246.38" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="F1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="LBI" class="0">
@@ -9016,8 +9083,9 @@ General purpose 1N400x type rectifier
 <net name="VIN" class="1">
 <segment>
 <pinref part="CN1" gate="G$1" pin="2"/>
-<wire x1="-254" y1="-22.86" x2="-246.38" y2="-22.86" width="0.1524" layer="91"/>
-<label x="-248.92" y="-22.86" size="1.778" layer="95"/>
+<wire x1="-269.24" y1="-22.86" x2="-261.62" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-266.7" y="-22.86" size="1.778" layer="95"/>
+<pinref part="F1" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
