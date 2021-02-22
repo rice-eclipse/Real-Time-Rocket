@@ -7429,26 +7429,26 @@ Source: www.kingbright.com</description>
 <text x="-3.17313125" y="3.158890625" size="1.271409375" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-3.0896" y="-4.09131875" size="1.271409375" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
 <rectangle x1="-0.853371875" y1="-0.853371875" x2="0.853" y2="0.853" layer="31"/>
-<wire x1="-1.4" y1="2.61" x2="1.4" y2="2.61" width="0.05" layer="1"/>
-<wire x1="1.4" y1="2.61" x2="1.4" y2="2.3" width="0.05" layer="1"/>
-<wire x1="1.4" y1="2.3" x2="2.3" y2="2.3" width="0.05" layer="1"/>
-<wire x1="2.3" y1="2.3" x2="2.3" y2="1.4" width="0.05" layer="1"/>
-<wire x1="2.3" y1="1.4" x2="2.61" y2="1.4" width="0.05" layer="1"/>
-<wire x1="2.61" y1="1.4" x2="2.61" y2="-1.4" width="0.05" layer="1"/>
-<wire x1="2.61" y1="-1.4" x2="2.3" y2="-1.4" width="0.05" layer="1"/>
-<wire x1="2.3" y1="-1.4" x2="2.3" y2="-2.3" width="0.05" layer="1"/>
-<wire x1="2.3" y1="-2.3" x2="1.4" y2="-2.3" width="0.05" layer="1"/>
-<wire x1="1.4" y1="-2.3" x2="1.4" y2="-2.61" width="0.05" layer="1"/>
-<wire x1="1.4" y1="-2.61" x2="-1.4" y2="-2.61" width="0.05" layer="1"/>
-<wire x1="-1.4" y1="-2.61" x2="-1.4" y2="-2.3" width="0.05" layer="1"/>
-<wire x1="-1.4" y1="-2.3" x2="-2.3" y2="-2.3" width="0.05" layer="1"/>
-<wire x1="-2.3" y1="-2.3" x2="-2.3" y2="-1.4" width="0.05" layer="1"/>
-<wire x1="-2.3" y1="-1.4" x2="-2.61" y2="-1.4" width="0.05" layer="1"/>
-<wire x1="-2.61" y1="-1.4" x2="-2.61" y2="1.4" width="0.05" layer="1"/>
-<wire x1="-2.61" y1="1.4" x2="-2.3" y2="1.4" width="0.05" layer="1"/>
-<wire x1="-2.3" y1="1.4" x2="-2.3" y2="2.3" width="0.05" layer="1"/>
-<wire x1="-2.3" y1="2.3" x2="-1.4" y2="2.3" width="0.05" layer="1"/>
-<wire x1="-1.4" y1="2.3" x2="-1.4" y2="2.61" width="0.05" layer="1"/>
+<wire x1="-1.4" y1="2.61" x2="1.4" y2="2.61" width="0.05" layer="39"/>
+<wire x1="1.4" y1="2.61" x2="1.4" y2="2.3" width="0.05" layer="39"/>
+<wire x1="1.4" y1="2.3" x2="2.3" y2="2.3" width="0.05" layer="39"/>
+<wire x1="2.3" y1="2.3" x2="2.3" y2="1.4" width="0.05" layer="39"/>
+<wire x1="2.3" y1="1.4" x2="2.61" y2="1.4" width="0.05" layer="39"/>
+<wire x1="2.61" y1="1.4" x2="2.61" y2="-1.4" width="0.05" layer="39"/>
+<wire x1="2.61" y1="-1.4" x2="2.3" y2="-1.4" width="0.05" layer="39"/>
+<wire x1="2.3" y1="-1.4" x2="2.3" y2="-2.3" width="0.05" layer="39"/>
+<wire x1="2.3" y1="-2.3" x2="1.4" y2="-2.3" width="0.05" layer="39"/>
+<wire x1="1.4" y1="-2.3" x2="1.4" y2="-2.61" width="0.05" layer="39"/>
+<wire x1="1.4" y1="-2.61" x2="-1.4" y2="-2.61" width="0.05" layer="39"/>
+<wire x1="-1.4" y1="-2.61" x2="-1.4" y2="-2.3" width="0.05" layer="39"/>
+<wire x1="-1.4" y1="-2.3" x2="-2.3" y2="-2.3" width="0.05" layer="39"/>
+<wire x1="-2.3" y1="-2.3" x2="-2.3" y2="-1.4" width="0.05" layer="39"/>
+<wire x1="-2.3" y1="-1.4" x2="-2.61" y2="-1.4" width="0.05" layer="39"/>
+<wire x1="-2.61" y1="-1.4" x2="-2.61" y2="1.4" width="0.05" layer="39"/>
+<wire x1="-2.61" y1="1.4" x2="-2.3" y2="1.4" width="0.05" layer="39"/>
+<wire x1="-2.3" y1="1.4" x2="-2.3" y2="2.3" width="0.05" layer="39"/>
+<wire x1="-2.3" y1="2.3" x2="-1.4" y2="2.3" width="0.05" layer="39"/>
+<wire x1="-1.4" y1="2.3" x2="-1.4" y2="2.61" width="0.05" layer="39"/>
 <circle x="-3" y="1.2" radius="0.1" width="0.2" layer="21"/>
 <circle x="-3" y="1.2" radius="0.1" width="0.2" layer="51"/>
 <smd name="1" x="-1.955" y="0.975" dx="0.34" dy="0.81" layer="1" roundness="30" rot="R270"/>
@@ -7799,11 +7799,11 @@ General purpose 1N400x type rectifier
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
-<class number="1" name="PWR" width="0.6096" drill="0">
-<clearance class="1" value="0.1778"/>
+<class number="1" name="PWR" width="0.508" drill="0">
+<clearance class="1" value="0.1524"/>
 </class>
-<class number="2" name="GND" width="0.762" drill="0">
-<clearance class="2" value="0.1778"/>
+<class number="2" name="GND" width="0.508" drill="0">
+<clearance class="2" value="0.1524"/>
 </class>
 </classes>
 <parts>
@@ -8952,7 +8952,7 @@ General purpose 1N400x type rectifier
 <label x="-175.26" y="-55.88" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="VBAT" class="0">
+<net name="VBAT" class="1">
 <segment>
 <pinref part="U2" gate="G$1" pin="VBAT"/>
 <wire x1="-180.34" y1="-22.86" x2="-193.04" y2="-22.86" width="0.1524" layer="91"/>
@@ -9013,6 +9013,13 @@ General purpose 1N400x type rectifier
 <wire x1="-127" y1="-43.18" x2="-127" y2="-40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="VIN" class="1">
+<segment>
+<pinref part="CN1" gate="G$1" pin="2"/>
+<wire x1="-254" y1="-22.86" x2="-246.38" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-248.92" y="-22.86" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -9028,7 +9035,6 @@ General purpose 1N400x type rectifier
 <approved hash="208,1,-22.86,30.48,VCC,sup,,,,"/>
 <approved hash="208,1,30.48,-81.28,VCC,sup,,,,"/>
 <approved hash="208,1,-144.78,-22.86,VCC,out,,,,"/>
-<approved hash="208,1,-83.82,-22.86,VCC,sup,,,,"/>
 </errors>
 </schematic>
 </drawing>
