@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Users/clayt/Documents/GitHub/Real-Time-Rocket/PCBs/ElectroII.brd
 
-Start at      : 15:02:53 (2021-02-22)
-End at        : 15:02:56 (2021-02-22)
-Elapsed time  : 00:00:02
+Start at      : 19:22:37 (2021-02-22)
+End at        : 19:22:59 (2021-02-22)
+Elapsed time  : 00:00:21
 
-Signals       :    60   RoutingGrid: 25 mil  Layers: 2
-Connections   :   131   predefined:  38 ( 9 Vias )
+Signals       :    58   RoutingGrid: 6.25 mil  Layers: 2
+Connections   :   135   predefined:  35 ( 0 Vias )
 
-Router memory :   127680
+Router memory :   3096576
 
 Passname          :    Busses     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:00  00:00:01  00:00:00  00:00:00  00:00:01  00:00:00
-Number of Ripups  :         0        16         0         0         0         0
-max. Level        :         0         1         0         0         0         0
-max. Total        :         0         3         0         0         0         0
+Time per pass     :  00:00:00  00:00:03  00:00:05  00:00:05  00:00:04  00:00:04
+Number of Ripups  :         0         0         0         0         0         0
+max. Level        :         0         0         0         0         0         0
+max. Total        :         0         0         0         0         0         0
 
-Routed            :        20        57        57        57        57        57
-Vias              :         0       138        62        42        32        30
-Resolution        :    44.3 %    72.5 %    72.5 %    72.5 %    72.5 %    72.5 %
+Routed            :        22       100       100       100       100       100
+Vias              :         0       134        48        27        18        17
+Resolution        :    42.2 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
-Final             : 72.5% finished
+Final             : 97.8% finished. Polygons may have fallen apart.
