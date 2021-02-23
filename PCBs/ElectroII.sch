@@ -7997,10 +7997,10 @@ General purpose 1N400x type rectifier
 <wire x1="60.96" y1="-129.54" x2="60.96" y2="-73.66" width="0.1524" layer="97"/>
 <wire x1="60.96" y1="-73.66" x2="-43.18" y2="-73.66" width="0.1524" layer="97"/>
 <text x="-25.4" y="-83.82" size="2.54" layer="97">TRANCEIVER</text>
-<wire x1="-322.58" y1="-7.62" x2="-73.66" y2="-7.62" width="0.1524" layer="97"/>
+<wire x1="-279.4" y1="-7.62" x2="-73.66" y2="-7.62" width="0.1524" layer="97"/>
 <wire x1="-73.66" y1="-7.62" x2="-73.66" y2="-68.58" width="0.1524" layer="97"/>
-<wire x1="-73.66" y1="-68.58" x2="-322.58" y2="-68.58" width="0.1524" layer="97"/>
-<wire x1="-322.58" y1="-68.58" x2="-322.58" y2="-7.62" width="0.1524" layer="97"/>
+<wire x1="-73.66" y1="-68.58" x2="-279.4" y2="-68.58" width="0.1524" layer="97"/>
+<wire x1="-279.4" y1="-68.58" x2="-279.4" y2="-7.62" width="0.1524" layer="97"/>
 <text x="-175.26" y="-12.7" size="1.778" layer="97">BOOST CONVERTER</text>
 <text x="-259.08" y="-17.78" size="1.778" layer="97">PTC FUSE</text>
 </plain>
@@ -9166,19 +9166,6 @@ General purpose 1N400x type rectifier
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="208,1,83.82,43.18,VCC,sup,,,,"/>
-<approved hash="208,1,137.16,43.18,VCC,sup,,,,"/>
-<approved hash="208,1,83.82,-2.54,VCC,sup,,,,"/>
-<approved hash="208,1,137.16,-2.54,VCC,sup,,,,"/>
-<approved hash="208,1,83.82,-50.8,VCC,sup,,,,"/>
-<approved hash="208,1,-45.72,10.16,VCC,sup,,,,"/>
-<approved hash="208,1,-22.86,10.16,VCC,sup,,,,"/>
-<approved hash="208,1,-35.56,33.02,VCC,sup,,,,"/>
-<approved hash="208,1,-22.86,30.48,VCC,sup,,,,"/>
-<approved hash="208,1,30.48,-81.28,VCC,sup,,,,"/>
-<approved hash="208,1,-144.78,-22.86,VCC,out,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
