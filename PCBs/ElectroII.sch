@@ -4768,8 +4768,8 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 </package>
 <package name="TEST_PAD">
 <smd name="P$1" x="0" y="0" dx="1.5875" dy="1.5875" layer="1" roundness="100"/>
-<text x="-1.27" y="1.27" size="0.635" layer="27">&gt;NAME</text>
-<text x="-1.27" y="-1.905" size="0.635" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="1.27" size="0.635" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-1.905" size="0.635" layer="21">&gt;VALUE</text>
 </package>
 </packages>
 <packages3d>
@@ -7943,12 +7943,12 @@ General purpose 1N400x type rectifier
 <part name="U2" library="TPS61090RSAR" deviceset="TPS61090RSAR" device=""/>
 <part name="GND17" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="GND18" library="RTR Main Library" deviceset="GND" device=""/>
-<part name="C2" library="RTR Main Library" deviceset="C-ALL_PACKAGES" device="C1206" value="100u"/>
+<part name="C2" library="RTR Main Library" deviceset="C-ALL_PACKAGES" device="C1206" value="47u"/>
 <part name="GND19" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="GND20" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="GND21" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="L1" library="RTR Main Library" deviceset="L_SMD" device="" value="6.8u"/>
-<part name="R1" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="1.85M"/>
+<part name="R1" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="1.8M"/>
 <part name="R2" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="200k"/>
 <part name="R3" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="1.1M"/>
 <part name="R4" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="200k"/>
@@ -7970,6 +7970,7 @@ General purpose 1N400x type rectifier
 <part name="T3" library="RTR Main Library" deviceset="TEST_PAD" device="" value="GND"/>
 <part name="T4" library="RTR Main Library" deviceset="TEST_PAD" device="" value="5V"/>
 <part name="T5" library="RTR Main Library" deviceset="TEST_PAD" device="" value="VCC"/>
+<part name="T6" library="RTR Main Library" deviceset="TEST_PAD" device="" value="ANT"/>
 </parts>
 <sheets>
 <sheet>
@@ -8002,7 +8003,7 @@ General purpose 1N400x type rectifier
 <wire x1="-73.66" y1="-68.58" x2="-279.4" y2="-68.58" width="0.1524" layer="97"/>
 <wire x1="-279.4" y1="-68.58" x2="-279.4" y2="-7.62" width="0.1524" layer="97"/>
 <text x="-175.26" y="-12.7" size="1.778" layer="97">BOOST CONVERTER</text>
-<text x="-259.08" y="-17.78" size="1.778" layer="97">PTC FUSE</text>
+<text x="-256.54" y="-17.78" size="1.778" layer="97">PTC FUSE</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="0" y="0" smashed="yes">
@@ -8117,12 +8118,12 @@ General purpose 1N400x type rectifier
 <instance part="GND14" gate="1" x="-45.72" y="-20.32" smashed="yes">
 <attribute name="VALUE" x="-48.26" y="-22.86" size="1.778" layer="96"/>
 </instance>
-<instance part="J1" gate="G$1" x="48.26" y="-104.14" smashed="yes">
-<attribute name="NAME" x="44.44143125" y="-100.06686875" size="1.27285" layer="95"/>
-<attribute name="VALUE" x="43.93218125" y="-109.7407" size="1.27288125" layer="96"/>
+<instance part="J1" gate="G$1" x="55.88" y="-104.14" smashed="yes">
+<attribute name="NAME" x="52.06143125" y="-100.06686875" size="1.27285" layer="95"/>
+<attribute name="VALUE" x="51.55218125" y="-109.7407" size="1.27288125" layer="96"/>
 </instance>
-<instance part="GND15" gate="1" x="38.1" y="-109.22" smashed="yes">
-<attribute name="VALUE" x="35.56" y="-111.76" size="1.778" layer="96"/>
+<instance part="GND15" gate="1" x="45.72" y="-109.22" smashed="yes">
+<attribute name="VALUE" x="43.18" y="-111.76" size="1.778" layer="96"/>
 </instance>
 <instance part="C1" gate="G$1" x="35.56" y="-88.9" smashed="yes">
 <attribute name="NAME" x="36.576" y="-88.265" size="1.778" layer="95"/>
@@ -8201,8 +8202,8 @@ General purpose 1N400x type rectifier
 <attribute name="VALUE" x="-123.698" y="-31.75" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="D1" gate="1" x="-233.68" y="-25.4" smashed="yes" rot="R90">
-<attribute name="NAME" x="-234.1626" y="-22.86" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-231.3686" y="-22.86" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="-231.14" y="-15.7226" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-228.6" y="-18.0086" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND24" gate="1" x="-233.68" y="-30.48" smashed="yes">
 <attribute name="VALUE" x="-236.22" y="-33.02" size="1.778" layer="96"/>
@@ -8240,6 +8241,10 @@ General purpose 1N400x type rectifier
 <instance part="T5" gate="G$1" x="-27.94" y="33.02" smashed="yes">
 <attribute name="NAME" x="-33.02" y="40.64" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-33.02" y="38.1" size="1.778" layer="96"/>
+</instance>
+<instance part="T6" gate="G$1" x="45.72" y="-99.06" smashed="yes">
+<attribute name="NAME" x="40.64" y="-91.44" size="1.778" layer="95"/>
+<attribute name="VALUE" x="40.64" y="-93.98" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -8461,9 +8466,9 @@ General purpose 1N400x type rectifier
 <label x="-40.64" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="UART0" gate="G$1" pin="6"/>
-<wire x1="104.14" y1="-58.42" x2="106.68" y2="-58.42" width="0.1524" layer="91"/>
-<label x="106.68" y="-58.42" size="1.778" layer="95"/>
+<pinref part="UART0" gate="G$1" pin="4"/>
+<wire x1="104.14" y1="-55.88" x2="106.68" y2="-55.88" width="0.1524" layer="91"/>
+<label x="106.68" y="-55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI0_GPIO0" class="0">
@@ -8688,9 +8693,9 @@ General purpose 1N400x type rectifier
 <label x="-40.64" y="7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="MISO"/>
-<wire x1="-15.24" y1="-96.52" x2="-33.02" y2="-96.52" width="0.1524" layer="91"/>
-<label x="-33.02" y="-96.52" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="MOSI"/>
+<wire x1="20.32" y1="-109.22" x2="25.4" y2="-109.22" width="0.1524" layer="91"/>
+<label x="25.4" y="-109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -8712,9 +8717,9 @@ General purpose 1N400x type rectifier
 <label x="-40.64" y="5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="MOSI"/>
-<wire x1="20.32" y1="-109.22" x2="25.4" y2="-109.22" width="0.1524" layer="91"/>
-<label x="25.4" y="-109.22" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="MISO"/>
+<wire x1="-15.24" y1="-96.52" x2="-33.02" y2="-96.52" width="0.1524" layer="91"/>
+<label x="-33.02" y="-96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCLK" class="0">
@@ -9030,46 +9035,48 @@ General purpose 1N400x type rectifier
 </net>
 <net name="UART0_GPIO1" class="0">
 <segment>
-<pinref part="UART0" gate="G$1" pin="8"/>
-<wire x1="104.14" y1="-60.96" x2="106.68" y2="-60.96" width="0.1524" layer="91"/>
-<label x="106.68" y="-60.96" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="GPIO27/GEN2"/>
 <wire x1="-22.86" y1="15.24" x2="-40.64" y2="15.24" width="0.1524" layer="91"/>
 <label x="-40.64" y="15.24" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="UART0" gate="G$1" pin="6"/>
+<wire x1="104.14" y1="-58.42" x2="106.68" y2="-58.42" width="0.1524" layer="91"/>
+<label x="106.68" y="-58.42" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="UART0_GPIO2" class="0">
-<segment>
-<pinref part="UART0" gate="G$1" pin="10"/>
-<wire x1="104.14" y1="-63.5" x2="106.68" y2="-63.5" width="0.1524" layer="91"/>
-<label x="106.68" y="-63.5" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GPIO22/GEN3"/>
 <wire x1="-22.86" y1="12.7" x2="-40.64" y2="12.7" width="0.1524" layer="91"/>
 <label x="-40.64" y="12.7" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="UART0" gate="G$1" pin="8"/>
+<wire x1="104.14" y1="-60.96" x2="106.68" y2="-60.96" width="0.1524" layer="91"/>
+<label x="106.68" y="-60.96" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="UART0_GPIO3" class="0">
-<segment>
-<pinref part="UART0" gate="G$1" pin="12"/>
-<wire x1="104.14" y1="-66.04" x2="106.68" y2="-66.04" width="0.1524" layer="91"/>
-<label x="106.68" y="-66.04" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GPIO5"/>
 <wire x1="-22.86" y1="-5.08" x2="-40.64" y2="-5.08" width="0.1524" layer="91"/>
 <label x="-40.64" y="-5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="UART0" gate="G$1" pin="10"/>
+<wire x1="104.14" y1="-63.5" x2="106.68" y2="-63.5" width="0.1524" layer="91"/>
+<label x="106.68" y="-63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ANT" class="3">
 <segment>
 <pinref part="U1" gate="G$1" pin="ANT"/>
 <pinref part="J1" gate="G$1" pin="SIG"/>
-<wire x1="20.32" y1="-101.6" x2="38.1" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="-101.6" x2="45.72" y2="-101.6" width="0.1524" layer="91"/>
 <label x="22.86" y="-101.6" size="1.778" layer="95"/>
+<pinref part="T6" gate="G$1" pin="P$1"/>
+<junction x="45.72" y="-101.6"/>
 </segment>
 </net>
 <net name="FB" class="0">
