@@ -1085,28 +1085,6 @@ by exp-project-lbr.ulp</description>
 <wire x1="50.35" y1="0" x2="50.1" y2="-0.5" width="0.127" layer="52"/>
 <wire x1="50.1" y1="-0.5" x2="58.1" y2="-0.5" width="0.127" layer="52"/>
 <wire x1="58.1" y1="-0.5" x2="57.85" y2="0" width="0.127" layer="52"/>
-<pad name="PP4" x="7.132728125" y="14.3805" drill="0.8" diameter="1.778"/>
-<pad name="PP9" x="9.548653125" y="14.3805" drill="0.8" diameter="1.778"/>
-<pad name="PP8" x="5.17698125" y="8.8583875" drill="0.8" diameter="1.778"/>
-<pad name="PP3" x="7.592903125" y="8.8583875" drill="0.8" diameter="1.778"/>
-<pad name="PP1" x="10.699090625" y="4.831846875" drill="0.8" diameter="1.778"/>
-<pad name="PP6" x="10.699090625" y="2.30088125" drill="0.8" diameter="1.778"/>
-<pad name="PP35" x="17.2566" y="2.415925" drill="0.8" diameter="1.778"/>
-<pad name="PP40" x="18.867215625" y="6.212375" drill="0.8" diameter="1.778"/>
-<pad name="PP38" x="53.725546875" y="2.415925" drill="0.8" diameter="1.778"/>
-<pad name="PP37" x="56.026428125" y="2.070790625" drill="0.8" diameter="1.778"/>
-<pad name="PP20" x="56.8317375" y="9.433609375" drill="0.8" diameter="1.778"/>
-<pad name="PP39" x="58.09721875" y="12.539796875" drill="0.8" diameter="1.778"/>
-<pad name="PP19" x="58.327309375" y="15.185809375" drill="0.8" diameter="1.778"/>
-<pad name="PP15" x="55.796340625" y="14.26545625" drill="0.8" diameter="1.778"/>
-<pad name="PP36" x="60.6281875" y="12.424753125" drill="0.8" diameter="1.778"/>
-<pad name="PP14" x="58.327309375" y="18.407040625" drill="0.8" diameter="1.778"/>
-<pad name="PP5" x="55.796340625" y="23.12384375" drill="0.8" diameter="1.778"/>
-<pad name="PP17" x="58.2122625" y="21.743315625" drill="0.8" diameter="1.778"/>
-<pad name="PP16" x="55.796340625" y="20.3627875" drill="0.8" diameter="1.778"/>
-<pad name="PP18" x="55.796340625" y="17.0265125" drill="0.8" diameter="1.778"/>
-<pad name="PP22" x="23.0088" y="2.070790625" drill="0.8" diameter="1.4224"/>
-<pad name="PP23" x="24.734459375" y="2.070790625" drill="0.8" diameter="1.4224"/>
 </package>
 </packages>
 </library>
@@ -2019,6 +1997,47 @@ design rules under a new name.</description>
 <wire x1="11.4028" y1="41.5922" x2="11.94450625" y2="41.5922" width="0.508" layer="1"/>
 <wire x1="11.94450625" y1="41.5922" x2="12.13470625" y2="41.402" width="0.508" layer="1"/>
 <wire x1="12.13470625" y1="41.402" x2="12.573" y2="41.402" width="0.508" layer="1"/>
+<wire x1="86.995" y1="62.865" x2="88.9" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="87.745" y1="56.345" x2="86.995" y2="62.865" width="0" layer="19" extent="1-1"/>
+<wire x1="82.665" y1="56.345" x2="87.745" y2="56.345" width="0" layer="19" extent="1-1"/>
+<wire x1="77.585" y1="53.805" x2="82.665" y2="56.345" width="0" layer="19" extent="1-1"/>
+<wire x1="95.365" y1="53.805" x2="87.745" y2="56.345" width="0" layer="19" extent="1-1"/>
+<wire x1="69.965" y1="56.345" x2="77.585" y2="53.805" width="0" layer="19" extent="1-1"/>
+<wire x1="62.345" y1="56.345" x2="69.965" y2="56.345" width="0" layer="19" extent="1-1"/>
+<wire x1="57.265" y1="53.805" x2="62.345" y2="56.345" width="0" layer="19" extent="1-1"/>
+<wire x1="52.185" y1="56.345" x2="57.265" y2="53.805" width="0" layer="19" extent="1-1"/>
+<wire x1="55.88" y1="62.23" x2="52.185" y2="56.345" width="0" layer="19" extent="1-1"/>
+<wire x1="55.88" y1="71.12" x2="55.88" y2="62.23" width="0" layer="19" extent="1-1"/>
+<wire x1="45.085" y1="64.135" x2="52.185" y2="56.345" width="0" layer="19" extent="1-1"/>
+<wire x1="69.85" y1="32.385" x2="77.585" y2="53.805" width="0" layer="19" extent="1-1"/>
+<wire x1="81.915" y1="21.59" x2="69.85" y2="32.385" width="0" layer="19" extent="1-1"/>
+<wire x1="89.12" y1="20.97" x2="81.915" y2="21.59" width="0" layer="19" extent="1-1"/>
+<wire x1="95.25" y1="17.145" x2="89.12" y2="20.97" width="0" layer="19" extent="1-1"/>
+<wire x1="89.12" y1="6.97" x2="95.25" y2="17.145" width="0" layer="19" extent="1-1"/>
+<wire x1="103.92" y1="8.97" x2="95.25" y2="17.145" width="0" layer="19" extent="1-1"/>
+<wire x1="109.22" y1="8.685" x2="103.92" y2="8.97" width="0" layer="19" extent="1-1"/>
+<wire x1="109.22" y1="11.635" x2="109.22" y2="8.685" width="0" layer="19" extent="1-1"/>
+<wire x1="109.985" y1="15.875" x2="109.22" y2="11.635" width="0" layer="19" extent="1-1"/>
+<wire x1="71.12" y1="5.08" x2="89.12" y2="6.97" width="0" layer="19" extent="1-1"/>
+<wire x1="22.86" y1="71.12" x2="45.085" y2="64.135" width="0" layer="19" extent="1-1"/>
+<wire x1="19.05" y1="50.8" x2="22.86" y2="71.12" width="0" layer="19" extent="1-1"/>
+<wire x1="17.145" y1="45.085" x2="19.05" y2="50.8" width="0" layer="19" extent="1-1"/>
+<wire x1="13.66" y1="42.595" x2="17.145" y2="45.085" width="0" layer="19" extent="1-1"/>
+<wire x1="13.335" y1="40.64" x2="14.097" y2="41.402" width="0" layer="19" extent="1-1"/>
+<wire x1="14.097" y1="39.878" x2="13.335" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="12.573" y1="39.878" x2="13.335" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="15.29" y1="39.665" x2="14.097" y2="39.878" width="0" layer="19" extent="1-1"/>
+<wire x1="15.29" y1="40.315" x2="15.29" y2="39.665" width="0" layer="19" extent="1-1"/>
+<wire x1="15.29" y1="40.965" x2="15.29" y2="40.315" width="0" layer="19" extent="1-1"/>
+<wire x1="9.525" y1="41.91" x2="11.38" y2="41.615" width="0" layer="19" extent="1-1"/>
+<wire x1="22.225" y1="41.123" x2="17.145" y2="45.085" width="0" layer="19" extent="1-1"/>
+<wire x1="22.355" y1="36.83" x2="22.225" y2="41.123" width="0" layer="19" extent="1-1"/>
+<wire x1="26.67" y1="36.347" x2="22.355" y2="36.83" width="0" layer="19" extent="1-1"/>
+<wire x1="5.08" y1="49.66" x2="9.525" y2="41.91" width="0" layer="19" extent="1-1"/>
+<wire x1="8.145" y1="55.515" x2="5.08" y2="49.66" width="0" layer="19" extent="1-1"/>
+<wire x1="6.502" y1="27.305" x2="12.573" y2="39.878" width="0" layer="19" extent="1-1"/>
+<wire x1="8.89" y1="11.43" x2="6.502" y2="27.305" width="0" layer="19" extent="1-1"/>
+<wire x1="38.1" y1="5.08" x2="8.89" y2="11.43" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOSI">
 <contactref element="SPI0" pad="3"/>
