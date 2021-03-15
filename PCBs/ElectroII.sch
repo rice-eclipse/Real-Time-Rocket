@@ -7816,6 +7816,90 @@ General purpose 1N400x type rectifier
 </deviceset>
 </devicesets>
 </library>
+<library name="DIODE_SB340-E3-54">
+<packages>
+<package name="DIODE_DO-201AD">
+<pad name="1" x="-20.066" y="0" drill="1.5748" diameter="2.0828" shape="square"/>
+<pad name="2" x="0" y="0" drill="1.5748" diameter="2.0828" rot="R180"/>
+<wire x1="-21.4884" y1="0" x2="-22.7584" y2="0" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0.635" x2="-22.5044" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.381" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.127" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.381" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.127" width="0.1524" layer="21"/>
+<wire x1="-21.7424" y1="0.635" x2="-21.7424" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-14.9352" y1="-2.794" x2="-5.1308" y2="-2.794" width="0.1524" layer="21"/>
+<wire x1="-5.1308" y1="-2.794" x2="-5.1308" y2="2.794" width="0.1524" layer="21"/>
+<wire x1="-5.1308" y1="2.794" x2="-14.9352" y2="2.794" width="0.1524" layer="21"/>
+<wire x1="-14.9352" y1="2.794" x2="-14.9352" y2="-2.794" width="0.1524" layer="21"/>
+<text x="-12.7" y="-4.445" size="1.27" layer="21" ratio="6" rot="SR0">&gt;Value</text>
+<wire x1="-21.4884" y1="0" x2="-22.7584" y2="0" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0.635" x2="-22.5044" y2="-0.635" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.635" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.508" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.381" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="0.127" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.635" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.508" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.381" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-22.5044" y1="0" x2="-21.7424" y2="-0.127" width="0.1524" layer="51"/>
+<wire x1="-21.7424" y1="0.635" x2="-21.7424" y2="-0.635" width="0.1524" layer="51"/>
+<wire x1="-20.066" y1="0" x2="-14.7828" y2="0" width="0.1524" layer="51"/>
+<wire x1="0" y1="0" x2="-5.2832" y2="0" width="0.1524" layer="51"/>
+<wire x1="-14.7828" y1="-2.667" x2="-5.2832" y2="-2.667" width="0.1524" layer="51"/>
+<wire x1="-5.2832" y1="-2.667" x2="-5.2832" y2="2.667" width="0.1524" layer="51"/>
+<wire x1="-5.2832" y1="2.667" x2="-14.7828" y2="2.667" width="0.1524" layer="51"/>
+<wire x1="-14.7828" y1="2.667" x2="-14.7828" y2="-2.667" width="0.1524" layer="51"/>
+<text x="-12.7" y="3.175" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<wire x1="-12.7" y1="2.54" x2="-12.7" y2="-2.54" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="DIODE">
+<pin name="2" x="0" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="1" x="10.16" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<wire x1="2.54" y1="0" x2="3.4798" y2="0" width="0.2032" layer="94"/>
+<wire x1="3.81" y1="1.905" x2="3.81" y2="-1.905" width="0.2032" layer="94"/>
+<wire x1="3.175" y1="0" x2="3.81" y2="0" width="0.2032" layer="94"/>
+<wire x1="6.35" y1="-1.905" x2="6.35" y2="1.905" width="0.2032" layer="94"/>
+<wire x1="6.35" y1="0" x2="7.62" y2="0" width="0.2032" layer="94"/>
+<wire x1="6.35" y1="0" x2="3.81" y2="1.905" width="0.2032" layer="94"/>
+<wire x1="3.81" y1="-1.905" x2="6.35" y2="0" width="0.2032" layer="94"/>
+<text x="0" y="-5.08" size="1.27" layer="96" ratio="10" rot="SR0">&gt;Value</text>
+<text x="0" y="2.54" size="1.27" layer="95" ratio="10" rot="SR0">&gt;Name</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DIODE_SB340-E3/54" prefix="CR">
+<gates>
+<gate name="A" symbol="DIODE" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="DIODE_DO-201AD">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="BUILT_BY" value="EMA_UL_Team" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="SB340-E3/54" constant="no"/>
+<attribute name="VENDOR" value="Vishay" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7882,7 +7966,7 @@ General purpose 1N400x type rectifier
 <part name="GND20" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="GND21" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="L1" library="RTR Main Library" deviceset="L_SMD" device="" value="6.8u"/>
-<part name="R1" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="1.8M"/>
+<part name="R1" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="2M"/>
 <part name="R2" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="200k"/>
 <part name="R3" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="1.1M"/>
 <part name="R4" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="200k"/>
@@ -7905,6 +7989,7 @@ General purpose 1N400x type rectifier
 <part name="T4" library="RTR Main Library" deviceset="TEST_PAD" device="" value="5V"/>
 <part name="T5" library="RTR Main Library" deviceset="TEST_PAD" device="" value="VCC"/>
 <part name="T6" library="RTR Main Library" deviceset="TEST_PAD" device="" value="ANT"/>
+<part name="CR1" library="DIODE_SB340-E3-54" deviceset="DIODE_SB340-E3/54" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7932,9 +8017,9 @@ General purpose 1N400x type rectifier
 <wire x1="60.96" y1="-129.54" x2="60.96" y2="-73.66" width="0.1524" layer="97"/>
 <wire x1="60.96" y1="-73.66" x2="-43.18" y2="-73.66" width="0.1524" layer="97"/>
 <text x="-25.4" y="-83.82" size="2.54" layer="97">TRANCEIVER</text>
-<wire x1="-279.4" y1="-7.62" x2="-73.66" y2="-7.62" width="0.1524" layer="97"/>
-<wire x1="-73.66" y1="-7.62" x2="-73.66" y2="-68.58" width="0.1524" layer="97"/>
-<wire x1="-73.66" y1="-68.58" x2="-279.4" y2="-68.58" width="0.1524" layer="97"/>
+<wire x1="-279.4" y1="-7.62" x2="-63.5" y2="-7.62" width="0.1524" layer="97"/>
+<wire x1="-63.5" y1="-7.62" x2="-63.5" y2="-68.58" width="0.1524" layer="97"/>
+<wire x1="-63.5" y1="-68.58" x2="-279.4" y2="-68.58" width="0.1524" layer="97"/>
 <wire x1="-279.4" y1="-68.58" x2="-279.4" y2="-7.62" width="0.1524" layer="97"/>
 <text x="-175.26" y="-12.7" size="1.778" layer="97">BOOST CONVERTER</text>
 <text x="-256.54" y="-17.78" size="1.778" layer="97">PTC FUSE</text>
@@ -8180,6 +8265,10 @@ General purpose 1N400x type rectifier
 <attribute name="NAME" x="40.64" y="-91.44" size="1.778" layer="95"/>
 <attribute name="VALUE" x="40.64" y="-93.98" size="1.778" layer="96"/>
 </instance>
+<instance part="CR1" gate="A" x="-86.36" y="-22.86" smashed="yes">
+<attribute name="VALUE" x="-86.36" y="-27.94" size="1.27" layer="96" ratio="10" rot="SR0"/>
+<attribute name="NAME" x="-86.36" y="-20.32" size="1.27" layer="95" ratio="10" rot="SR0"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -8221,25 +8310,9 @@ General purpose 1N400x type rectifier
 <label x="106.68" y="-53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="VOUT"/>
-<wire x1="-144.78" y1="-22.86" x2="-127" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-127" y1="-22.86" x2="-119.38" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-119.38" y1="-22.86" x2="-111.76" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-111.76" y1="-22.86" x2="-104.14" y2="-22.86" width="0.1524" layer="91"/>
-<junction x="-111.76" y="-22.86"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="-104.14" y1="-22.86" x2="-91.44" y2="-22.86" width="0.1524" layer="91"/>
-<junction x="-104.14" y="-22.86"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<junction x="-91.44" y="-22.86"/>
-<wire x1="-91.44" y1="-22.86" x2="-86.36" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="PWR" gate="G$1" pin="A"/>
-<wire x1="-91.44" y1="-22.86" x2="-91.44" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="2"/>
-<junction x="-127" y="-22.86"/>
-<label x="-86.36" y="-22.86" size="1.778" layer="95"/>
-<junction x="-119.38" y="-22.86"/>
-<pinref part="T4" gate="G$1" pin="P$1"/>
+<pinref part="CR1" gate="A" pin="1"/>
+<wire x1="-76.2" y1="-22.86" x2="-71.12" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-71.12" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -9102,6 +9175,30 @@ General purpose 1N400x type rectifier
 <pinref part="F1" gate="G$1" pin="1"/>
 <pinref part="T1" gate="G$1" pin="P$1"/>
 <junction x="-261.62" y="-22.86"/>
+</segment>
+</net>
+<net name="BOOST_OUT" class="1">
+<segment>
+<pinref part="U2" gate="G$1" pin="VOUT"/>
+<wire x1="-144.78" y1="-22.86" x2="-127" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-127" y1="-22.86" x2="-119.38" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="-22.86" x2="-111.76" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-111.76" y1="-22.86" x2="-104.14" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="-111.76" y="-22.86"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="-104.14" y1="-22.86" x2="-91.44" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="-104.14" y="-22.86"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<junction x="-91.44" y="-22.86"/>
+<wire x1="-91.44" y1="-22.86" x2="-86.36" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="PWR" gate="G$1" pin="A"/>
+<wire x1="-91.44" y1="-22.86" x2="-91.44" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<junction x="-127" y="-22.86"/>
+<label x="-86.36" y="-22.86" size="1.778" layer="95"/>
+<junction x="-119.38" y="-22.86"/>
+<pinref part="T4" gate="G$1" pin="P$1"/>
+<pinref part="CR1" gate="A" pin="2"/>
 </segment>
 </net>
 </nets>
