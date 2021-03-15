@@ -112,10 +112,10 @@
 <smd name="15" x="-0.325" y="1.955" dx="0.34" dy="0.81" layer="1" roundness="30" rot="R180"/>
 <smd name="16" x="-0.975" y="1.955" dx="0.34" dy="0.81" layer="1" roundness="30" rot="R180"/>
 <smd name="17" x="0" y="0" dx="2.7" dy="2.7" layer="1" cream="no"/>
-<pad name="P$1" x="-0.762" y="0.762" drill="0.6"/>
-<pad name="P$2" x="0.762" y="0.762" drill="0.6"/>
-<pad name="P$3" x="0.762" y="-0.762" drill="0.6"/>
-<pad name="P$4" x="-0.762" y="-0.762" drill="0.6"/>
+<pad name="PGND1" x="-0.762" y="0.762" drill="0.6"/>
+<pad name="PGND2" x="0.762" y="0.762" drill="0.6"/>
+<pad name="PGND4" x="0.762" y="-0.762" drill="0.6"/>
+<pad name="PGND3" x="-0.762" y="-0.762" drill="0.6"/>
 </package>
 </packages>
 <symbols>
@@ -149,9 +149,9 @@
 <device name="" package="QFN65P400X400X100-17N">
 <connects>
 <connect gate="G$1" pin="EN" pad="11"/>
-<connect gate="G$1" pin="EXT_PAD" pad="17"/>
+<connect gate="G$1" pin="EXT_PAD" pad="17 PGND1 PGND2 PGND3 PGND4"/>
 <connect gate="G$1" pin="FB" pad="14"/>
-<connect gate="G$1" pin="GND" pad="13 P$1 P$2 P$3 P$4"/>
+<connect gate="G$1" pin="GND" pad="13"/>
 <connect gate="G$1" pin="LBI" pad="9"/>
 <connect gate="G$1" pin="LBO" pad="12"/>
 <connect gate="G$1" pin="PGND" pad="5 6 7"/>
