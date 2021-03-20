@@ -7969,7 +7969,6 @@ LETTER landscape</description>
 <part name="R8" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="DNP"/>
 <part name="P+9" library="RTR Main Library" deviceset="VCC" device=""/>
 <part name="P+10" library="RTR Main Library" deviceset="VCC" device=""/>
-<part name="R9" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="0.1 1/8w"/>
 <part name="D2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:6240344/1"/>
 </parts>
 <sheets>
@@ -8262,10 +8261,6 @@ LETTER landscape</description>
 </instance>
 <instance part="P+10" gate="VCC" x="309.88" y="-50.8" smashed="yes">
 <attribute name="VALUE" x="307.34" y="-53.34" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="R9" gate="G$1" x="27.94" y="-88.9" smashed="yes">
-<attribute name="NAME" x="24.13" y="-87.4014" size="1.778" layer="95"/>
-<attribute name="VALUE" x="24.13" y="-92.202" size="1.778" layer="96"/>
 </instance>
 <instance part="D2" gate="1" x="213.36" y="-73.66" smashed="yes">
 <attribute name="NAME" x="215.9" y="-73.1774" size="1.778" layer="95"/>
@@ -8649,11 +8644,7 @@ LETTER landscape</description>
 <pinref part="CN1" gate="G$1" pin="1"/>
 <wire x1="27.94" y1="-76.2" x2="38.1" y2="-76.2" width="0.1524" layer="91"/>
 <pinref part="GND25" gate="1" pin="GND"/>
-<wire x1="38.1" y1="-76.2" x2="38.1" y2="-88.9" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="38.1" y1="-88.9" x2="38.1" y2="-93.98" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="-88.9" x2="38.1" y2="-88.9" width="0.1524" layer="91"/>
-<junction x="38.1" y="-88.9"/>
+<wire x1="38.1" y1="-76.2" x2="38.1" y2="-93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND26" gate="1" pin="GND"/>
@@ -9159,13 +9150,6 @@ LETTER landscape</description>
 <junction x="177.8" y="-73.66"/>
 <pinref part="T4" gate="G$1" pin="P$1"/>
 <pinref part="D2" gate="1" pin="A"/>
-</segment>
-</net>
-<net name="CGND" class="0">
-<segment>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="22.86" y1="-88.9" x2="12.7" y2="-88.9" width="0.1524" layer="91"/>
-<label x="12.7" y="-88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI2_GPIO0" class="0">
