@@ -1,0 +1,6 @@
+"Qty";"Value";"Device";"Package";"Parts";"Description";"ARROW_PART_NUMBER";"ARROW_PRICE-STOCK";"DESCRIPTION";"HEIGHT";"MANUFACTURER_NAME";"MANUFACTURER_PART_NUMBER";"MOUSER_PART_NUMBER";"MOUSER_PRICE-STOCK";"PROD_ID";"VALUE";
+"3";"0.1u";"C-ALL_PACKAGESC1206";"C1206";"C1, C2, C3";"CAPACITOR, American symbol";"";"";"";"";"";"";"";"";"";"";
+"1";"10k";"R-ALL_PACKAGESR1206";"R1206";"R3";"RESISTOR, American symbol";"";"";"";"";"";"";"";"";"";"";
+"2";"2.2k";"R-ALL_PACKAGESR1206";"R1206";"R1, R2";"RESISTOR, American symbol";"";"";"";"";"";"";"";"";"";"";
+"1";"2X6 FEMALE";"SENSOR_BREAKOUTPTH_FEMALE";"2X7";"J1";".1 inch-spaced 12P sensor breakout";"";"";"";"";"";"";"";"";"CONN-12423";"2X6 FEMALE";
+"1";"BNO085";"BNO085";"BNO085";"AC1";"IMU ACCEL/GYRO/MAG I2C 32BIT";"";"";"IMU ACCEL/GYRO/MAG I2C 32BIT";"1.18mm";"Hillcrest Laboratories, Inc.";"BNO085";"";"";"";"";
