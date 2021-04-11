@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5152,14 +5152,14 @@ Used as a generalized connector for attaching new sensors</description>
 <part name="J1" library="RTR Main Library" deviceset="SENSOR_BREAKOUT" device="PTH_FEMALE" package3d_urn="urn:adsk.eagle:package:38277/1" value="2X6 FEMALE"/>
 <part name="GND1" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="GND2" library="RTR Main Library" deviceset="GND" device=""/>
-<part name="C1" library="RTR Main Library" deviceset="C-ALL_PACKAGES" device="C1206"/>
-<part name="C2" library="RTR Main Library" deviceset="C-ALL_PACKAGES" device="C1206"/>
-<part name="C3" library="RTR Main Library" deviceset="C-ALL_PACKAGES" device="C1206"/>
+<part name="C1" library="RTR Main Library" deviceset="C-ALL_PACKAGES" device="C1206" value="22p"/>
+<part name="C2" library="RTR Main Library" deviceset="C-ALL_PACKAGES" device="C1206" value="2.2u"/>
+<part name="C3" library="RTR Main Library" deviceset="C-ALL_PACKAGES" device="C1206" value="22p"/>
 <part name="GND3" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="P+1" library="RTR Main Library" deviceset="VCC" device=""/>
 <part name="P+2" library="RTR Main Library" deviceset="VCC" device=""/>
-<part name="R1" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206"/>
-<part name="L1" library="RTR Main Library" deviceset="L_SMD" device=""/>
+<part name="R1" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="0R"/>
+<part name="L1" library="RTR Main Library" deviceset="L_SMD" device="" value="1.8n"/>
 <part name="GND4" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="GND5" library="RTR Main Library" deviceset="GND" device=""/>
 </parts>
