@@ -3474,16 +3474,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <rectangle x1="-0.15" y1="0.05" x2="0.15" y2="0.1" layer="51"/>
 <rectangle x1="-0.15" y1="-0.1" x2="0.15" y2="-0.05" layer="51"/>
 </package>
-<package name="L-DS75LC">
-<smd name="P$1" x="-3.175" y="0" dx="2" dy="3" layer="1"/>
-<smd name="P$2" x="3.225" y="0" dx="2" dy="3" layer="1"/>
-<circle x="0" y="0" radius="1.79605" width="0.1524" layer="21"/>
-<circle x="-1.27" y="0" radius="0.179603125" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="3.81" x2="3.81" y2="3.81" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="3.81" x2="3.81" y2="-3.81" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="-3.81" x2="-3.81" y2="-3.81" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="-3.81" x2="-3.81" y2="3.81" width="0.1524" layer="21"/>
-</package>
 </packages>
 <packages3d>
 <package3d name="2X6" urn="urn:adsk.eagle:package:38277/1" type="box" library_version="1">
@@ -3578,16 +3568,6 @@ CONN_06x2
 <text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-</symbol>
-<symbol name="L" library_version="18">
-<description>INDUCTOR</description>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="2" x="7.62" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-180"/>
-<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94" curve="-180"/>
-<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.254" layer="94" curve="-180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -5112,28 +5092,61 @@ Used as a generalized connector for attaching new sensors</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="L_SMD" prefix="L" uservalue="yes" library_version="18">
-<description>SMD Inductor</description>
+</devicesets>
+</library>
+<library name="AIMC-0805-1N8S-T">
+<packages>
+<package name="INDC2012X105N">
+<text x="-1.71" y="-1.07" size="0.5" layer="27" align="top-left">&gt;VALUE</text>
+<text x="-1.71" y="1.07" size="0.5" layer="25">&gt;NAME</text>
+<wire x1="1.1" y1="-0.72" x2="-1.1" y2="-0.72" width="0.127" layer="51"/>
+<wire x1="1.1" y1="0.72" x2="-1.1" y2="0.72" width="0.127" layer="51"/>
+<wire x1="1.1" y1="-0.72" x2="1.1" y2="0.72" width="0.127" layer="51"/>
+<wire x1="-1.1" y1="-0.72" x2="-1.1" y2="0.72" width="0.127" layer="51"/>
+<wire x1="-1.708" y1="-0.983" x2="1.708" y2="-0.983" width="0.05" layer="39"/>
+<wire x1="-1.708" y1="0.983" x2="1.708" y2="0.983" width="0.05" layer="39"/>
+<wire x1="-1.708" y1="-0.983" x2="-1.708" y2="0.983" width="0.05" layer="39"/>
+<wire x1="1.708" y1="-0.983" x2="1.708" y2="0.983" width="0.05" layer="39"/>
+<smd name="1" x="-0.86" y="0" dx="1.2" dy="1.47" layer="1"/>
+<smd name="2" x="0.86" y="0" dx="1.2" dy="1.47" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="AIMC-0805-1N8S-T">
+<text x="-7.62" y="5.08" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="2.54" size="1.778" layer="96">&gt;VALUE</text>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.254" layer="94" curve="-180"/>
+<pin name="1" x="-7.62" y="0" visible="off" length="short" direction="pas"/>
+<pin name="2" x="7.62" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="AIMC-0805-1N8S-T" prefix="L">
+<description>1.8nH Unshielded Multilayer Inductor 600mA 100mOhm Max 0805 (2012 Metric)  </description>
 <gates>
-<gate name="G$1" symbol="L" x="0" y="0"/>
+<gate name="G$1" symbol="AIMC-0805-1N8S-T" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="L-DS75LC">
+<device name="" package="INDC2012X105N">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-<connect gate="G$1" pin="2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESCRIPTION" value=" IND 1.8nH 0.3A 100mΩ "/>
+<attribute name="DIGI-KEY_PART_NUMBER" value="535-11559-1-ND"/>
+<attribute name="MF" value="Abracon"/>
+<attribute name="MP" value="AIMC-0805-1N8S-T"/>
+<attribute name="PACKAGE" value="2012 Bourns"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/AIMC-0805-1N8S-T/?ref=eda"/>
+</technology>
 </technologies>
 </device>
 </devices>
-<spice>
-<pinmapping spiceprefix="L">
-<pinmap gate="G$1" pin="1" pinorder="1"/>
-<pinmap gate="G$1" pin="2" pinorder="2"/>
-</pinmapping>
-</spice>
 </deviceset>
 </devicesets>
 </library>
@@ -5159,9 +5172,9 @@ Used as a generalized connector for attaching new sensors</description>
 <part name="P+1" library="RTR Main Library" deviceset="VCC" device=""/>
 <part name="P+2" library="RTR Main Library" deviceset="VCC" device=""/>
 <part name="R1" library="RTR Main Library" deviceset="R-ALL_PACKAGES" device="R1206" value="0R"/>
-<part name="L1" library="RTR Main Library" deviceset="L_SMD" device="" value="1.8n"/>
 <part name="GND4" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="GND5" library="RTR Main Library" deviceset="GND" device=""/>
+<part name="L1" library="AIMC-0805-1N8S-T" deviceset="AIMC-0805-1N8S-T" device="" value="1.8n"/>
 </parts>
 <sheets>
 <sheet>
@@ -5206,17 +5219,16 @@ Used as a generalized connector for attaching new sensors</description>
 </instance>
 <instance part="R1" gate="G$1" x="35.56" y="20.32" smashed="yes">
 <attribute name="NAME" x="31.75" y="21.8186" size="1.778" layer="95"/>
-<attribute name="VALUE" x="31.75" y="17.018" size="1.778" layer="96"/>
-</instance>
-<instance part="L1" gate="G$1" x="35.56" y="15.24" smashed="yes">
-<attribute name="NAME" x="33.02" y="17.78" size="1.778" layer="95"/>
-<attribute name="VALUE" x="33.02" y="12.7" size="1.778" layer="96"/>
+<attribute name="VALUE" x="36.83" y="22.098" size="1.778" layer="96"/>
 </instance>
 <instance part="GND4" gate="1" x="-53.34" y="5.08" smashed="yes">
 <attribute name="VALUE" x="-55.88" y="2.54" size="1.778" layer="96"/>
 </instance>
 <instance part="GND5" gate="1" x="45.72" y="10.16" smashed="yes">
 <attribute name="VALUE" x="43.18" y="7.62" size="1.778" layer="96"/>
+</instance>
+<instance part="L1" gate="G$1" x="35.56" y="15.24" smashed="yes">
+<attribute name="NAME" x="33.02" y="12.7" size="1.778" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -5244,10 +5256,10 @@ Used as a generalized connector for attaching new sensors</description>
 <wire x1="40.64" y1="20.32" x2="45.72" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="45.72" y1="20.32" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="L1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="15.24" x2="45.72" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
 <junction x="45.72" y="15.24"/>
+<pinref part="L1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -5311,8 +5323,10 @@ Used as a generalized connector for attaching new sensors</description>
 <net name="N$4" class="0">
 <segment>
 <pinref part="A1" gate="G$1" pin="AT2"/>
+<wire x1="25.4" y1="15.24" x2="27.94" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="L1" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="15.24" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="15.24" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
+<junction x="27.94" y="15.24"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -5394,12 +5408,6 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
-</note>
-<note version="8.4" severity="warning">
-Since Version 8.4, EAGLE supports properties for SPICE simulation. 
-Probes in schematics and SPICE mapping objects found in parts and library devices
-will not be understood with this version. Update EAGLE to the latest version
-for full support of SPICE simulation. 
 </note>
 </compatibility>
 </eagle>
