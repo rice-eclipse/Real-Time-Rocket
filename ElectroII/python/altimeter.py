@@ -26,7 +26,7 @@ class Altimeter:
             0,
             0
         ]
-        self._address = 0x76  # Hardware address on the altimeter. 0x76 for hi CS
+        self._address = 0x77  # Hardware address on the altimeter. 0x76 for hi CS
         #and 0x77 for low CS
         self._prom_commands = [
             0xA0,
@@ -101,7 +101,7 @@ class Altimeter:
             buffer=bytearray([self._adc_command]))
         output_buffer = bytearray(3)
         self._i2c.readfrom_into(address=self._address, buffer=output_buffer)
-        print(output_buffer)
+        #print(output_buffer)
         self._i2c.unlock()  # free the i2c
         return big_endian_add(output_buffer)
 
@@ -111,12 +111,12 @@ class Altimeter:
         Returns a mapping {"temp": tempval, "pressure": pressure}
         """
         d1 = self.read_raw(self._convert_d1_256)
-        print("D1 is", d1)
+        #print("D1 is", d1)
         d2 = self.read_raw(self._convert_d2_4096)
-        print("D2 is", d2)
+        #print("D2 is", d2)
 
         d_t = d2 - (self._c[5] << 8)  # temperature offset from reference
-        print("DT is", d_t)
+        #print("DT is", d_t)
 
         int_temp = ((d_t * self._c[6]) >> 23) + 2000
         temp = float(int_temp) / 100
@@ -124,11 +124,11 @@ class Altimeter:
         off = self._c[2] << 16  # offset at actual temperature
         off += (self._c[4]*d_t) >> 7
 
-        print("OFF is", off)
+        #print("OFF is", off)
 
         sens = (self._c[1] << 15) + ((self._c[3] * d_t) >> 8)  # sensitivity
 
-        print("SENS is", sens)
+        #print("SENS is", sens)
 
         intpressure = ((d1 * sens >> 21) - off) >> 15
         pressure = float(intpressure) / 100
@@ -144,6 +144,6 @@ class Altimeter:
         return output
 
 
-alt = Altimeter()
-alt.initialize()
-print(alt.get_data())
+#alt = Altimeter()
+#alt.initialize()
+#print(alt.get_data())
