@@ -144,6 +144,6 @@ class Altimeter:
         return output
 
 
-#alt = Altimeter()
-#alt.initialize()
-#print(alt.get_data())
+alt = Altimeter()
+alt.initialize()
+print(alt.get_data())
