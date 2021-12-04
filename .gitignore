@@ -1,3 +1,6 @@
 *.l#*
 *.b#*
 *.s#*
+ElectroII/python/logs/
+*__pycache_*
+

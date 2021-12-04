@@ -1,4 +1,7 @@
 {
     "interval": 1,
-    "runtime": 5
+    "runtime": 5,
+    "csv_save_interval": 300,
+    "start_on_boot": true,
+    "run_indefinite": true
 }
