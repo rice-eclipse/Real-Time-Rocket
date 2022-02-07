@@ -5175,6 +5175,7 @@ Used as a generalized connector for attaching new sensors</description>
 <part name="GND4" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="GND5" library="RTR Main Library" deviceset="GND" device=""/>
 <part name="L1" library="AIMC-0805-1N8S-T" deviceset="AIMC-0805-1N8S-T" device="" value="1.8n"/>
+<part name="GND6" library="RTR Main Library" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5230,6 +5231,9 @@ Used as a generalized connector for attaching new sensors</description>
 <instance part="L1" gate="G$1" x="35.56" y="15.24" smashed="yes">
 <attribute name="NAME" x="33.02" y="12.7" size="1.778" layer="95"/>
 </instance>
+<instance part="GND6" gate="1" x="-81.28" y="-53.34" smashed="yes">
+<attribute name="VALUE" x="-83.82" y="-55.88" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -5260,6 +5264,12 @@ Used as a generalized connector for attaching new sensors</description>
 <wire x1="43.18" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
 <junction x="45.72" y="15.24"/>
 <pinref part="L1" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="-81.28" y1="-50.8" x2="-81.28" y2="-48.26" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="11"/>
+<wire x1="-81.28" y1="-48.26" x2="-76.2" y2="-48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -5379,14 +5389,14 @@ Used as a generalized connector for attaching new sensors</description>
 </net>
 <net name="STB" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="12"/>
-<wire x1="-60.96" y1="-48.26" x2="-55.88" y2="-48.26" width="0.1524" layer="91"/>
-<label x="-55.88" y="-48.26" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="A1" gate="G$1" pin="HW_S"/>
 <wire x1="-25.4" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
 <label x="-33.02" y="-7.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="4"/>
+<wire x1="-60.96" y1="-38.1" x2="-55.88" y2="-38.1" width="0.1524" layer="91"/>
+<label x="-55.88" y="-38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

@@ -7,7 +7,7 @@ Pin Description:
 1. V (3v nominal)
 2. Unused
 3. Tx - output. Transmitter signal for UART.
-4. Unused
+4. HW_S. Used to enable standby mode.
 5. Rx - input. Receiver signal for UART.
 6. HW_R. System reset pin, active low
 7. Unused
@@ -15,7 +15,7 @@ Pin Description:
 9. Unused
 10. FIX - Indicates when a GPS fix is obtained
 11. GND
-12. HW_S. Used to enable standby mode.
+12. Unused
 13. Unused
 14. Unused
 15. Unused
