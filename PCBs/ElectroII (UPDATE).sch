@@ -9007,8 +9007,23 @@ Source: &lt;a href="https://www.mouser.in/datasheet/2/196/Infineon-BAT54SERIES-D
 <wire x1="71.12" y1="-88.9" x2="76.2" y2="-88.9" width="0.1524" layer="91"/>
 <label x="81.28" y="-106.68" size="1.778" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="FB"/>
+<pinref part="L_OUT" gate="G$1" pin="2"/>
+<wire x1="144.78" y1="-96.52" x2="147.32" y2="-96.52" width="0.1524" layer="91"/>
+<label x="152.4" y="-96.52" size="1.778" layer="95"/>
+<pinref part="C_OUT" gate="G$1" pin="1"/>
+<junction x="152.4" y="-96.52"/>
+<wire x1="147.32" y1="-96.52" x2="152.4" y2="-96.52" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="-96.52" x2="172.72" y2="-96.52" width="0.1524" layer="91"/>
+<pinref part="T2" gate="G$1" pin="P$1"/>
+<pinref part="PWR" gate="G$1" pin="A"/>
+<wire x1="172.72" y1="-96.52" x2="177.8" y2="-96.52" width="0.1524" layer="91"/>
+<junction x="172.72" y="-96.52"/>
+<pinref part="DOUT" gate="1" pin="A"/>
+<wire x1="177.8" y1="-96.52" x2="193.04" y2="-96.52" width="0.1524" layer="91"/>
+<junction x="177.8" y="-96.52"/>
 <wire x1="71.12" y1="-109.22" x2="147.32" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="-109.22" x2="147.32" y2="-96.52" width="0.1524" layer="91"/>
+<junction x="147.32" y="-96.52"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -9080,23 +9095,6 @@ Source: &lt;a href="https://www.mouser.in/datasheet/2/196/Infineon-BAT54SERIES-D
 <pinref part="DIN" gate="G$1" pin="A"/>
 <pinref part="CN2" gate="G$1" pin="2"/>
 <wire x1="172.72" y1="-76.2" x2="193.04" y2="-76.2" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="BUCK_OUT" class="1">
-<segment>
-<pinref part="L_OUT" gate="G$1" pin="2"/>
-<wire x1="144.78" y1="-96.52" x2="152.4" y2="-96.52" width="0.1524" layer="91"/>
-<label x="152.4" y="-96.52" size="1.778" layer="95"/>
-<pinref part="C_OUT" gate="G$1" pin="1"/>
-<junction x="152.4" y="-96.52"/>
-<wire x1="152.4" y1="-96.52" x2="172.72" y2="-96.52" width="0.1524" layer="91"/>
-<pinref part="T2" gate="G$1" pin="P$1"/>
-<pinref part="PWR" gate="G$1" pin="A"/>
-<wire x1="172.72" y1="-96.52" x2="177.8" y2="-96.52" width="0.1524" layer="91"/>
-<junction x="172.72" y="-96.52"/>
-<pinref part="DOUT" gate="1" pin="A"/>
-<wire x1="177.8" y1="-96.52" x2="193.04" y2="-96.52" width="0.1524" layer="91"/>
-<junction x="177.8" y="-96.52"/>
 </segment>
 </net>
 </nets>
