@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "avio_flight_instruments_meeting_1")(type "KiCad")(uri "/Users/hy_red_leaf/Documents/KiCad/6.0/projects/avio_flight_instruments_meeting_1.pretty")(options "")(descr ""))
+  (lib (name "7555Badge")(type "KiCad")(uri "${KIPRJMOD}/7555Badge.pretty")(options "")(descr ""))
+)

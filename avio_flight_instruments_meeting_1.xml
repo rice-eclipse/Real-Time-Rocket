@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/hy_red_leaf/Documents/KiCad/6.0/projects/neutro_copy/avio_flight_instruments_meeting_1.kicad_sch</source>
+    <date>Sunday, October 30, 2022 at 05:42:09 PM</date>
+    <tool>Eeschema (6.0.7-1)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev>v01</rev>
+        <date>2022-09-18</date>
+        <source>avio_flight_instruments_meeting_1.kicad_sch</source>
+        <comment number="1" value="Hong-Ye Wang"/>
+        <comment number="2" value="Neutro"/>
+        <comment number="3" value="Testing"/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="A1">
+      <value>ADA3708</value>
+      <footprint>ADA3708_RPI-ZERO</footprint>
+      <fields>
+        <field name="MANUFACTURER">Raspberry</field>
+        <field name="STANDARD">MAnufactutrer Recommendations</field>
+      </fields>
+      <libsource lib="Flight_Instruments" part="ADA3708" description=""/>
+      <property name="STANDARD" value="MAnufactutrer Recommendations"/>
+      <property name="MANUFACTURER" value="Raspberry"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7e2e85c-6a7c-4f83-89a3-1175f717106b</tstamps>
+    </comp>
+    <comp ref="BT1">
+      <value>S8411-45R</value>
+      <footprint>S8411-45R:BAT_S8411-45R</footprint>
+      <fields>
+        <field name="MANUFACTURER">Harwin</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">4.25mm</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+      </fields>
+      <libsource lib="S8411-45R" part="S8411-45R" description=""/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="4.25mm"/>
+      <property name="PARTREV" value=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Harwin"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a569fb78-9066-4007-9b52-3f4e45d8faab</tstamps>
+    </comp>
+    <comp ref="BT2">
+      <value>S8411-45R</value>
+      <footprint>S8411-45R:BAT_S8411-45R</footprint>
+      <fields>
+        <field name="MANUFACTURER">Harwin</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">4.25mm</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+      </fields>
+      <libsource lib="S8411-45R" part="S8411-45R" description=""/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="4.25mm"/>
+      <property name="PARTREV" value=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Harwin"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>72656a50-96ab-48bf-859f-bb1365f2a263</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e4beeb5f-5cf7-47f5-986d-4cb6a9ad655b</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7169aeda-f5a1-4e02-b985-3473a20b3bc3</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ad9476a2-7d50-4aef-b309-625d107f02df</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>22p</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>be5d3146-f8fe-47ce-bf55-fa9ddc61f5fc</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>2.2u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3bdc4995-614e-4d26-8503-e27b66762d8c</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>22p</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>596be091-7ebe-459b-8152-e308e660c5a5</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>2.2u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0998b74e-e042-40d2-8f04-f7c40b18ebce</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>0.47u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e8e8efd-e799-4c11-87ca-177c2b52bb16</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>22p</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>923761c6-3dc0-4dfb-bbbe-ace9f6a4a2af</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>0.47u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>323c5536-262a-4093-a7a1-12fdc37b2200</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>22p</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5517d888-be28-426e-a0f0-36dc73c16400</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>100 nF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0428919c-c927-411a-b93c-c713ed6dc692</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e21d16e-ff8d-4a2e-9656-206dc03641a8</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>09a6927a-586f-489f-9566-c221e7e34bda</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>719860e7-fb55-4583-9d70-1ee3dcbf6b63</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>1.8n</value>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>12b21f18-570d-4df6-9ac4-d07cb756d18a</tstamps>
+    </comp>
+    <comp ref="L2">
+      <value>47n</value>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>579f6778-0fa4-48c0-ace3-32fe62e6e30f</tstamps>
+    </comp>
+    <comp ref="L3">
+      <value>47n</value>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3fbd9f02-b5c4-4403-8729-94c5f05e253a</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ca28fb2-0ea3-4d51-90f8-b5f40585bd04</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>24527e3c-3516-46a4-b432-a743b325c41c</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e2fa040-18ed-4efe-aeb6-61e64e283a76</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>DNI</value>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>81a04399-907b-47b0-838f-02ef3afe1c70</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e46fe421-cec5-402c-930f-8405934a722b</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5428560-d69a-488f-8601-f899d60a195b</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2ecea89f-44fe-4e48-8985-bfd35fe7a55c</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f6701f31-d023-4475-9377-5ccb94e9493e</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>220</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4101ed43-7c94-4d3a-9ce4-ff29e3d1327a</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>72b56602-ec3d-4b2b-b8a3-e1d8ac15eff0</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e1eec8af-d690-4c62-bb1d-e635b8744e98</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>TestPoint</value>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c658fef1-2f1b-4fd9-aac9-fdc855bdb4f5</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>BNO055</value>
+      <footprint>LGA28R50P4X10_380X520X100</footprint>
+      <fields>
+        <field name="MANUFACTURER">BOSCH</field>
+      </fields>
+      <libsource lib="Flight_Instruments" part="BNO055" description=""/>
+      <property name="MANUFACTURER" value="BOSCH"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62ca3a57-ae4e-4000-8d08-b6d1c0cf5caf</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>M20050-1</value>
+      <footprint>XCVR_M20050-1</footprint>
+      <fields>
+        <field name="MANUFACTURER">Antenova</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">2.0 mm</field>
+        <field name="PARTREV">M20050-1-PS-2.01</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+      </fields>
+      <libsource lib="Flight_Instruments" part="M20050-1" description=""/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="2.0 mm"/>
+      <property name="MANUFACTURER" value="Antenova"/>
+      <property name="PARTREV" value="M20050-1-PS-2.01"/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>07e0677c-ae27-4ee7-a743-b8a0802e4f94</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>DS3231M</value>
+      <footprint>DS3231M_TRL:SOIC127P1032X265-16N</footprint>
+      <datasheet>http://datasheets.maximintegrated.com/en/ds/DS3231.pdf</datasheet>
+      <libsource lib="" part="DS3231M_1" description="Extremely Accurate I2C-Integrated RTC/TCXO/Crystal SOIC-16"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03bd4ce2-a04c-464b-8363-cd6cd032bf32</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>MS5803-01BA_Miniature_Altimeter_Module</value>
+      <footprint>avio_flight_instruments_meeting_1:MS5803-01BA_Miniature_Altimeter_Module</footprint>
+      <libsource lib="Flight_Instruments" part="MS5803-01BA_Miniature_Altimeter_Module" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0ad358eb-4262-4c1d-98ce-c4cb91f6106e</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>RFM96W-433S2</value>
+      <footprint>RF_Module:HOPERF_RFM9XW_SMD</footprint>
+      <datasheet>https://www.hoperf.com/data/upload/portal/20181127/5bfcc0ac60235.pdf</datasheet>
+      <libsource lib="" part="RFM96W-433S2_1" description="Low power long range transceiver module, SPI and parallel interface, 433 MHz, spreading factor 6 to12, bandwith 7.8 to 500kHz, -111 to -148 dBm, SMD-16, DIP-16"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="avio_flight_instruments_meeting_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9fd0209f-04a3-4e96-9974-c903c54379f8</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="DS3231M_1">
+      <description>Extremely Accurate I2C-Integrated RTC/TCXO/Crystal SOIC-16</description>
+      <docs>http://datasheets.maximintegrated.com/en/ds/DS3231.pdf</docs>
+      <footprints>
+        <fp>SOIC*7.5x10.3mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U?</field>
+        <field name="Value">DS3231M_1</field>
+        <field name="Footprint">Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm</field>
+        <field name="Datasheet">http://datasheets.maximintegrated.com/en/ds/DS3231.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="32KHZ" type="open_collector"/>
+        <pin num="2" name="VCC" type="power_in"/>
+        <pin num="3" name="~{INT}/SQW" type="open_collector"/>
+        <pin num="4" name="~{RST}" type="bidirectional"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="GND" type="passive"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="GND" type="passive"/>
+        <pin num="9" name="GND" type="passive"/>
+        <pin num="10" name="GND" type="passive"/>
+        <pin num="11" name="GND" type="passive"/>
+        <pin num="12" name="GND" type="passive"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="VBAT" type="power_in"/>
+        <pin num="15" name="SDA" type="bidirectional"/>
+        <pin num="16" name="SCL" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="RFM96W-433S2_1">
+      <description>Low power long range transceiver module, SPI and parallel interface, 433 MHz, spreading factor 6 to12, bandwith 7.8 to 500kHz, -111 to -148 dBm, SMD-16, DIP-16</description>
+      <docs>https://www.hoperf.com/data/upload/portal/20181127/5bfcc0ac60235.pdf</docs>
+      <footprints>
+        <fp>HOPERF*RFM9XW*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U?</field>
+        <field name="Value">RFM96W-433S2_1</field>
+        <field name="Datasheet">https://www.hoperf.com/data/upload/portal/20181127/5bfcc0ac60235.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="MISO" type="output"/>
+        <pin num="3" name="MOSI" type="input"/>
+        <pin num="4" name="SCK" type="input"/>
+        <pin num="5" name="NSS" type="input"/>
+        <pin num="6" name="RESET" type="bidirectional"/>
+        <pin num="7" name="DIO5" type="bidirectional"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="ANT" type="bidirectional"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="DIO3" type="bidirectional"/>
+        <pin num="12" name="DIO4" type="bidirectional"/>
+        <pin num="13" name="3.3V" type="power_in"/>
+        <pin num="14" name="DIO0" type="bidirectional"/>
+        <pin num="15" name="DIO1" type="bidirectional"/>
+        <pin num="16" name="DIO2" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L_Small">
+      <description>Inductor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small_US">
+      <description>Resistor, small US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Flight_Instruments" part="ADA3708">
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">ADA3708</field>
+        <field name="Footprint">ADA3708_RPI-ZERO</field>
+        <field name="STANDARD">MAnufactutrer Recommendations</field>
+        <field name="MANUFACTURER">Raspberry</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3[1]" type="power_in"/>
+        <pin num="2" name="5V[1]" type="power_in"/>
+        <pin num="3" name="GPIO2/SDA" type="bidirectional"/>
+        <pin num="4" name="5V[2]" type="power_in"/>
+        <pin num="5" name="GPIO3/SCL" type="bidirectional"/>
+        <pin num="6" name="GND[8]" type="power_in"/>
+        <pin num="7" name="GPIO4/GPCKL0" type="bidirectional"/>
+        <pin num="8" name="TXD0/GPIO14" type="bidirectional"/>
+        <pin num="9" name="GND[1]" type="power_in"/>
+        <pin num="10" name="RXD0/GPIO15" type="bidirectional"/>
+        <pin num="11" name="GPIO17/GEN0" type="bidirectional"/>
+        <pin num="12" name="GPIO18" type="bidirectional"/>
+        <pin num="13" name="GPIO27/GEN2" type="bidirectional"/>
+        <pin num="14" name="GND[4]" type="power_in"/>
+        <pin num="15" name="GPIO22/GEN3" type="bidirectional"/>
+        <pin num="16" name="GEN4/GPIO23" type="bidirectional"/>
+        <pin num="17" name="3V3[2]" type="power_in"/>
+        <pin num="18" name="GEN5/GPIO24" type="bidirectional"/>
+        <pin num="19" name="GPIO10/MOSI" type="bidirectional"/>
+        <pin num="20" name="GND[5]" type="power_in"/>
+        <pin num="21" name="GPIO9/MISO" type="bidirectional"/>
+        <pin num="22" name="GEN/6GPIO25" type="bidirectional"/>
+        <pin num="23" name="GPIO11/SCLK" type="bidirectional"/>
+        <pin num="24" name="~{CE0}/GPIO8" type="bidirectional"/>
+        <pin num="25" name="GND[2]" type="power_in"/>
+        <pin num="26" name="~{CE1/}GPIO7" type="bidirectional"/>
+        <pin num="27" name="ID_SD" type="bidirectional"/>
+        <pin num="28" name="ID_SC" type="bidirectional"/>
+        <pin num="29" name="GPIO5" type="bidirectional"/>
+        <pin num="30" name="GND[6]" type="power_in"/>
+        <pin num="31" name="GPIO6" type="bidirectional"/>
+        <pin num="32" name="GPIO12" type="bidirectional"/>
+        <pin num="33" name="GPIO13" type="bidirectional"/>
+        <pin num="34" name="GND[7]" type="power_in"/>
+        <pin num="35" name="GPIO19" type="bidirectional"/>
+        <pin num="36" name="GPIO16" type="bidirectional"/>
+        <pin num="37" name="GPIO26" type="bidirectional"/>
+        <pin num="38" name="GPIO20" type="bidirectional"/>
+        <pin num="39" name="GND[3]" type="power_in"/>
+        <pin num="40" name="GPIO21" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Flight_Instruments" part="BNO055">
+      <fields>
+        <field name="Reference">U?</field>
+        <field name="Value">BNO055</field>
+        <field name="Footprint">LGA28R50P4X10_380X520X100</field>
+        <field name="MANUFACTURER">BOSCH</field>
+      </fields>
+      <pins>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="NBOOT_LOAD_PIN" type="bidirectional"/>
+        <pin num="5" name="PS1" type="input"/>
+        <pin num="6" name="PS0" type="input"/>
+        <pin num="9" name="CAP" type="passive"/>
+        <pin num="10" name="PIN10" type="power_in"/>
+        <pin num="11" name="NRESET" type="input"/>
+        <pin num="14" name="INT" type="output"/>
+        <pin num="15" name="PIN15" type="power_in"/>
+        <pin num="16" name="PIN16" type="power_in"/>
+        <pin num="17" name="COM3" type="bidirectional"/>
+        <pin num="18" name="COM2" type="bidirectional"/>
+        <pin num="19" name="COM1" type="bidirectional"/>
+        <pin num="20" name="COM0" type="bidirectional"/>
+        <pin num="25" name="GNDIO" type="power_in"/>
+        <pin num="26" name="XOUT32" type="output"/>
+        <pin num="27" name="XIN32" type="input"/>
+        <pin num="28" name="VDDIO" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Flight_Instruments" part="M20050-1">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">M20050-1</field>
+        <field name="Footprint">XCVR_M20050-1</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">2.0 mm</field>
+        <field name="MANUFACTURER">Antenova</field>
+        <field name="PARTREV">M20050-1-PS-2.01</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+      </fields>
+      <pins>
+        <pin num="1" name="AT1" type="passive"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="ANT_OUT" type="output"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="RF_IN" type="input"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="VCC" type="power_in"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="~{HW_R}" type="input"/>
+        <pin num="11" name="TM" type="output"/>
+        <pin num="12" name="BV" type="power_in"/>
+        <pin num="13" name="E2" type="no_connect"/>
+        <pin num="14" name="E3" type="no_connect"/>
+        <pin num="15" name="GND" type="power_in"/>
+        <pin num="16" name="GND" type="power_in"/>
+        <pin num="17" name="GND" type="power_in"/>
+        <pin num="18" name="FIX" type="output"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="20" name="TX" type="output"/>
+        <pin num="21" name="RX" type="input"/>
+        <pin num="22" name="GND" type="power_in"/>
+        <pin num="23" name="GND" type="power_in"/>
+        <pin num="24" name="GND" type="power_in"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="HW_S" type="input"/>
+        <pin num="27" name="GND" type="power_in"/>
+        <pin num="28" name="AT2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Flight_Instruments" part="MS5803-01BA_Miniature_Altimeter_Module">
+      <fields>
+        <field name="Reference">U?</field>
+        <field name="Value">MS5803-01BA_Miniature_Altimeter_Module</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SCLK" type="input"/>
+        <pin num="2" name="GND" type="power_out"/>
+        <pin num="3" name="CSB" type="input"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="VDD" type="power_in"/>
+        <pin num="6" name="PS" type="input"/>
+        <pin num="7" name="SDA" type="bidirectional"/>
+        <pin num="8" name="SDO" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="S8411-45R" part="S8411-45R">
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">S8411-45R</field>
+        <field name="Footprint">BAT_S8411-45R</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">4.25mm</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="MANUFACTURER">Harwin</field>
+      </fields>
+      <pins>
+        <pin num="N" name="" type="passive"/>
+        <pin num="P" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Flight_Instruments">
+      <uri>/Users/hy_red_leaf/Documents/KiCad/6.0/projects/neutro_copy/Flight_Instruments.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3.3V">
+      <node ref="A1" pin="1" pinfunction="3V3[1]" pintype="power_in"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U4" pin="5" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U5" pin="13" pinfunction="3.3V" pintype="power_in"/>
+    </net>
+    <net code="2" name="+3V3">
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="28" pinfunction="VDDIO" pintype="power_in"/>
+      <node ref="U1" pin="3" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="3" name="BOOTN">
+      <node ref="A1" pin="29" pinfunction="GPIO5" pintype="bidirectional"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="NBOOT_LOAD_PIN" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="CLKSEL">
+      <node ref="A1" pin="7" pinfunction="GPIO4/GPCKL0" pintype="bidirectional"/>
+      <node ref="U1" pin="10" pinfunction="PIN10" pintype="power_in"/>
+    </net>
+    <net code="5" name="CS">
+      <node ref="A1" pin="24" pinfunction="~{CE0}/GPIO8" pintype="bidirectional"/>
+      <node ref="U5" pin="5" pinfunction="NSS" pintype="input"/>
+    </net>
+    <net code="6" name="DIO0">
+      <node ref="A1" pin="18" pinfunction="GEN5/GPIO24" pintype="bidirectional"/>
+      <node ref="U5" pin="14" pinfunction="DIO0" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="FIX Indicator">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U2" pin="18" pinfunction="FIX" pintype="output"/>
+    </net>
+    <net code="8" name="GND">
+      <node ref="BT1" pin="N" pintype="passive"/>
+      <node ref="BT2" pin="N" pintype="passive"/>
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="L1" pin="1" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="25" pinfunction="GNDIO" pintype="power_in"/>
+      <node ref="U1" pin="5" pinfunction="PS1" pintype="input"/>
+      <node ref="U1" pin="6" pinfunction="PS0" pintype="input"/>
+      <node ref="U2" pin="15" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="16" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="17" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="19" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="22" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="23" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="24" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="25" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="27" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="5" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="10" pinfunction="GND" pintype="passive"/>
+      <node ref="U3" pin="11" pinfunction="GND" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="GND" pintype="passive"/>
+      <node ref="U3" pin="13" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="5" pinfunction="GND" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="GND" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="GND" pintype="passive"/>
+      <node ref="U3" pin="8" pinfunction="GND" pintype="passive"/>
+      <node ref="U3" pin="9" pinfunction="GND" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="GND" pintype="power_out"/>
+      <node ref="U5" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="10" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="8" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="9" name="HW Standby">
+      <node ref="U2" pin="26" pinfunction="HW_S" pintype="input"/>
+    </net>
+    <net code="10" name="INTN">
+      <node ref="A1" pin="31" pinfunction="GPIO6" pintype="bidirectional"/>
+      <node ref="U1" pin="14" pinfunction="INT" pintype="output"/>
+    </net>
+    <net code="11" name="MISO">
+      <node ref="A1" pin="21" pinfunction="GPIO9/MISO" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="MISO0">
+      <node ref="U5" pin="2" pinfunction="MISO" pintype="output"/>
+    </net>
+    <net code="13" name="MOSI">
+      <node ref="A1" pin="19" pinfunction="GPIO10/MOSI" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="MOSI0">
+      <node ref="U5" pin="3" pinfunction="MOSI" pintype="input"/>
+    </net>
+    <net code="15" name="NRST">
+      <node ref="A1" pin="33" pinfunction="GPIO13" pintype="bidirectional"/>
+      <node ref="U1" pin="11" pinfunction="NRESET" pintype="input"/>
+    </net>
+    <net code="16" name="Net-(BT1-PadP)">
+      <node ref="BT1" pin="P" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="BV" pintype="power_in"/>
+    </net>
+    <net code="17" name="Net-(BT2-PadP)">
+      <node ref="BT2" pin="P" pintype="passive"/>
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="U3" pin="14" pinfunction="VBAT" pintype="power_in"/>
+    </net>
+    <net code="18" name="Net-(C1-Pad2)">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="CAP" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(C6-Pad1)">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="RF_IN" pintype="input"/>
+    </net>
+    <net code="20" name="Net-(C6-Pad2)">
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="ANT_OUT" pintype="output"/>
+    </net>
+    <net code="21" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(L1-Pad2)">
+      <node ref="L1" pin="2" pintype="passive"/>
+      <node ref="U2" pin="28" pinfunction="AT2" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(L2-Pad1)">
+      <node ref="L2" pin="1" pintype="passive"/>
+      <node ref="U2" pin="21" pinfunction="RX" pintype="input"/>
+    </net>
+    <net code="24" name="Net-(L3-Pad1)">
+      <node ref="L3" pin="1" pintype="passive"/>
+      <node ref="U2" pin="20" pinfunction="TX" pintype="output"/>
+    </net>
+    <net code="25" name="Net-(R4-Pad2)">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="COM3" pintype="bidirectional"/>
+    </net>
+    <net code="26" name="Net-(R6-Pad2)">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="AT1" pintype="passive"/>
+    </net>
+    <net code="27" name="RST-RTC">
+      <node ref="A1" pin="11" pinfunction="GPIO17/GEN0" pintype="bidirectional"/>
+      <node ref="U3" pin="4" pinfunction="~{RST}" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="RST-TRX">
+      <node ref="A1" pin="16" pinfunction="GEN4/GPIO23" pintype="bidirectional"/>
+      <node ref="U5" pin="6" pinfunction="RESET" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="RX">
+      <node ref="A1" pin="8" pinfunction="TXD0/GPIO14" pintype="bidirectional"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="L2" pin="2" pintype="passive"/>
+    </net>
+    <net code="30" name="SCL0">
+      <node ref="A1" pin="28" pinfunction="ID_SC" pintype="bidirectional"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="COM1" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="SCL1alt">
+      <node ref="A1" pin="5" pinfunction="GPIO3/SCL" pintype="bidirectional"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U3" pin="16" pinfunction="SCL" pintype="input"/>
+      <node ref="U4" pin="1" pinfunction="SCLK" pintype="input"/>
+    </net>
+    <net code="32" name="SCLK">
+      <node ref="A1" pin="23" pinfunction="GPIO11/SCLK" pintype="bidirectional"/>
+      <node ref="U5" pin="4" pinfunction="SCK" pintype="input"/>
+    </net>
+    <net code="33" name="SDA0">
+      <node ref="A1" pin="27" pinfunction="ID_SD" pintype="bidirectional"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="COM0" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="SDA1alt">
+      <node ref="A1" pin="3" pinfunction="GPIO2/SDA" pintype="bidirectional"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U3" pin="15" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U4" pin="7" pinfunction="SDA" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="TRX">
+      <node ref="U5" pin="9" pinfunction="ANT" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="TX">
+      <node ref="A1" pin="10" pinfunction="RXD0/GPIO15" pintype="bidirectional"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="L3" pin="2" pintype="passive"/>
+    </net>
+    <net code="37" name="unconnected-(A1-Pad2)">
+      <node ref="A1" pin="2" pinfunction="5V[1]" pintype="power_in"/>
+    </net>
+    <net code="38" name="unconnected-(A1-Pad4)">
+      <node ref="A1" pin="4" pinfunction="5V[2]" pintype="power_in"/>
+    </net>
+    <net code="39" name="unconnected-(A1-Pad6)">
+      <node ref="A1" pin="6" pinfunction="GND[8]" pintype="power_in"/>
+    </net>
+    <net code="40" name="unconnected-(A1-Pad9)">
+      <node ref="A1" pin="9" pinfunction="GND[1]" pintype="power_in"/>
+    </net>
+    <net code="41" name="unconnected-(A1-Pad12)">
+      <node ref="A1" pin="12" pinfunction="GPIO18" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="unconnected-(A1-Pad13)">
+      <node ref="A1" pin="13" pinfunction="GPIO27/GEN2" pintype="bidirectional"/>
+    </net>
+    <net code="43" name="unconnected-(A1-Pad14)">
+      <node ref="A1" pin="14" pinfunction="GND[4]" pintype="power_in"/>
+    </net>
+    <net code="44" name="unconnected-(A1-Pad15)">
+      <node ref="A1" pin="15" pinfunction="GPIO22/GEN3" pintype="bidirectional"/>
+    </net>
+    <net code="45" name="unconnected-(A1-Pad17)">
+      <node ref="A1" pin="17" pinfunction="3V3[2]" pintype="power_in"/>
+    </net>
+    <net code="46" name="unconnected-(A1-Pad20)">
+      <node ref="A1" pin="20" pinfunction="GND[5]" pintype="power_in"/>
+    </net>
+    <net code="47" name="unconnected-(A1-Pad22)">
+      <node ref="A1" pin="22" pinfunction="GEN/6GPIO25" pintype="bidirectional"/>
+    </net>
+    <net code="48" name="unconnected-(A1-Pad25)">
+      <node ref="A1" pin="25" pinfunction="GND[2]" pintype="power_in"/>
+    </net>
+    <net code="49" name="unconnected-(A1-Pad26)">
+      <node ref="A1" pin="26" pinfunction="~{CE1/}GPIO7" pintype="bidirectional"/>
+    </net>
+    <net code="50" name="unconnected-(A1-Pad30)">
+      <node ref="A1" pin="30" pinfunction="GND[6]" pintype="power_in"/>
+    </net>
+    <net code="51" name="unconnected-(A1-Pad32)">
+      <node ref="A1" pin="32" pinfunction="GPIO12" pintype="bidirectional"/>
+    </net>
+    <net code="52" name="unconnected-(A1-Pad34)">
+      <node ref="A1" pin="34" pinfunction="GND[7]" pintype="power_in"/>
+    </net>
+    <net code="53" name="unconnected-(A1-Pad35)">
+      <node ref="A1" pin="35" pinfunction="GPIO19" pintype="bidirectional"/>
+    </net>
+    <net code="54" name="unconnected-(A1-Pad36)">
+      <node ref="A1" pin="36" pinfunction="GPIO16" pintype="bidirectional"/>
+    </net>
+    <net code="55" name="unconnected-(A1-Pad37)">
+      <node ref="A1" pin="37" pinfunction="GPIO26" pintype="bidirectional"/>
+    </net>
+    <net code="56" name="unconnected-(A1-Pad38)">
+      <node ref="A1" pin="38" pinfunction="GPIO20" pintype="bidirectional"/>
+    </net>
+    <net code="57" name="unconnected-(A1-Pad39)">
+      <node ref="A1" pin="39" pinfunction="GND[3]" pintype="power_in"/>
+    </net>
+    <net code="58" name="unconnected-(A1-Pad40)">
+      <node ref="A1" pin="40" pinfunction="GPIO21" pintype="bidirectional"/>
+    </net>
+    <net code="59" name="unconnected-(U1-Pad15)">
+      <node ref="U1" pin="15" pinfunction="PIN15" pintype="power_in+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U1-Pad16)">
+      <node ref="U1" pin="16" pinfunction="PIN16" pintype="power_in+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U1-Pad18)">
+      <node ref="U1" pin="18" pinfunction="COM2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U1-Pad26)">
+      <node ref="U1" pin="26" pinfunction="XOUT32" pintype="output+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U1-Pad27)">
+      <node ref="U1" pin="27" pinfunction="XIN32" pintype="input+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U2-Pad10)">
+      <node ref="U2" pin="10" pinfunction="~{HW_R}" pintype="input+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U2-Pad11)">
+      <node ref="U2" pin="11" pinfunction="TM" pintype="output+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U2-Pad13)">
+      <node ref="U2" pin="13" pinfunction="E2" pintype="no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U2-Pad14)">
+      <node ref="U2" pin="14" pinfunction="E3" pintype="no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U3-Pad1)">
+      <node ref="U3" pin="1" pinfunction="32KHZ" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(U3-Pad3)">
+      <node ref="U3" pin="3" pinfunction="~{INT}/SQW" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(U4-Pad3)">
+      <node ref="U4" pin="3" pinfunction="CSB" pintype="input+no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(U4-Pad4)">
+      <node ref="U4" pin="4" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(U4-Pad6)">
+      <node ref="U4" pin="6" pinfunction="PS" pintype="input+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(U4-Pad8)">
+      <node ref="U4" pin="8" pinfunction="SDO" pintype="output+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(U5-Pad7)">
+      <node ref="U5" pin="7" pinfunction="DIO5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(U5-Pad11)">
+      <node ref="U5" pin="11" pinfunction="DIO3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(U5-Pad12)">
+      <node ref="U5" pin="12" pinfunction="DIO4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(U5-Pad15)">
+      <node ref="U5" pin="15" pinfunction="DIO1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(U5-Pad16)">
+      <node ref="U5" pin="16" pinfunction="DIO2" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>
