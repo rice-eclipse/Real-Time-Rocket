@@ -1,4 +1,4 @@
-20399535486325428
+20399538703587075
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -86037,19 +86037,19 @@ BAT_S8411-45R
 2
 2
 avio_flight_instruments_meeting_1
-BNO085
-
-
-0
-28
-28
-avio_flight_instruments_meeting_1
 ICM7555-PDIP
 
 
 0
 4
 4
+avio_flight_instruments_meeting_1
+IC_BNO080
+
+
+0
+28
+28
 avio_flight_instruments_meeting_1
 MS5803-01BA_Miniature_Altimeter_Module
 
