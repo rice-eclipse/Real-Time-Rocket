@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name "Flight_Instruments")(type "KiCad")(uri "${KIPRJMOD}/Flight_Instruments.kicad_sym")(options "")(descr ""))
-)
