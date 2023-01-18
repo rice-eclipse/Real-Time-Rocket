@@ -1,0 +1,156 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "MS580330BA01-00"
+   (description "Pressure Sensor 435.1PSI (3000kPa) Absolute 24 b 8-SMD Module")
+   (family "ANA")
+   (package "MS580330BA0100")
+   (attribute "Datasheet Link" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=MS5803-30BA&DocType=Data+Sheet&DocLang=English")
+   (attribute "Geometry.Height" "3.23mm")
+   (attribute "Manufacturer_Name" "TE Connectivity")
+   (attribute "Manufacturer_Part_Number" "MS580330BA01-00")
+   (attribute "Mouser Part Number" "824-MS580330BA01-00")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Measurement-Specialties/MS580330BA01-00?qs=oFx6pF86PmCR00wWSBOdQA%3D%3D")
+   (attribute "Arrow Part Number" "MS580330BA01-00")
+   (attribute "Arrow Price/Stock" "https://www.arrow.com/en/products/ms580330ba01-00/te-connectivity?region=europe")
+   (attribute "Mouser Testing Part Number" "")
+   (attribute "Mouser Testing Price/Stock" "")
+   (gate
+    (symbol "MS580330BA01-00")
+    (pin "SCLK" 1 PS)
+    (pin "GND" 2 PS)
+    (pin "CSB" 3 PS)
+    (pin "NC" 4 NC)
+    (pin "VDD" 5 PS)
+    (pin "PS" 6 PS)
+    (pin "SDI/SDA" 7 PS)
+    (pin "SDO" 8 PS)
+   )
+  )
+  (symbol "MS580330BA01-00"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1100 100) (pt 1100 -400) (pt 200 -400) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -300) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1300 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1300 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1300 -200) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1300 -300) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "MS580330BA0100"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -3.2 -3.1)
+      (pt 3.2 -3.1)
+      (pt 3.2 3.1)
+      (pt -3.2 3.1)
+      (pt -3.2 -3.1))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -4.8 4.1)
+      (pt 4.8 4.1)
+      (pt 4.8 -4.1)
+      (pt -4.8 -4.1)
+      (pt -4.8 4.1))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 3.2 2.6)
+      (pt 3.2 3.1)
+      (pt -3.2 3.1)
+      (pt -3.2 2.6))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -3.2 -2.6)
+      (pt -3.2 -3.1)
+      (pt 3.2 -3.1)
+      (pt 3.2 -2.6))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 4.3 -1.9)
+      (arc (pt 4.300 -1.900) (pt 4.300 -1.950) (pt 4.400 -1.850) (start 180.0) (sweep 180.0))
+      (pt 4.4 -1.9)
+      (arc (pt 4.400 -1.900) (pt 4.300 -1.950) (pt 4.400 -1.850) (start 180.0) (sweep .0))
+      (pt 4.3 -1.9))))
+   (leg 1 (pt 2.675 -1.900) (padstack 0))
+   (leg 2 (pt 2.675 -0.650) (padstack 0))
+   (leg 3 (pt 2.400 0.650) (padstack 3))
+   (leg 4 (pt 2.675 1.900) (padstack 0))
+   (leg 5 (pt -2.675 1.900) (padstack 0))
+   (leg 6 (pt -2.675 0.650) (padstack 0))
+   (leg 7 (pt -2.675 -0.650) (padstack 0))
+   (leg 8 (pt -2.675 -1.900) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.900 2.250 0 0 0.000))
+   )
+   (padstack 3
+    (plated false)
+    (pad (layer TCOP) (rectf 0.900 2.800 0 0 0.000))
+   )
+   (model "MS580330BA01-00.stp"
+    (euler 0 0 0)
+    (offset 0 0 3.049999952316284)
+   )
+  )
+ )
+)

@@ -1,0 +1,20 @@
+.M20050-1 :1 ;Antennas GPS/GNSS RADIONOVA RF Module MTK chipset
+M200501
+*STM IC
+*NGS
+*PLB 1="AT1" 2="GND_1" 3="GND_2" 4="ANT_OUT" 5="GND_3" 6="ANT_IN" 7="GND_4" 8="VCC" 9="GND_5" 10="HW_R" 11="TM" 12="BV" 13="E2" 14="E3" 15="GND_6" 16="GND_7" 17="GND_8" 18="FIX" 19="GND_9" 20="TX" 21="RX" 22="GND_10" 23="GND_11" 24="GND_12" 25="GND_13" 26="HW_S" 27="GND_14" 28="AT2"
+*MXP 28
+*DFN M20050-1
+~!Manufacturer_Name (Antenova)
+~!Manufacturer_Part_Number (M20050-1)
+~!Mouser Part Number (237-M20050-1)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Antenova/M20050-1?qs=j%252B1pi9TdxUa935Cnq0dcJA%3D%3D)
+~!Arrow Part Number (M20050-1)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/m20050-1/antenova?region=nac)
+~!Mouser Testing Part Number (-)
+~!Mouser Testing Price/Stock (-)
+~!Link Datasheet (https://www.mouser.com/datasheet/2/23/antenova_M20050-1-1279284.pdf)
+~!Height (2mm)
+~!3D_Model (M20050-1)
+M20050-1
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 17.1!U 18.1!U 19.1!U 20.1!U 21.1!U 22.1!U 23.1!U 24.1!U 25.1!U 26.1!U 27.1!U 28.1!U 

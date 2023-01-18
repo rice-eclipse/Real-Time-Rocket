@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'MS580330BA01_00'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "MOUSER_TESTING_PART_NUMBER", "MOUSER_TESTING_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "TE Connectivity", "MS580330BA01-00" (!) = "", "MS580330BA0100", "Other", "824-MS580330BA01-00", "https://www.mouser.co.uk/ProductDetail/Measurement-Specialties/MS580330BA01-00?qs=oFx6pF86PmCR00wWSBOdQA%3D%3D", "MS580330BA01-00", "https://www.arrow.com/en/products/ms580330ba01-00/te-connectivity?region=europe", "", "", "Pressure Sensor 435.1PSI (3000kPa) Absolute 24 b 8-SMD Module", "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=MS5803-30BA&DocType=Data+Sheet&DocLang=English", "3.23 mm"
+END_PART
+
+END.

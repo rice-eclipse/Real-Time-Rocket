@@ -1,0 +1,9 @@
+Manufacturer=Antenova
+PartNumber=M20050-1
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=28
+Version=1.5
+Released=2020-03-30 13:05:34
+Downloaded=2022-12-30 18:57:35
+3D=Y

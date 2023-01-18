@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BNO085
+D IMU ACCEL/GYRO/MAG I2C 32BIT
+K
+F https://www.hillcrestlabs.com/downloads/bno080-datasheet
+$ENDCMP
+#
+#End Doc Library

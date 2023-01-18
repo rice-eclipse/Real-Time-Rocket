@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'M20050_1'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "MOUSER_TESTING_PART_NUMBER", "MOUSER_TESTING_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Antenova", "M20050-1" (!) = "", "M200501", "Other", "237-M20050-1", "https://www.mouser.co.uk/ProductDetail/Antenova/M20050-1?qs=j%252B1pi9TdxUa935Cnq0dcJA%3D%3D", "M20050-1", "https://www.arrow.com/en/products/m20050-1/antenova?region=nac", "", "", "Antennas GPS/GNSS RADIONOVA RF Module MTK chipset", "https://www.mouser.com/datasheet/2/23/antenova_M20050-1-1279284.pdf", "2 mm"
+END_PART
+
+END.

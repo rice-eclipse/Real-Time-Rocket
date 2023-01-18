@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "BNO085"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "BNO085")
+        (spec "default")
+    )
+)

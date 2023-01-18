@@ -1,0 +1,20 @@
+.MS580330BA01-00 :1 ;Pressure Sensor 435.1PSI (3000kPa) Absolute 24 b 8-SMD Module
+MS580330BA0100
+*STM U
+*NGS
+*PLB 1="SCLK" 2="GND" 3="CSB" 4="NC" 5="VDD" 6="PS" 7="SDI/SDA" 8="SDO"
+*MXP 8
+*DFN MS580330BA01-00
+~!Manufacturer_Name (TE Connectivity)
+~!Manufacturer_Part_Number (MS580330BA01-00)
+~!Mouser Part Number (824-MS580330BA01-00)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Measurement-Specialties/MS580330BA01-00?qs=oFx6pF86PmCR00wWSBOdQA%3D%3D)
+~!Arrow Part Number (MS580330BA01-00)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/ms580330ba01-00/te-connectivity?region=europe)
+~!Mouser Testing Part Number (-)
+~!Mouser Testing Price/Stock (-)
+~!Link Datasheet (https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=MS5803-30BA&DocType=Data+Sheet&DocLang=English)
+~!Height (3.23mm)
+~!3D_Model (MS580330BA01-00)
+MS580330BA01-00
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 
