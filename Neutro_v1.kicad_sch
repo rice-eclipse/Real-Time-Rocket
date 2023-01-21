@@ -2653,6 +2653,15 @@
     (uuid e24bf519-e299-479f-80f5-ed95ac25b9df)
   )
 
+  (label "t_pwr" (at 81.28 93.98 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 17fde22d-4528-4148-90be-b6440aece8b5)
+  )
+  (label "gps_pwr" (at 41.91 201.93 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid d0c95790-77e5-4680-b16c-e7eddec88b2f)
+  )
+
   (global_label "INTN" (shape output) (at 370.84 96.52 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 0209a53e-88b6-4eba-bb2a-20b391c1491b)
