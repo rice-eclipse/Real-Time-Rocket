@@ -3465,7 +3465,7 @@
     (uuid 3fbd9f02-b5c4-4403-8729-94c5f05e253a)
     (property "Reference" "L3" (id 0) (at 119.38 208.28 90))
     (property "Value" "47n" (id 1) (at 119.38 205.74 90))
-    (property "Footprint" "Inductor_SMD:L_1206_3216Metric" (id 2) (at 119.38 204.47 0)
+    (property "Footprint" "Inductor_SMD:L_1008_2520Metric" (id 2) (at 119.38 204.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 119.38 204.47 0)
@@ -3779,7 +3779,7 @@
     (uuid 579f6778-0fa4-48c0-ace3-32fe62e6e30f)
     (property "Reference" "L2" (id 0) (at 106.68 196.85 90))
     (property "Value" "47n" (id 1) (at 106.68 199.39 90))
-    (property "Footprint" "Inductor_SMD:L_1206_3216Metric" (id 2) (at 106.68 201.93 0)
+    (property "Footprint" "Inductor_SMD:L_1008_2520Metric" (id 2) (at 106.68 201.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 106.68 201.93 0)
@@ -5114,10 +5114,10 @@
       (reference "L1") (unit 1) (value "1.8n") (footprint "Inductor_SMD:L_0805_2012Metric")
     )
     (path "/579f6778-0fa4-48c0-ace3-32fe62e6e30f"
-      (reference "L2") (unit 1) (value "47n") (footprint "Inductor_SMD:L_1206_3216Metric")
+      (reference "L2") (unit 1) (value "47n") (footprint "Inductor_SMD:L_1008_2520Metric")
     )
     (path "/3fbd9f02-b5c4-4403-8729-94c5f05e253a"
-      (reference "L3") (unit 1) (value "47n") (footprint "Inductor_SMD:L_1206_3216Metric")
+      (reference "L3") (unit 1) (value "47n") (footprint "Inductor_SMD:L_1008_2520Metric")
     )
     (path "/4d75ebbc-b2e2-4e56-bc2e-dc62c7c80fd4"
       (reference "R1") (unit 1) (value "0") (footprint "Resistor_SMD:R_1206_3216Metric")

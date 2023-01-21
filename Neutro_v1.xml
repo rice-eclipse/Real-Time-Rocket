@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/hy_red_leaf/Documents/GitHub/Real-Time-Rocket/Neutro_v1.kicad_sch</source>
-    <date>Monday, January 09, 2023 at 03:27:24 PM</date>
+    <date>Saturday, January 21, 2023 at 03:14:05 PM</date>
     <tool>Eeschema (6.0.7-1)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -268,7 +268,7 @@
     </comp>
     <comp ref="L2">
       <value>47n</value>
-      <footprint>Inductor_SMD:L_1206_3216Metric</footprint>
+      <footprint>Inductor_SMD:L_1008_2520Metric</footprint>
       <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
@@ -277,7 +277,7 @@
     </comp>
     <comp ref="L3">
       <value>47n</value>
-      <footprint>Inductor_SMD:L_1206_3216Metric</footprint>
+      <footprint>Inductor_SMD:L_1008_2520Metric</footprint>
       <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
@@ -376,7 +376,7 @@
     </comp>
     <comp ref="TP1">
       <value>MOSI</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
@@ -385,7 +385,7 @@
     </comp>
     <comp ref="TP2">
       <value>MISO</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
@@ -393,89 +393,152 @@
       <tstamps>42836128-f1fc-494d-bc72-ae36f1c0e455</tstamps>
     </comp>
     <comp ref="TP3">
+      <value>SCLK</value>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>29d84c9d-22d8-46d1-a9e5-634045e9176a</tstamps>
+    </comp>
+    <comp ref="TP4">
+      <value>CS</value>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>95cd63e1-397d-4d89-a58f-5093b8d9b2fd</tstamps>
+    </comp>
+    <comp ref="TP5">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01ba5980-42f8-4550-9914-82cb6ecacab8</tstamps>
+    </comp>
+    <comp ref="TP6">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bda46dff-c79f-4be6-bc29-f2a4dd22ada4</tstamps>
+    </comp>
+    <comp ref="TP7">
       <value>Fix</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>aff5efea-fc17-438e-b264-1c5b415c9996</tstamps>
     </comp>
-    <comp ref="TP4">
+    <comp ref="TP8">
       <value>HW</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>9649eabd-ae44-4fe1-be78-96668779a694</tstamps>
     </comp>
-    <comp ref="TP5">
+    <comp ref="TP9">
       <value>RX</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>30142d95-e72f-48bf-922e-b3b8d9d991fa</tstamps>
     </comp>
-    <comp ref="TP6">
+    <comp ref="TP10">
       <value>TX</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>398377ef-b252-41c6-b95c-3a44903bc541</tstamps>
     </comp>
-    <comp ref="TP7">
+    <comp ref="TP11">
       <value>3.3V</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>3bb642b7-4831-4841-a96f-8c4351d1c7fc</tstamps>
     </comp>
-    <comp ref="TP8">
+    <comp ref="TP12">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>575a9677-aa34-4865-bde1-fbe9f563d89a</tstamps>
+    </comp>
+    <comp ref="TP13">
       <value>SCL1</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>581d1826-2218-4f3b-be29-7981d5056345</tstamps>
     </comp>
-    <comp ref="TP9">
+    <comp ref="TP14">
       <value>SDA1</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>083c036b-38cf-46f2-8d38-51d749ba7f74</tstamps>
     </comp>
-    <comp ref="TP10">
+    <comp ref="TP15">
+      <value>5V</value>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>614e07e7-69d5-4a01-972c-99fbae9f9d05</tstamps>
+    </comp>
+    <comp ref="TP16">
       <value>BOOTN</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>a88fbdc4-e648-4e82-a7e6-7cc1e86ef75f</tstamps>
     </comp>
-    <comp ref="TP11">
+    <comp ref="TP17">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>97c5b5dc-10b4-4570-b1e5-86225e3123a3</tstamps>
+    </comp>
+    <comp ref="TP18">
       <value>SCL0</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>2becc36f-53c9-4ff1-9f7f-f9106f536b74</tstamps>
     </comp>
-    <comp ref="TP12">
+    <comp ref="TP19">
       <value>SDA0</value>
-      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Neutro_v1.kicad_sch"/>
@@ -956,12 +1019,13 @@
       <node ref="R4" pin="1" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
       <node ref="R9" pin="1" pintype="passive"/>
-      <node ref="TP7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP11" pin="1" pinfunction="1" pintype="passive"/>
     </net>
     <net code="2" name="+5V">
       <node ref="A1" pin="2" pinfunction="5V[1]" pintype="power_in"/>
       <node ref="A1" pin="4" pinfunction="5V[2]" pintype="power_in"/>
       <node ref="J1" pin="1" pinfunction="Pin_1" pintype="power_out"/>
+      <node ref="TP15" pin="1" pinfunction="1" pintype="passive"/>
     </net>
     <net code="3" name="+BATT">
       <node ref="BT1" pin="P" pintype="passive"/>
@@ -970,30 +1034,43 @@
       <node ref="U1" pin="12" pinfunction="BV" pintype="power_in"/>
       <node ref="U5" pin="14" pinfunction="VBAT" pintype="power_in"/>
     </net>
-    <net code="4" name="BOOTN">
+    <net code="4" name="/gps_pwr">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="5" name="/t_pwr">
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U2" pin="13" pinfunction="3.3V" pintype="power_in"/>
+    </net>
+    <net code="6" name="BOOTN">
       <node ref="A1" pin="22" pinfunction="GEN/6GPIO25" pintype="bidirectional"/>
       <node ref="R8" pin="2" pintype="passive"/>
-      <node ref="TP10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP16" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U4" pin="4" pinfunction="~{BOOT}" pintype="input"/>
     </net>
-    <net code="5" name="CLKSEL0">
+    <net code="7" name="CLKSEL0">
       <node ref="A1" pin="18" pinfunction="GEN5/GPIO24" pintype="bidirectional"/>
       <node ref="U4" pin="10" pinfunction="CLKSEL0" pintype="input"/>
     </net>
-    <net code="6" name="CS">
+    <net code="8" name="CS">
       <node ref="A1" pin="15" pinfunction="GPIO22/GEN3" pintype="bidirectional"/>
+      <node ref="TP4" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="NSS" pintype="input"/>
     </net>
-    <net code="7" name="DIO0">
+    <net code="9" name="DIO0">
       <node ref="A1" pin="11" pinfunction="GPIO17/GEN0" pintype="bidirectional"/>
       <node ref="U2" pin="14" pinfunction="DIO0" pintype="bidirectional"/>
     </net>
-    <net code="8" name="FIX">
+    <net code="10" name="FIX">
       <node ref="A1" pin="35" pinfunction="GPIO19" pintype="bidirectional"/>
-      <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U1" pin="18" pinfunction="FIX" pintype="output"/>
     </net>
-    <net code="9" name="GND">
+    <net code="11" name="GND">
       <node ref="A1" pin="14" pinfunction="GND[4]" pintype="power_in"/>
       <node ref="A1" pin="20" pinfunction="GND[5]" pintype="power_in"/>
       <node ref="A1" pin="25" pinfunction="GND[2]" pintype="power_in"/>
@@ -1022,6 +1099,10 @@
       <node ref="J2" pin="2" pinfunction="Ext" pintype="passive"/>
       <node ref="L1" pin="1" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="TP12" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP17" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U1" pin="15" pinfunction="GND" pintype="power_in"/>
       <node ref="U1" pin="16" pinfunction="GND" pintype="power_in"/>
       <node ref="U1" pin="17" pinfunction="GND" pintype="power_in"/>
@@ -1055,56 +1136,44 @@
       <node ref="U5" pin="8" pinfunction="GND" pintype="passive"/>
       <node ref="U5" pin="9" pinfunction="GND" pintype="passive"/>
     </net>
-    <net code="10" name="HW">
+    <net code="12" name="HW">
       <node ref="A1" pin="37" pinfunction="GPIO26" pintype="bidirectional"/>
-      <node ref="TP4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U1" pin="26" pinfunction="HW_S" pintype="input"/>
     </net>
-    <net code="11" name="INTN">
+    <net code="13" name="INTN">
       <node ref="A1" pin="12" pinfunction="GPIO18" pintype="bidirectional"/>
       <node ref="U4" pin="14" pinfunction="~{H_INT}" pintype="output"/>
     </net>
-    <net code="12" name="MISO0">
+    <net code="14" name="MISO0">
       <node ref="A1" pin="21" pinfunction="GPIO9/MISO" pintype="bidirectional"/>
       <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="MISO" pintype="output"/>
     </net>
-    <net code="13" name="MOSI0">
+    <net code="15" name="MOSI0">
       <node ref="A1" pin="19" pinfunction="GPIO10/MOSI" pintype="bidirectional"/>
       <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="3" pinfunction="MOSI" pintype="input"/>
     </net>
-    <net code="14" name="NRST">
+    <net code="16" name="NRST">
       <node ref="A1" pin="16" pinfunction="GEN4/GPIO23" pintype="bidirectional"/>
       <node ref="U4" pin="11" pinfunction="~{RST}" pintype="input"/>
     </net>
-    <net code="15" name="Net-(A1-Pad38)">
-      <node ref="A1" pin="38" pinfunction="GPIO20" pintype="bidirectional"/>
+    <net code="17" name="Net-(A1-Pad24)">
+      <node ref="A1" pin="24" pinfunction="~{CE0}/GPIO8" pintype="bidirectional"/>
       <node ref="R6" pin="1" pintype="passive"/>
     </net>
-    <net code="16" name="Net-(A1-Pad40)">
-      <node ref="A1" pin="40" pinfunction="GPIO21" pintype="bidirectional"/>
+    <net code="18" name="Net-(A1-Pad26)">
+      <node ref="A1" pin="26" pinfunction="~{CE1/}GPIO7" pintype="bidirectional"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
-    <net code="17" name="Net-(C1-Pad2)">
-      <node ref="C1" pin="2" pintype="passive"/>
-      <node ref="C2" pin="2" pintype="passive"/>
-      <node ref="R1" pin="2" pintype="passive"/>
-      <node ref="U1" pin="8" pinfunction="VCC" pintype="power_in"/>
-    </net>
-    <net code="18" name="Net-(C3-Pad1)">
+    <net code="19" name="Net-(C3-Pad1)">
       <node ref="C3" pin="1" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="RF_IN" pintype="input"/>
     </net>
-    <net code="19" name="Net-(C3-Pad2)">
+    <net code="20" name="Net-(C3-Pad2)">
       <node ref="C3" pin="2" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="ANT_OUT" pintype="output"/>
-    </net>
-    <net code="20" name="Net-(C5-Pad2)">
-      <node ref="C5" pin="2" pintype="passive"/>
-      <node ref="C6" pin="2" pintype="passive"/>
-      <node ref="R3" pin="2" pintype="passive"/>
-      <node ref="U2" pin="13" pinfunction="3.3V" pintype="power_in"/>
     </net>
     <net code="21" name="Net-(C9-Pad2)">
       <node ref="C9" pin="2" pintype="passive"/>
@@ -1162,7 +1231,7 @@
       <node ref="U3" pin="6" pinfunction="PS" pintype="input"/>
     </net>
     <net code="33" name="RST-RTC">
-      <node ref="A1" pin="7" pinfunction="GPIO4/GPCKL0" pintype="bidirectional"/>
+      <node ref="A1" pin="29" pinfunction="GPIO5" pintype="bidirectional"/>
       <node ref="U5" pin="4" pinfunction="~{RST}" pintype="bidirectional"/>
     </net>
     <net code="34" name="RST-TRX">
@@ -1173,31 +1242,32 @@
       <node ref="A1" pin="8" pinfunction="TXD0/GPIO14" pintype="bidirectional"/>
       <node ref="C7" pin="1" pintype="passive"/>
       <node ref="L2" pin="2" pintype="passive"/>
-      <node ref="TP5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP9" pin="1" pinfunction="1" pintype="passive"/>
     </net>
     <net code="36" name="SCL0">
       <node ref="A1" pin="5" pinfunction="GPIO3/SCL" pintype="bidirectional"/>
-      <node ref="TP11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP18" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U4" pin="19" pinfunction="H_SCL/SCK/RX" pintype="bidirectional"/>
     </net>
     <net code="37" name="SCL1">
       <node ref="A1" pin="28" pinfunction="ID_SC" pintype="bidirectional"/>
-      <node ref="TP8" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP13" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U3" pin="1" pinfunction="SCLK" pintype="input"/>
       <node ref="U5" pin="16" pinfunction="SCL" pintype="input"/>
     </net>
     <net code="38" name="SCLK">
       <node ref="A1" pin="23" pinfunction="GPIO11/SCLK" pintype="bidirectional"/>
+      <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="4" pinfunction="SCK" pintype="input"/>
     </net>
     <net code="39" name="SDA0">
       <node ref="A1" pin="3" pinfunction="GPIO2/SDA" pintype="bidirectional"/>
-      <node ref="TP12" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP19" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U4" pin="20" pinfunction="H_SDA/H_MISO/TX" pintype="bidirectional"/>
     </net>
     <net code="40" name="SDA1">
       <node ref="A1" pin="27" pinfunction="ID_SD" pintype="bidirectional"/>
-      <node ref="TP9" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP14" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U3" pin="7" pinfunction="SDA" pintype="bidirectional"/>
       <node ref="U5" pin="15" pinfunction="SDA" pintype="bidirectional"/>
     </net>
@@ -1205,28 +1275,28 @@
       <node ref="A1" pin="10" pinfunction="RXD0/GPIO15" pintype="bidirectional"/>
       <node ref="C8" pin="1" pintype="passive"/>
       <node ref="L3" pin="2" pintype="passive"/>
-      <node ref="TP6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP10" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="42" name="unconnected-(A1-Pad24)">
-      <node ref="A1" pin="24" pinfunction="~{CE0}/GPIO8" pintype="bidirectional+no_connect"/>
+    <net code="42" name="unconnected-(A1-Pad7)">
+      <node ref="A1" pin="7" pinfunction="GPIO4/GPCKL0" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="43" name="unconnected-(A1-Pad26)">
-      <node ref="A1" pin="26" pinfunction="~{CE1/}GPIO7" pintype="bidirectional+no_connect"/>
-    </net>
-    <net code="44" name="unconnected-(A1-Pad29)">
-      <node ref="A1" pin="29" pinfunction="GPIO5" pintype="bidirectional+no_connect"/>
-    </net>
-    <net code="45" name="unconnected-(A1-Pad31)">
+    <net code="43" name="unconnected-(A1-Pad31)">
       <node ref="A1" pin="31" pinfunction="GPIO6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="46" name="unconnected-(A1-Pad32)">
+    <net code="44" name="unconnected-(A1-Pad32)">
       <node ref="A1" pin="32" pinfunction="GPIO12" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="47" name="unconnected-(A1-Pad33)">
+    <net code="45" name="unconnected-(A1-Pad33)">
       <node ref="A1" pin="33" pinfunction="GPIO13" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="48" name="unconnected-(A1-Pad36)">
+    <net code="46" name="unconnected-(A1-Pad36)">
       <node ref="A1" pin="36" pinfunction="GPIO16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(A1-Pad38)">
+      <node ref="A1" pin="38" pinfunction="GPIO20" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(A1-Pad40)">
+      <node ref="A1" pin="40" pinfunction="GPIO21" pintype="bidirectional+no_connect"/>
     </net>
     <net code="49" name="unconnected-(U1-Pad10)">
       <node ref="U1" pin="10" pinfunction="~{HW_R}" pintype="input+no_connect"/>
