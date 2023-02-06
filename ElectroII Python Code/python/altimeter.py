@@ -27,7 +27,7 @@ class Altimeter:
             0
         ]
         self._address = 0x77  # Hardware address on the altimeter. 0x76 for hi CS
-        #and 0x77 for low CS
+        #and 0x77 for low CS (chip select pin)
         self._prom_commands = [
             0xA0,
             0xA2,
