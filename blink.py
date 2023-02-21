@@ -17,6 +17,6 @@ try:
         led_red.value = False
         led_green.value = True
         time.sleep(0.75)
-except InterruptedError:
+except KeyboardInterrupt:
     led_red.value = False
     led_green.value = False
