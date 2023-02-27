@@ -1,6 +1,6 @@
 frequency_mhz: 433.0
-cs_pin: CE1
-reset_pin: D25
+cs_pin: D22
+reset_pin: D27
 ctrl1A_pin: D6
 ctrl2A_pin: D19
 ctrl1B_pin: D13

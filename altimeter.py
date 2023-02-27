@@ -2,7 +2,7 @@ import time
 #import busio
 #import board
 import array
-import utils #import big_endian_add
+#from utils import big_endian_add
 import struct
 
 print(utils.__doc__)
