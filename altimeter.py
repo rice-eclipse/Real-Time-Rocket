@@ -1,11 +1,11 @@
 import time
-#import busio
-#import board
+import busio
+import board
 import array
 #from utils import big_endian_add
 import struct
 
-print(utils.__doc__)
+#print(utils.__doc__)
 
 meters_per_foot = 0.3048
 standard_atm_mbar = 1013.25
@@ -39,7 +39,7 @@ class Altimeter:
             0xAA,
             0xAC
         ]
-        self._i2c = busio.I2C(board.SCL, board.SDA)
+        self._i2c = busio.I2C(board.D1, board.D0)
         self._reset_command = 0x1E
         self._convert_d1_256 = 0x40
         self._convert_d1_4096 = 0x48
@@ -86,7 +86,7 @@ class Altimeter:
         output_buffer = bytearray(2)
         self._i2c.readfrom_into(address=self._address, buffer=output_buffer)
         self._i2c.unlock()  # free the i2c
-        return big_endian_add(output_buffer)
+        return output_buffer
 
     def read_raw(self, command):
         """
@@ -105,7 +105,7 @@ class Altimeter:
         self._i2c.readfrom_into(address=self._address, buffer=output_buffer)
         print(output_buffer)
         self._i2c.unlock()  # free the i2c
-        return big_endian_add(output_buffer)
+        return output_buffer
 
     def get_data(self):
         """
@@ -117,7 +117,9 @@ class Altimeter:
         d2 = self.read_raw(self._convert_d2_4096)
         print("D2 is", d2)
 
-        d_t = d2 - (self._c[5] << 8)  # temperature offset from reference
+        print(type(d2))
+        print(type(self._c[5]))
+        d_t = d2 - bytearray([int(self._c[5]) << 8])  # temperature offset from reference
         print("DT is", d_t)
 
         int_temp = ((d_t * self._c[6]) >> 23) + 2000

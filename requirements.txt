@@ -1,3 +1,4 @@
 Adafruit-Blinka==8.15.0
 adafruit-circuitpython-bno08x==1.1.9
 adafruit-circuitpython-gps==3.10.7
+utils=1.0.1
