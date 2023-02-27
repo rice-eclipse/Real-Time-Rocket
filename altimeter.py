@@ -1,9 +1,11 @@
 import time
-import busio
-import board
+#import busio
+#import board
 import array
-from utils import big_endian_add
+import utils #import big_endian_add
 import struct
+
+print(utils.__doc__)
 
 meters_per_foot = 0.3048
 standard_atm_mbar = 1013.25
