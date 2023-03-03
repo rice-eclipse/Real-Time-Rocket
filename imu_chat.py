@@ -13,7 +13,7 @@ BNO_QUATERNION_ADDR = 0x01
 BNO_EULER_ADDR = 0x0D
 
 # Initialize I2C bus
-bus = smbus.SMBus(I2C_BUS_NUM)
+bus = smbus.SMBus(I2C_BUS_NUM, timeout=1)
 
 # Read chip ID
 chip_id = bus.read_byte_data(BNO085_ADDR, BNO_CHIP_ID_ADDR)
