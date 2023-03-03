@@ -15,5 +15,7 @@ while True:
         if parts[6] != '0':
             # If fix quality is not 0, print fix message
             print('GPS fix achieved!')
+        else:
+            print('GPS not fixed')
         # Print the full GGA sentence
         print(data)
