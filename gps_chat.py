@@ -1,4 +1,5 @@
-from pyserial import serial
+import serial
+from serial import Serial
 
 # Set up the serial port
 ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)
