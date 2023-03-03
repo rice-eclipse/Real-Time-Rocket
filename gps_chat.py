@@ -2,6 +2,8 @@ import serial
 
 # Set up the serial port
 ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)
+ser.open()
+print("serial opened")
 
 # Send command to enable NMEA output
 ser.write(b'$PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*29\r\n')
