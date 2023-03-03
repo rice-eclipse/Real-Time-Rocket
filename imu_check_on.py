@@ -8,7 +8,7 @@ BNO085_ADDR = 0x4B
 BNO_CHIP_ID_ADDR = 0x00
 
 # Initialize the I2C bus with a timeout of 1 second
-bus = smbus.SMBus(1, timeout=1)
+bus = smbus.SMBus(1)
 
 # Read the chip ID from the BNO085 IMU
 chip_id = bus.read_byte_data(BNO085_ADDR, BNO_CHIP_ID_ADDR)
