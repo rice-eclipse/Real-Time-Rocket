@@ -1,5 +1,6 @@
 import smbus
 import time
+import math
 
 # Define MS5803 constants
 MS5803_ADDRESS = 0x76  # Address of the MS5803 altimeter
@@ -9,7 +10,7 @@ MS5803_CONVERT_D2_256 = 0x50  # Start temperature conversion, OSR=256
 MS5803_ADC_READ = 0x00  # ADC read command
 
 # Define I2C bus
-bus = smbus.SMBus(0)  # Use I2C bus 1 on Raspberry Pi
+bus = smbus.SMBus(0)  # Use I2C bus 0 on Raspberry Pi
 
 # Reset MS5803
 bus.write_byte(MS5803_ADDRESS, MS5803_RESET)
@@ -18,7 +19,7 @@ time.sleep(0.05)
 while True:
     # Start pressure conversion
     bus.write_byte(MS5803_ADDRESS, MS5803_CONVERT_D1_256)
-    time.sleep(0.05)
+    time.sleep(1)
 
     # Read ADC value for pressure
     adc = bus.read_i2c_block_data(MS5803_ADDRESS, MS5803_ADC_READ, 3)
@@ -26,7 +27,7 @@ while True:
 
     # Start temperature conversion
     bus.write_byte(MS5803_ADDRESS, MS5803_CONVERT_D2_256)
-    time.sleep(0.05)
+    time.sleep(1)
 
     # Read ADC value for temperature
     adc = bus.read_i2c_block_data(MS5803_ADDRESS, MS5803_ADC_READ, 3)
@@ -56,6 +57,10 @@ while True:
 
     P = (((d1 * SENS) / 2 ** 21) - OFF) / 2 ** 15
 
+    # Calculate altitude
+    P0 = 1013.25  # Sea level pressure in mbar
+    h = ((P0 / P) ** (1 / 5.257) - 1) * (TEMP + 273.15) / 0.0065
+
     print("Pressure: %.2f mbar" % P)
+    print("Altitude: %.2f meters" % h)
     print("Temperature: %.2f C" % TEMP)
-    time.sleep(1)
