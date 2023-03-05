@@ -6,7 +6,7 @@ print("serial opened")
 
 # Send command to enable NMEA output
 #ser.write(b'$PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*29\r\n')
-gps.send_command(b'PMTK314,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0')
+ser.write(b'PMTK314,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0')
 print("enabled NMEA output")
 
 # Read and print GPS data
