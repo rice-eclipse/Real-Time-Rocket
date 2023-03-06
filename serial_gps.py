@@ -29,6 +29,7 @@ def formatDegreesMinutes(coordinates, digits):
 # gps is the serial port, that's used to communicate with the GPS adapter
 def getPositionData(gps):
     data = gps.readline()
+    print("line read")
     message = data[0:6]
     if (message == "$GPRMC"):
         # GPRMC = Recommended minimum specific GPS/Transit data
