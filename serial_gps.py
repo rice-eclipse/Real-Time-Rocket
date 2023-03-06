@@ -47,6 +47,7 @@ def getPositionData(gps):
             print("Your position: lon = " + str(longitude) + ", lat = " + str(latitude))
     else:
         # Handle other NMEA messages and unsupported strings
+        print("Message not $GPRMC, message is ",message)
         pass
 
 print("Application started!")
