@@ -1,6 +1,6 @@
 import serial
 
-SERIAL_PORT = "/dev/ttyAMA0"
+SERIAL_PORT = "/dev/ttys0"
 running = True
 
 # In the NMEA message, the position gets transmitted as:
