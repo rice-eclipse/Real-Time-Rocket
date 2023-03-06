@@ -1,4 +1,6 @@
 import serial
+import RPi.GPIO as GPIO
+
 
 SERIAL_PORT = "/dev/ttyS0"
 running = True
@@ -31,6 +33,13 @@ def getPositionData(gps):
     data = gps.readline()
     print("line read")
     message = data[0:6]
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(19, GPIO.IN)
+
+    value = GPIO.input(19)
+    print("Value on GPIO 19: ", value)
+
+    GPIO.cleanup()
     if (message == "$GPRMC"):
         # GPRMC = Recommended minimum specific GPS/Transit data
         # Reading the GPS fix data is an alternative approach that also works
