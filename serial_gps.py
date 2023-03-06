@@ -48,6 +48,7 @@ def getPositionData(gps):
     else:
         # Handle other NMEA messages and unsupported strings
         print("Message not $GPRMC, message is ",message)
+        print("data is ", data)
         pass
 
 print("Application started!")
