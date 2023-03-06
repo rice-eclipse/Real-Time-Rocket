@@ -50,7 +50,7 @@ def getPositionData(gps):
 
 print("Application started!")
 gps = serial.Serial(SERIAL_PORT, baudrate = 9600, timeout = 0.5, xonxoff=True, rtscts=True, dsrdtr=True)
-
+print("Serial object created")
 while running:
     try:
         getPositionData(gps)
