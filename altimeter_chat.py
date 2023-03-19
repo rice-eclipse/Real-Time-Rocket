@@ -60,7 +60,7 @@ while True:
     P = P / 100.0  # Convert to millibars
 
     # Calculate altitude
-    P0 = 1013.25  # Sea level pressure in mbar
+    P0 = 1030  # Approximate sea level pressure in mbar at Galveston
     h = ((P0 / P) ** (1 / 5.257) - 1) * (TEMP + 273.15) / 0.006
 
     print("Pressure: %.2f mbar" % P)
