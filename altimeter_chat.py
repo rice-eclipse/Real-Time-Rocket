@@ -66,3 +66,4 @@ while True:
     print("Pressure: %.2f mbar" % P)
     print("Temperature: %.2f C" % TEMP)
     print("Altitude: %.2f meters" % h)
+    time.sleep(1)
