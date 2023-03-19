@@ -19,7 +19,7 @@ time.sleep(0.05)
 while True:
     # Start pressure conversion
     bus.write_byte(MS5803_ADDRESS, MS5803_CONVERT_D1_256)
-    time.sleep(1)
+    time.sleep(0.05)
 
     # Read ADC value for pressure
     adc = bus.read_i2c_block_data(MS5803_ADDRESS, MS5803_ADC_READ, 3)
@@ -27,7 +27,7 @@ while True:
 
     # Start temperature conversion
     bus.write_byte(MS5803_ADDRESS, MS5803_CONVERT_D2_256)
-    time.sleep(1)
+    time.sleep(0.05)
 
     # Read ADC value for temperature
     adc = bus.read_i2c_block_data(MS5803_ADDRESS, MS5803_ADC_READ, 3)
@@ -36,15 +36,16 @@ while True:
     # Calculate temperature
     dT = d2 - 8388608
     TEMP = 2000 + (dT * 5) / 8388608
+    TEMP = TEMP / 100.0  # Convert to degrees Celsius
 
     # Calculate pressure
     OFF = 0
     SENS = 0
-    if TEMP < 2000:
+    if TEMP < 20:
         T2 = (dT * dT) / 2147483648
         OFF2 = 61 * ((TEMP - 2000) ** 2) / 16
         SENS2 = 2 * ((TEMP - 2000) ** 2)
-        if TEMP < -1500:
+        if TEMP < -15:
             OFF2 += 15 * ((TEMP + 1500) ** 2)
             SENS2 += 8 * ((TEMP + 1500) ** 2)
     else:
@@ -56,11 +57,12 @@ while True:
     SENS = (1100 * 2 ** 21) + ((SENS2 * dT) / 2 ** 25)
 
     P = (((d1 * SENS) / 2 ** 21) - OFF) / 2 ** 15
+    P = P / 100.0  # Convert to millibars
 
     # Calculate altitude
     P0 = 1013.25  # Sea level pressure in mbar
-    h = ((P0 / P) ** (1 / 5.257) - 1) * (TEMP + 273.15) / 0.0065
+    h = ((P0 / P) ** (1 / 5.257) - 1) * (TEMP + 273.15) / 0.006
 
     print("Pressure: %.2f mbar" % P)
-    print("Altitude: %.2f meters" % h)
     print("Temperature: %.2f C" % TEMP)
+    print("Altitude: %.2f meters" % h)
