@@ -90,7 +90,7 @@ class Radio:
 		if self.magic != None:
 			self.packet_size += struct.calcsize(Radio.DATA_TYPES['uint8'])
 
-		for _, var_type in self.packetdef:
+		for _, var_type in self.packetdef.items():
 			self.packet_size += struct.calcsize(Radio.DATA_TYPES[var_type])
 
 		if self.packet_size >= 252:
