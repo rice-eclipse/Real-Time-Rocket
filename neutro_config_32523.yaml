@@ -1,38 +1,38 @@
 # Radio configuration file for launch transmissions.
 
-frequency:		433.0	# RF frequency in MHz (433.0)
-bandwidth:		250		# RF bandwidth in kHz (62.5, 125, 250, 500)
-spreading:		10		# RF LoRa spreading factor (7-12)
-tx_power:		20		# RF transmit power in dBm (5-23)
+frequency: 433.0 # RF frequency in MHz (433.0)
+bandwidth: 250 # RF bandwidth in kHz (62.5, 125, 250, 500)
+spreading: 10 # RF LoRa spreading factor (7-12)
+tx_power: 20 # RF transmit power in dBm (5-23)
 
-amp_mode:		D		# D=disabled, B=bypass, T=transmit, R=receive
-timeout:		3		# Receive timeout in seconds
-coding_rate:	6		# Error correction strength (5-8)
-baudrate:		1		# Transceiver baudrate in MHz
+amp_mode: D # D=disabled, B=bypass, T=transmit, R=receive
+timeout: 3 # Receive timeout in seconds
+coding_rate: 6 # Error correction strength (5-8)
+baudrate: 1 # Transceiver baudrate in MHz
 
-callsign:		ABCDE	# Ham radio callsign (null = don't send)
-send_packet_n:	false	# Send packet number
-send_time:		true	# Send Unix time at transmit
-magic:			0x42	# Magic checkbyte (null = don't send)
+callsign: ABCDE # Ham radio callsign (null = don't send)
+send_packet_n: false # Send packet number
+send_time: true # Send Unix time at transmit
+magic: 0x42 # Magic checkbyte (null = don't send)
 
 pins:
 	transceiver:
-		sck:	SCK
-		mosi:	MOSI
-		miso:	MISO
-		cs:		CE1
-		reset:	D25
+		sck: SCK
+		mosi: MOSI
+		miso: MISO
+		cs: CE1
+		reset: D25
 	switch_A:
-		ctrl1:	D6
-		ctrl2:	D19
+		ctrl1: D6
+		ctrl2: D19
 	switch_B:
-		ctrl1:	D13
-		ctrl2:	D26
+		ctrl1: D13
+		ctrl2: D26
 
 packetdef:
-	- pressure:		float64
-	- temperature:	float64
-	- altitude:	float64
+	- pressure: float64
+	- temperature: float64
+	- altitude: float64
 
 # Supported data types:
 # int8, int16, int32, int64, uint8, uint16, uint32, uint64,
