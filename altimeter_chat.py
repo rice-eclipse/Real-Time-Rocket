@@ -4,8 +4,7 @@ import math
 from radio_launch_test import Radio
 
 trx = Radio("/home/pi/Neutro/neutro_config_32523.yaml", None)
-example_data = {'latitude': 29.72, 'longitude': -95.41, 'fix_quality': 2}
-trx.send(example_data)
+
 # Define MS5803 constants
 MS5803_ADDRESS = 0x76  # Address of the MS5803 altimeter
 MS5803_RESET = 0x1E  # Reset command
@@ -66,6 +65,8 @@ while True:
     # Calculate altitude
     P0 = 1030  # Approximate sea level pressure in mbar at Galveston
     h = ((P0 / P) ** (1 / 5.257) - 1) * (TEMP + 273.15) / 0.006
+    example_data = {'pressure': P, 'temperature': TEMP, 'altitude': h}
+    trx.send(example_data)
 
     print("Pressure: %.2f mbar" % P)
     print("Temperature: %.2f C" % TEMP)
