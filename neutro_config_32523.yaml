@@ -17,17 +17,17 @@ magic: 0x42 # Magic checkbyte (null = don't send)
 
 pins:
   transceiver:
-    sck: SCK
-    mosi: MOSI
-    miso: MISO
-    cs: CE1
-    reset: D25
+    sck: D11
+    mosi: D10
+    miso: D9
+    cs: D22
+    reset: D27
   switch_A:
-    ctrl1: D6
-    ctrl2: D19
+    ctrl1: D16
+    ctrl2: D16
   switch_B:
-    ctrl1: D13
-    ctrl2: D26
+    ctrl1: D16
+    ctrl2: D16
 
 packetdef:
   - pressure: float64
