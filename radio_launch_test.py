@@ -152,17 +152,17 @@ class Radio:
 		if self.callsign != None:
 			data_bytes.extend(bytes(self.callsign, 'ascii'))
 		if self.send_packet_n:
-			data_bytes.extend(struct.pack(f">{self.packets_sent}", Radio.DATA_TYPES['uint32']))
+			data_bytes.extend(struct.pack(f">{Radio.DATA_TYPES['uint32']}", self.packets_sent))
 		if self.send_time:
-			data_bytes.extend(struct.pack(f">{time.time_ns()}", Radio.DATA_TYPES['uint64']))
+			data_bytes.extend(struct.pack(f">{Radio.DATA_TYPES['uint64']}", time.time_ns()))
 
 		for var_name, var_type in self.packetdef:
 			val = data[var_name]
-			packed_val = struct.pack(f">{val}", Radio.DATA_TYPES[var_type])
+			packed_val = struct.pack(f">{Radio.DATA_TYPES[var_type]}", val)
 			data_bytes.extend(packed_val)
 
 		if self.magic != None:
-			data_bytes.extend(struct.pack(f">{self.magic}", Radio.DATA_TYPES['uint8']))
+			data_bytes.extend(struct.pack(f">{Radio.DATA_TYPES['uint8']}", self.magic))
 
 		if len(data_bytes) != self.packet_size:
 			print(f"Packet of size {len(data_bytes)} is invalid for config with size {self.packet_size}")
