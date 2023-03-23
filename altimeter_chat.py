@@ -1,74 +1,19 @@
-import smbus
 import time
-import math
+from ms5803 import MS5803
 from radio_launch_test import Radio
+
+P0 = 1030  # Approximate sea level pressure in mbar at Galveston
 
 trx = Radio("/home/pi/Neutro/neutro_config_32523.yaml", None)
 
-# Define MS5803 constants
-MS5803_ADDRESS = 0x76  # Address of the MS5803 altimeter
-MS5803_RESET = 0x1E  # Reset command
-MS5803_CONVERT_D1_256 = 0x40  # Start pressure conversion, OSR=256
-MS5803_CONVERT_D2_256 = 0x50  # Start temperature conversion, OSR=256
-MS5803_ADC_READ = 0x00  # ADC read command
+altimeter = MS5803(0)
 
-# Define I2C bus
-bus = smbus.SMBus(0)  # Use I2C bus 0 on Raspberry Pi
-
-# Reset MS5803
-bus.write_byte(MS5803_ADDRESS, MS5803_RESET)
-time.sleep(0.05)
 
 while True:
-    # Start pressure conversion
-    bus.write_byte(MS5803_ADDRESS, MS5803_CONVERT_D1_256)
-    time.sleep(0.05)
-
-    # Read ADC value for pressure
-    adc = bus.read_i2c_block_data(MS5803_ADDRESS, MS5803_ADC_READ, 3)
-    d1 = (adc[0] << 16) | (adc[1] << 8) | adc[2]
-
-    # Start temperature conversion
-    bus.write_byte(MS5803_ADDRESS, MS5803_CONVERT_D2_256)
-    time.sleep(0.05)
-
-    # Read ADC value for temperature
-    adc = bus.read_i2c_block_data(MS5803_ADDRESS, MS5803_ADC_READ, 3)
-    d2 = (adc[0] << 16) | (adc[1] << 8) | adc[2]
-
-    # Calculate temperature
-    dT = d2 - 8388608
-    TEMP = 2000 + (dT * 5) / 8388608
-    TEMP = TEMP / 100.0  # Convert to degrees Celsius
-
-    # Calculate pressure
-    OFF = 0
-    SENS = 0
-    if TEMP < 20:
-        T2 = (dT * dT) / 2147483648
-        OFF2 = 61 * ((TEMP - 2000) ** 2) / 16
-        SENS2 = 2 * ((TEMP - 2000) ** 2)
-        if TEMP < -15:
-            OFF2 += 15 * ((TEMP + 1500) ** 2)
-            SENS2 += 8 * ((TEMP + 1500) ** 2)
-    else:
-        T2 = 0
-        OFF2 = 0
-        SENS2 = 0
-
-    OFF = (2953 * 2 ** 21) + ((SENS2 * dT) / 2 ** 24) - OFF2
-    SENS = (1100 * 2 ** 21) + ((SENS2 * dT) / 2 ** 25)
-
-    P = (((d1 * SENS) / 2 ** 21) - OFF) / 2 ** 15
-    P = P / 100.0  # Convert to millibars
-
-    # Calculate altitude
-    P0 = 1030  # Approximate sea level pressure in mbar at Galveston
-    h = ((P0 / P) ** (1 / 5.257) - 1) * (TEMP + 273.15) / 0.006
-    example_data = {'pressure': P, 'temperature': TEMP, 'altitude': h}
-    trx.send(example_data)
-
-    print("Pressure: %.2f mbar" % P)
-    print("Temperature: %.2f C" % TEMP)
-    print("Altitude: %.2f meters" % h)
-    time.sleep(1)
+    pressure, temp = altimeter.read()
+    
+    h = ((P0 / pressure) ** (1 / 5.257) - 1) * (temp + 273.15) / 0.006
+    data = {'pressure': pressure, 'temperature': temp, 'altitude': h}
+    trx.send(data)
+    print(data)
+    time.sleep(1.0)
