@@ -1,0 +1,56 @@
+# Radio configuration file for launch transmissions.
+
+frequency:		433.0	# RF frequency in MHz (433.0)
+bandwidth:		125		# RF bandwidth in kHz (62.5, 125, 250, 500)
+spreading:		9		# RF LoRa spreading factor (7-12)
+tx_power:		23		# RF transmit power in dBm (5-23)
+
+amp_mode:		R		# D=disabled, B=bypass, T=transmit, R=receive
+timeout:		4		# Receive timeout in seconds
+coding_rate:	5		# Error correction strength (5-8)
+baudrate:		10		# Transceiver baudrate in MHz
+
+callsign:		CLSGN	# Ham radio callsign (null = don't send)
+send_packet_n:	true	# Send packet number (true/false)
+send_time:		true	# Send Unix time at transmit (true/false)
+magic:			0x69	# Magic checkbyte (null = don't send)
+
+pins:
+	transceiver:
+		sck:	SCK
+		mosi:	MOSI
+		miso:	MISO
+		cs:		CE1
+		reset:	D25
+	switch_A:
+		ctrl1:	D6
+		ctrl2:	D19
+	switch_B:
+		ctrl1:	D13
+		ctrl2:	D26
+
+packetdef:
+	# GPS:
+	- latitude:		float64
+	- longitude:	float64
+	- fix_quality:	uint8
+	- satellites:	uint8
+	- altitude_gps:	float32
+	# Altimeter:
+	- pressure:		float32
+	- temperature:	float32
+	- altitude:		float32
+	# IMU:
+	- yaw:			float32
+	- pitch:		float32
+	- roll:			float32
+	- accel_x:		float32
+	- accel_y:		float32
+	- accel_z:		float32
+	- magnet_x:		float32
+	- magnet_y:		float32
+	- magnet_z:		float32
+
+# Supported data types:
+# int8, int16, int32, int64, uint8, uint16, uint32, uint64,
+# float32, float64, bool

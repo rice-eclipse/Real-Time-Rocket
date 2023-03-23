@@ -25,7 +25,7 @@ test_cases = []
 # each test case is a 3-tuple (bandwidth, spreading factor, transmission power)
 for spreading_factor in range(7, 13):
     for bandwidth in (500000, 250000, 125000, 62500):
-        for tx_power in (23, 20, 17):
+        for tx_power in (23,):
             for i in range(tests_per_config):
                 test_cases.append((bandwidth, spreading_factor, tx_power))
 
