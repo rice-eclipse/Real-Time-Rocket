@@ -3,7 +3,7 @@ import time
 import math
 from radio_launch_test import Radio
 
-trx = Radio("neutro_config_32523.yaml", None)
+trx = Radio("/home/pi/Neutro/neutro_config_32523.yaml", None)
 example_data = {'latitude': 29.72, 'longitude': -95.41, 'fix_quality': 2}
 trx.send(example_data)
 # Define MS5803 constants
