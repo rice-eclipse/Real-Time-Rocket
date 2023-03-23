@@ -69,7 +69,7 @@ class Radio:
 		spi = busio.SPI(clock=sck_id, MOSI=mosi_id, MISO=miso_id)
 
 		# Initialize transceiver
-		self.trx = adafruit_rfm9x.RFM9x(spi, cs, reset, self.frequency, self.baudrate)
+		self.trx = adafruit_rfm9x.RFM9x(spi, cs, reset, self.frequency, baudrate=self.baudrate)
 		self.trx.signal_bandwidth = self.bandwidth
 		self.trx.spreading_factor = self.spreading
 		self.trx.tx_power = self.tx_power
