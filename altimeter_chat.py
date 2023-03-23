@@ -12,7 +12,7 @@ altimeter = MS5803(0)
 while True:
     pressure, temp = altimeter.read()
     
-    h = ((P0 / pressure) ** (1 / 5.257) - 1) * (temp + 273.15) / 0.006
+    h = ((P0 / pressure) ** (1 / 5.257) - 1) * (temp + 273.15) / 0.0065
     data = {'pressure': pressure, 'temperature': temp, 'altitude': h}
     trx.send(data)
     print(data)

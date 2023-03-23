@@ -188,11 +188,11 @@ class MS5803(object):
         OFF  = OFF  - OFF2
         SENS = SENS - SENS2
 
-        # Temperature compensated pressure (0...14bar with units of 0.1mbar).
+        # Temperature compensated pressure (0...14bar with units of 0.01mbar).
         PRESS = (((raw_pressure * SENS) // 2**21) - OFF) // 2**15
 
         # Convert to floating point mbar and degrees celsius.
-        pressure = PRESS / 10.0
+        pressure = PRESS / 100.0
         temp = TEMP / 100.0
 
         return pressure, temp
