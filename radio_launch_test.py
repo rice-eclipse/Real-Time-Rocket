@@ -154,7 +154,7 @@ class Radio:
 		if self.send_packet_n:
 			data_bytes.extend(struct.pack(f">{self.packets_sent}", Radio.DATA_TYPES['uint32']))
 		if self.send_time:
-			data_bytes.extend(struct.pack(f">{time.time_ns}", Radio.DATA_TYPES['uint64']))
+			data_bytes.extend(struct.pack(f">{time.time_ns()}", Radio.DATA_TYPES['uint64']))
 
 		for var_name, var_type in self.packetdef:
 			val = data[var_name]
