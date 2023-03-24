@@ -30,9 +30,9 @@ pins:
     ctrl2: D16
 
 packetdef:
-  pressure: float64
-  temperature: float64
-  altitude: float64
+  - pressure: float64
+  - temperature: float64
+  - altitude: float64
 
 # Supported data types:
 # int8, int16, int32, int64, uint8, uint16, uint32, uint64,
