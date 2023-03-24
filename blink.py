@@ -20,7 +20,7 @@ try:
         led_green.value = False
         time.sleep(0.75)
         count += 1
-        if count == 5:
+        if count == 100:
             break
 except KeyboardInterrupt:
     led_red.value = False
