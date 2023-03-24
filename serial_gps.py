@@ -34,13 +34,10 @@ def getPositionData(gps):
     print("line read")
     message = data[0:6]
     
-    
-    
-
     value = GPIO.input(19)
     print("Value on GPIO 19: ", value)
 
-    GPIO.cleanup()
+    
     if (message == "$GPRMC"):
         # GPRMC = Recommended minimum specific GPS/Transit data
         # Reading the GPS fix data is an alternative approach that also works
@@ -66,17 +63,20 @@ gps = serial.Serial(SERIAL_PORT, baudrate = 9600, timeout = 0.5)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(19, GPIO.IN)
 GPIO.setup(26, GPIO.OUT)
-print("Serial object created")
 GPIO.output(26, 1)
-while running:
-    try:
-        getPositionData(gps)
-    except KeyboardInterrupt:
-        running = False
-        gps.close()
-        print("Application closed!")
-    except Exception as e:
-        
-        # You should do some error handling here...
-        print("Application error!")
-        print(e)
+print("Serial object created")
+try:
+    while running:
+        try:
+            getPositionData(gps)
+        except KeyboardInterrupt:
+            running = False
+            gps.close()
+            print("Application closed!")
+        except Exception as e:
+            
+            # You should do some error handling here...
+            print("Application error!")
+            print(e)
+finally:
+    GPIO.cleanup()
