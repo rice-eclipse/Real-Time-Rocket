@@ -12,12 +12,12 @@ count = 0
 
 try:
     while True:
-        
-        led_red.value = True
-        led_green.value = False
-        time.sleep(0.75)
+
         led_red.value = False
         led_green.value = True
+        time.sleep(0.75)
+        led_red.value = True
+        led_green.value = False
         time.sleep(0.75)
         count += 1
         if count == 5:
