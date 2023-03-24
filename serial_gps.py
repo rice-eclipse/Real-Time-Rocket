@@ -75,6 +75,8 @@ while running:
         running = False
         gps.close()
         print("Application closed!")
-    except:
+    except Exception as e:
+        
         # You should do some error handling here...
         print("Application error!")
+        print(e)
