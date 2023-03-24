@@ -33,8 +33,9 @@ def getPositionData(gps):
     data = gps.readline()
     print("line read")
     message = data[0:6]
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(19, GPIO.IN)
+    
+    
+    
 
     value = GPIO.input(19)
     print("Value on GPIO 19: ", value)
@@ -62,7 +63,11 @@ def getPositionData(gps):
 
 print("Application started!")
 gps = serial.Serial(SERIAL_PORT, baudrate = 9600, timeout = 0.5)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(19, GPIO.IN)
+GPIO.setup(26, GPIO.OUT)
 print("Serial object created")
+GPIO.output(26, 1)
 while running:
     try:
         getPositionData(gps)
