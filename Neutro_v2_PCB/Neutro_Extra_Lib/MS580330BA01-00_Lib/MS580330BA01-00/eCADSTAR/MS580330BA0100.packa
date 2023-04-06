@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "MS580330BA01-00"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-06-17-10:08:37)
+    (mountForm default
+        (footprintRef "MS580330BA0100")
+        (spec "System")
+    )
+)

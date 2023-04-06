@@ -1,0 +1,20 @@
+.BNO085 :1 ;IMU ACCEL/GYRO/MAG I2C 32BIT
+BNO085
+*STM AC
+*NGS
+*PLB 1="RESV_NC_1" 2="GND_1" 3="VDD" 4="BOOTN" 5="PS1" 6="PS0/WAKE" 7="RESV_NC_2" 8="RESV_NC_3" 9="CAP" 10="CLKSEL0" 11="NRST" 12="RESV_NC_4" 13="RESV_NC_5" 14="H_INTN" 15="ENV_SCL" 16="ENV_SDA" 17="SA0/H_MOSI" 18="H_CSN" 19="H_SCL/SCK/RX" 20="H_SDA/H_MISO/TX" 21="RESV_NC_6" 22="RESV_NC_7" 23="RESV_NC_8" 24="RESV_NC_9" 25="GND_2" 26="XOUT32/CLKSEL1" 27="XIN32" 28="VDDIO"
+*MXP 28
+*DFN BNO085
+~!Manufacturer_Name (Hillcrest Laboratories, Inc.)
+~!Manufacturer_Part_Number (BNO085)
+~!Mouser Part Number (-)
+~!Mouser Price/Stock (-)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Mouser Testing Part Number (-)
+~!Mouser Testing Price/Stock (-)
+~!Link Datasheet (https://www.hillcrestlabs.com/downloads/bno080-datasheet)
+~!Height (1.18mm)
+~!3D_Model (BNO085)
+BNO085
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 17.1!U 18.1!U 19.1!U 20.1!U 21.1!U 22.1!U 23.1!U 24.1!U 25.1!U 26.1!U 27.1!U 28.1!U 

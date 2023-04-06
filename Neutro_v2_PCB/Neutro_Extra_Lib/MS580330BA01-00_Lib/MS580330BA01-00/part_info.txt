@@ -1,0 +1,9 @@
+Manufacturer=TE Connectivity
+PartNumber=MS580330BA01-00
+PartCategory=Undefined or Miscellaneous
+PackageCategory=Other
+PinCount=8
+Version=1.3
+Released=2022-06-17 10:08:37
+Downloaded=2022-12-30 18:58:06
+3D=Y
