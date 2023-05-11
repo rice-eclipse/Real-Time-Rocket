@@ -19,32 +19,8 @@ bno = BNO08X_I2C(i2c)
 print("initialized!")
 
 # Print BNO085 calibration status.
-#sys_cal, gyro_cal, accel_cal, mag_cal = bno.calibration_status
-#print(f'System: {sys_cal}, Gyro: {gyro_cal}, Accel: {accel_cal}, Mag: {mag_cal}')
+bno.enable_feature(BNO_REPORT_ACCELEROMETER)
 
-# Configure the BNO085 sensor.
-bno.accelerometer_enabled = True
-bno.gyro_enabled = True
-bno.magnetometer_enabled = True
-bno.orientation_enabled = True
-bno.linear_acceleration_enabled = True
-bno.gravity_enabled = True
-bno.tap_detection_enabled = True
-bno.step_detection_enabled = True
-bno.wrist_wakeup_enabled = True
-bno.pickup_enabled = True
-
-# Enable quaternion reporting.
-bno.report_quaternion = True
-
-# Print BNO085 sensor data.
 while True:
-    # Get BNO085 sensor data.
-    quat = bno.quaternion
-    euler = bno.euler
-
-    # Print sensor data.
-    print(f'Quaternion: {quat}, Euler: {euler}')
-
-    # Delay for a second.
-    time.sleep(1)
+    accel_x, accel_y, accel_z = bno.acceleration  # pylint:disable=no-member
+    print("X: %0.6f  Y: %0.6f Z: %0.6f  m/s^2" % (accel_x, accel_y, accel_z))
