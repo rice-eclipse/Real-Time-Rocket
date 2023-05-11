@@ -12,7 +12,7 @@ trx.trx.signal_bandwidth = bandwidth * 10**3
 trx.trx.spreading_factor = spreading
 trx.trx.tx_power = tx_power
 
-for i in range(NUM_SENDS):
+while True:
     data = {'bandwidth': bandwidth, 'spreading': spreading, 'tx_power': tx_power}
     trx.send(data)
     time.sleep(0.5)

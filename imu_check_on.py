@@ -2,7 +2,7 @@ import smbus
 import time
 
 # Define the I2C address of the BNO085 IMU
-BNO085_ADDR = 0x4B
+BNO085_ADDR = 0x4A
 
 # Define the register address of the chip ID
 BNO_CHIP_ID_ADDR = 0x00
