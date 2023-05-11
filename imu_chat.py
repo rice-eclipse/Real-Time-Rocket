@@ -19,8 +19,8 @@ bno = BNO08X_I2C(i2c)
 print("initialized!")
 
 # Print BNO085 calibration status.
-sys_cal, gyro_cal, accel_cal, mag_cal = bno.calibration_status
-print(f'System: {sys_cal}, Gyro: {gyro_cal}, Accel: {accel_cal}, Mag: {mag_cal}')
+#sys_cal, gyro_cal, accel_cal, mag_cal = bno.calibration_status
+#print(f'System: {sys_cal}, Gyro: {gyro_cal}, Accel: {accel_cal}, Mag: {mag_cal}')
 
 # Print BNO085 sensor data.
 while True:
