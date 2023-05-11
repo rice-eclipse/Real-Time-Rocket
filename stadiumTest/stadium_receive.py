@@ -12,7 +12,7 @@ trx.trx.spreading_factor = spreading
 
 received = 0
 
-while received < NUM_SENDS:
+while True:
     data = trx.receive_and_log()
     if data is not None:
         received += 1

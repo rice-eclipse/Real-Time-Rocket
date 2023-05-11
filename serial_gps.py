@@ -31,14 +31,12 @@ def formatDegreesMinutes(coordinates, digits):
 # gps is the serial port, that's used to communicate with the GPS adapter
 def getPositionData(gps):
     data = gps.readline()
-    print("line read")
-    message = data[0:6]
+    #print("line read")
     
     value = GPIO.input(19)
-    print("Value on GPIO 19: ", value)
+    #print("Value on GPIO 19: ", value)
 
-    
-    if (message == "$GPRMC"):
+    if (data.startswith(b"$GPRMC")):
         # GPRMC = Recommended minimum specific GPS/Transit data
         # Reading the GPS fix data is an alternative approach that also works
         parts = data.split(",")
@@ -52,10 +50,12 @@ def getPositionData(gps):
             longitude = formatDegreesMinutes(parts[5], 3)
             latitude = formatDegreesMinutes(parts[3], 2)
             print("Your position: lon = " + str(longitude) + ", lat = " + str(latitude))
+    elif (data.startswith(b"$PMTK")):
+        print(data)
     else:
         # Handle other NMEA messages and unsupported strings
-        print("Message not $GPRMC, message is ",message)
-        print("data is ", data)
+        print(f"Message not $GPRMC, message is {data}")
+        #print("data is ", data)
         pass
 
 print("Application started!")

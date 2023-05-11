@@ -1,0 +1,39 @@
+# Radio configuration file for launch transmissions.
+
+frequency: 433.0 # RF frequency in MHz (433.0)
+bandwidth: 62.5 # RF bandwidth in kHz (62.5, 125, 250, 500)
+spreading: 10 # RF LoRa spreading factor (7-12)
+tx_power: 23 # RF transmit power in dBm (5-23)
+
+amp_mode: D # D=disabled, B=bypass, T=transmit, R=receive
+timeout: 3 # Receive timeout in seconds
+coding_rate: 5 # Error correction strength (5-8)
+baudrate: 10 # Transceiver baudrate in MHz
+
+callsign: KI5WNM # Ham radio callsign (null = don't send)
+send_packet_n: true # Send packet number
+send_time: true # Send Unix time at transmit
+magic: 0x69 # Magic checkbyte (null = don't send)
+
+pins:
+  transceiver:
+    sck: D11
+    mosi: D10
+    miso: D9
+    cs: D22
+    reset: D27
+  switch_A:
+    ctrl1: D16
+    ctrl2: D16
+  switch_B:
+    ctrl1: D16
+    ctrl2: D16
+
+packetdef:
+  - pressure: float64
+  - temperature: float64
+  - altitude: float64
+
+# Supported data types:
+# int8, int16, int32, int64, uint8, uint16, uint32, uint64,
+# float32, float64, bool

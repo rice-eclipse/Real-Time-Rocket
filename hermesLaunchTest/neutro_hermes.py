@@ -4,8 +4,8 @@ import eclipse_radio_v1 as eradio
 import yaml
 
 P0 = 1018.3  # Approximate sea level pressure in mbar at Galveston
-CONFIG_FILENAME = "/home/pi/Neutro/icarusLaunchTest/neutro_config_icarus.yaml"
-LOG_FILENAME = "/home/pi/Neutro/icarusLaunchTest/neutro_log_icarus.yaml"
+CONFIG_FILENAME = "/home/pi/Neutro/hermesLaunchTest/neutro_config_hermes.yaml"
+LOG_FILENAME = "/home/pi/Neutro/hermesLaunchTest/neutro_log_hermes.yaml"
 
 trx = eradio.Radio(CONFIG_FILENAME, None)
 
@@ -30,4 +30,4 @@ while True:
         logfile.flush()
 
     print(data)
-    time.sleep(0.05)
+    time.sleep(2.05)
