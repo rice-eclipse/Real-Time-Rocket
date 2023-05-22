@@ -19,7 +19,7 @@ try:
         led_green.value = False
         time.sleep(0.75)
         count += 1
-        if count == 40:
+        if count == 50:
             break
 
 except KeyboardInterrupt:
