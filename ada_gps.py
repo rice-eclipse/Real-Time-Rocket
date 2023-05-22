@@ -24,7 +24,7 @@ uart = serial.Serial("/dev/ttyS0", baudrate=9600, timeout=10)
 # i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
 
 # Create a GPS module instance.
-gps = ada_gps.GPS(uart, debug=False)  # Use UART/pyserial
+gps = adafruit_gps.GPS(uart, debug=False)  # Use UART/pyserial
 # gps = adafruit_gps.GPS_GtopI2C(i2c, debug=False)  # Use I2C interface
 
 # Initialize the GPS module by changing what data it sends and at what rate.
