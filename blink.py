@@ -12,7 +12,6 @@ count = 0
 
 try:
     while True:
-
         led_red.value = False
         led_green.value = True
         time.sleep(0.75)
@@ -20,8 +19,9 @@ try:
         led_green.value = False
         time.sleep(0.75)
         count += 1
-        if count == 100:
+        if count == 40:
             break
+
 except KeyboardInterrupt:
     led_red.value = False
     led_green.value = False
