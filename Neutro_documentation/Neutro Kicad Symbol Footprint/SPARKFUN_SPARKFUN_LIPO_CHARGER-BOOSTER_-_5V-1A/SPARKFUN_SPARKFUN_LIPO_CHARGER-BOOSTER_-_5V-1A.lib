@@ -1,0 +1,21 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# SPARKFUN_SPARKFUN_LIPO_CHARGER-BOOSTER_-_5V-1A
+#
+DEF SPARKFUN_SPARKFUN_LIPO_CHARGER-BOOSTER_-_5V-1A MD 0 40 N N 1 L N
+F0 "MD" 100 -100 50 H V L BNN
+F1 "SPARKFUN_SPARKFUN_LIPO_CHARGER-BOOSTER_-_5V-1A" 0 0 50 H I L BNN
+F2 "SPARKFUN_SPARKFUN_LIPO_CHARGER-BOOSTER_-_5V-1A_0" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 100 -600 100 -200 N
+P 2 0 0 10 100 -200 800 -200 N
+T 0 100 -700 100 0 0 0 SparkFun~LiPo~Charger/Booster~-~5V/1A Normal 0 L T
+S 217 -667 917 -267 0 0 10 f
+ENDDRAW
+ENDDEF
+#
+# End Library
